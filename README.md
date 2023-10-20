@@ -23,7 +23,7 @@ Welcome to my personal website project, hosted at [dileepabandara.dev](https://d
 
 ## 📸 Captured Media
 
-![Screenshot of dileepabandara.dev](https://dileepabandara.github.io/public-images/gh-rm-h/header_3.png)
+![Screenshot of dileepabandara.dev](https://gh.dileepabandara.dev/public-images/projects/dileepabandara-dev-coming-soon.png)
 
 ## 🌟 Features
 
@@ -62,7 +62,7 @@ To get a copy of this project up and running on your local machine, follow these
 
    ```bash
    git clone https://github.com/dileepabandara/dileepabandara.dev.git
-    ```
+   ```
 
 2. Navigate to the project directory:
 3. Install the dependencies:
@@ -79,17 +79,17 @@ To get a copy of this project up and running on your local machine, follow these
 
 4. Start the development server:
 
-    ```bash
-    npm run dev
-    # or
-    yarn dev
-    # or
-    pnpm dev
-    # or
-    bun dev
-    # or
-    npx next dev
-    ```
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   # or
+   npx next dev
+   ```
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. To change the port, use the `-p` flag. For example, `npm run dev -p 4000`.
 
@@ -122,7 +122,7 @@ To learn more about Next.js, take a look at the following resources:
 
 ## 🖼️ Icons and Images
 
-Icons used in this website are from [Icons8](https://icons8.com/).
+Icons used in this website are from [React Icons](https://react-icons.github.io/react-icons).
 
 ## 📜 License
 
