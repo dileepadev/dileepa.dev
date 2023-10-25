@@ -109,17 +109,17 @@ To learn more about Next.js, take a look at the following resources:
 ## 🍃 Branches
 
 - `main` - The source code for the latest stable and production-ready release of the website.
-- `develop` - New features and bug fixes that are being worked on but not yet ready for production.
+- `dev` - New features and bug fixes that are being worked on but not yet ready for production.
 - `feature/*` - Branches used to develop new features.
 - `bugfix/*` - Branches used to fix bugs.
 - `release/*` - Branches used to prepare for new releases.
   - `release/previous` - The latest previous stable release of the website.
   - `release/v*.*.*` - The latest release of the website with version number `*.*.*`.
-  - `release/v1.0.0` - The first stable release of the website.
+  - `release/v1.0.0` - The first stable release of the website with version number `1.0.0`.
 
 ## 🖼️ Icons and Images
 
-Icons used in this website are from [React Icons](https://react-icons.github.io/react-icons).
+Icons used in this website are from [React Icons](https://react-icons.github.io/react-icons) and [Heroicons](https://heroicons.com/).
 
 ## 📜 License
 
