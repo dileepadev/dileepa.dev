@@ -1,6 +1,6 @@
 # 🌐 Dileepa Bandara - Personal Website
 
-Welcome to my personal website project, hosted at [dileepabandara.dev](https://dileepabandara.dev). This website is designed to showcase my portfolio, share information about me, and provide a platform for sharing my thoughts and experiences.
+Welcome to my personal website project, hosted at [dileepabandara-dev.vercel.app](https://dileepabandara-dev.vercel.app/). This website is designed to showcase my portfolio, share information about me, and provide a platform for sharing my thoughts and experiences.
 
 ## 📚 Table of Contents
 
@@ -30,7 +30,6 @@ Welcome to my personal website project, hosted at [dileepabandara.dev](https://d
 - **`About`**: Get to know me, my background, and my professional journey.
 - **`Education`**: Discover my academic qualifications and institutions.
 - **`Experience`**: Explore my work history and professional experiences.
-- **`Volunteering`**: Learn about my contributions and activities as a volunteer.
 - **`Media`**: Access my blog and vlog for articles, tutorials, and videos on various topics.
 - **`Connect`**: Connect with me through social media and other communication channels.
 
@@ -95,8 +94,6 @@ To get a copy of this project up and running on your local machine, follow these
 
 6. You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-**Note:** This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## 📘 Learn More About Next.js
 
 To learn more about Next.js, take a look at the following resources:
@@ -107,16 +104,16 @@ To learn more about Next.js, take a look at the following resources:
 ## 🚀 Deployment
 
 - This website is hosted on [Vercel](https://vercel.com/), a cloud platform for static sites and Serverless Functions.
-- Any changes pushed to the `release/stable` branch will be automatically deployed to [dileepabandara.dev](https://dileepabandara.dev).
+- Any changes pushed to the `main` branch will be automatically deployed to [dileepabandara-dev.vercel.app](https://dileepabandara-dev.vercel.app/).
 
 ## 🍃 Branches
 
-- `main` - The source code for the latest stable release of the website.
+- `main` - The source code for the latest stable and production-ready release of the website.
 - `develop` - New features and bug fixes that are being worked on but not yet ready for production.
 - `feature/*` - Branches used to develop new features.
 - `bugfix/*` - Branches used to fix bugs.
 - `release/*` - Branches used to prepare for new releases.
-  - `release/stable` - The latest stable release of the website.
+  - `release/previous` - The latest previous stable release of the website.
   - `release/v*.*.*` - The latest release of the website with version number `*.*.*`.
   - `release/v1.0.0` - The first stable release of the website.
 
