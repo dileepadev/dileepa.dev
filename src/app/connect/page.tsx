@@ -1,7 +1,7 @@
-export default function Home() {
+export default function Connect() {
   return (
     <div className="flex flex-col justify-center items-center">
-      <p className=" text-3xl font-semibold text-center textTheme">Home</p>
+      <p className=" text-3xl font-semibold text-center textTheme">Connect</p>
       <p className="pt-5 text-base font-normal text-center textSecondaryTheme">
         Lorem, ipsum dolor sit amet consectetu id dignissimos.
       </p>

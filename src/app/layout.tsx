@@ -1,20 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import NavBar from "@/components/NavBar";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+import SiteInfo from "@/config/siteInfo";
+import MainFont from "@/constants/fontStyle";
 
 export const metadata: Metadata = {
-  title: "Dileepa Bandara",
-  description:
-    "Hello there, I'm Dileepa Bandara. This is my personal website, which contains public information that anyone can find on the internet.",
+  title: SiteInfo.username,
+  description: SiteInfo.description,
 };
 
 export default function RootLayout({
@@ -24,9 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <NavBar />
-        <main>{children}</main>
+      <body className={`${MainFont.className} bodyTheme`}>
+        <div className="relative flex flex-col h-screen">
+          <NavBar />
+          <main className="mt-20 py-6 xs:mx-6 sm:mx-12 md:mx-16 flex-grow">
+            {children}
+          </main>
+        </div>
         <Analytics />
       </body>
     </html>
