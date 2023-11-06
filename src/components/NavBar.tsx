@@ -6,7 +6,8 @@ import { NavLinks } from "@/constants/links";
 import IconClose from "./icons/IconClose";
 import IconMenu from "./icons/IconMenu";
 import SocialMediaBar from "./SocialMediaBar";
-import Footer from './Footer';
+import Footer from "./Footer";
+import { ThemeSwitcher } from "./theme/ThemeSwitcher";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -81,7 +82,8 @@ export default function NavBar() {
             <SocialMediaBar />
           </div>
         </div>
-        {/* 📱 Footer 📱 */}
+        {/* 📱 Footer & ThemeSwitcher 📱 */}
+        <ThemeSwitcher />
         <div className="pb-2">
           <Footer />
         </div>

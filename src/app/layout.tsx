@@ -5,6 +5,8 @@ import NavBar from "@/components/NavBar";
 import SiteInfo from "@/config/siteInfo";
 import MainFont from "@/constants/fontStyle";
 import Footer from "@/components/Footer";
+import { ThemeSwitcher } from "@/components/theme/ThemeSwitcher";
+import { ThemeProvider } from "@/components/theme/themeProvider";
 
 export const metadata: Metadata = {
   title: SiteInfo.username,
@@ -17,15 +19,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${MainFont.className} bodyTheme`}>
-        <div className="relative flex flex-col h-screen">
-          <NavBar />
-          <main className="mt-20 py-6 xs:mx-6 sm:mx-12 md:mx-16 flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="relative flex flex-col h-screen">
+            <NavBar />
+            <main className="mt-20 py-6 xs:mx-6 sm:mx-12 md:mx-16 flex-grow">
+              {children}
+            </main>
+            <ThemeSwitcher />
+            <Footer />
+          </div>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
