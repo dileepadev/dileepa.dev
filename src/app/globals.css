@@ -28,6 +28,14 @@
   @apply bg-slate-50 dark:bg-black outline-neutral-200 dark:outline-neutral-900;
 }
 
+.cardTheme {
+  @apply bg-neutral-200 dark:bg-neutral-900 shadow-md;
+}
+
+.footerTheme {
+  @apply bg-slate-50 dark:bg-black dark:outline-neutral-900 outline-neutral-200;
+}
+
 .transitionButtonTheme {
   @apply transition duration-300 ease-in-out;
 }

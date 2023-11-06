@@ -6,6 +6,7 @@ import { NavLinks } from "@/constants/links";
 import IconClose from "./icons/IconClose";
 import IconMenu from "./icons/IconMenu";
 import SocialMediaBar from "./SocialMediaBar";
+import Footer from './Footer';
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -79,6 +80,10 @@ export default function NavBar() {
             </p>
             <SocialMediaBar />
           </div>
+        </div>
+        {/* 📱 Footer 📱 */}
+        <div className="pb-2">
+          <Footer />
         </div>
       </div>
     </nav>

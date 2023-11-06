@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import NavBar from "@/components/NavBar";
 import SiteInfo from "@/config/siteInfo";
 import MainFont from "@/constants/fontStyle";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: SiteInfo.username,
@@ -23,6 +24,7 @@ export default function RootLayout({
           <main className="mt-20 py-6 xs:mx-6 sm:mx-12 md:mx-16 flex-grow">
             {children}
           </main>
+          <Footer />
         </div>
         <Analytics />
       </body>
