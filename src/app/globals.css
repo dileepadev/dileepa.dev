@@ -13,7 +13,7 @@
 }
 
 .textSecondaryTheme {
-  @apply text-neutral-400 dark:text-neutral-400;
+  @apply text-neutral-500 dark:text-neutral-400;
 }
 
 .textButtonTheme {

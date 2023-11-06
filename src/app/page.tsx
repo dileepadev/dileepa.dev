@@ -1,16 +1,74 @@
+import Image from "next/image";
+import Link from "next/link";
+import SiteInfo from "@/config/siteInfo";
+
+export function Title() {
+  return (
+    <div className="flex flex-col items-center justify-center">
+      <p className="text-2xl md:text-3xl mb-4 font-semibold text-center textSecondaryTheme">
+        Hi, everyone! I&apos;m
+      </p>
+      <p className="text-4xl md:text-5xl font-bold text-center">
+        Dileepa Bandara
+      </p>
+      <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-4 pt-8 md:pt-12">
+        <p className="text-center text-lg font-medium textSecondaryTheme">
+          🎓 Computing Student
+        </p>
+        <p className="text-center text-lg font-medium textSecondaryTheme">
+          💻 Solution Developer
+        </p>
+        <p className="text-center text-lg font-medium textSecondaryTheme">
+          🌏 Community Volunteer
+        </p>
+        <p className="text-center text-lg font-medium textSecondaryTheme">
+          📢 Content Creator
+        </p>
+      </div>
+      <div className="flex flex-col items-center justify-center pt-10 md:pt-16">
+        <div className="flex md:flex-row xs:flex-col gap-2">
+          <p className="text-center textTheme">Looking to contact?</p>
+          <p className="text-center textTheme">Send me an email ✨ </p>
+        </div>
+        <Link
+          href={`mailto:${SiteInfo.email}`}
+          className="pt-2 text-wd textButtonTheme transitionButtonTheme"
+        >
+          <span className="ml-2">{SiteInfo.email}</span>
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export function ProfilePicture({ isMobile }: { isMobile: boolean }) {
+  const imageWidth = isMobile ? 250 : 350;
+  const imageHeight = isMobile ? 250 : 350;
+  const imageViewType = isMobile ? "md:hidden md-10 mb-10" : "hidden md:block";
+  return (
+    <div
+      className={`flex flex-col items-center justify-center ${imageViewType}`}
+    >
+      <Image
+        src="/profile_picture.jpg"
+        alt="Profile picture of Dileepa Bandara"
+        width={imageWidth}
+        height={imageHeight}
+        className="rounded-full mx-auto"
+        priority
+      />
+    </div>
+  );
+}
+
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <p className=" text-3xl font-semibold text-center textTheme">Home</p>
-      <p className="pt-5 text-base font-normal text-center textSecondaryTheme">
-        Lorem, ipsum dolor sit amet consectetu id dignissimos.
-      </p>
-      <p className="pt-10 text-lg font-semibold textTheme">Section</p>
-      <p className="pt-5 text-sm font-normal text-center textSecondaryTheme">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sint,
-        minima accusantium cumque iusto esse ut, at eius quos vel dolorum!
-        alias, velit culpa iusto eligendi explicabo quo?
-      </p>
+    <div className="pt-5 md:pt-10 pb-5 md:pb-10">
+      <ProfilePicture isMobile={true} />
+      <div className="flex flex-row items-center justify-evenly ">
+        <Title />
+        <ProfilePicture isMobile={false} />
+      </div>
     </div>
   );
 }
