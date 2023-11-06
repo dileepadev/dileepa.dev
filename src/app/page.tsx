@@ -1,5 +1,4 @@
-import Footer from "@/components/Footer";
-import { WebLinks } from "@/constants/links";
+import WebLinks from "@/constants/links";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -57,7 +56,6 @@ export default function Home() {
           </Link>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
