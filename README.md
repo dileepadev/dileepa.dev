@@ -27,7 +27,7 @@ Welcome to my personal website project, hosted at [dileepabandara-dev.vercel.app
 
 ## 🌟 Features
 
-- **`About`**: Get to know me, my background, and my professional journey.
+- **`About`**: Get to know my background, goals, and interests.
 - **`Education`**: Discover my academic qualifications and institutions.
 - **`Experience`**: Explore my work history and professional experiences.
 - **`Media`**: Access my blog and vlog for articles, tutorials, and videos on various topics.
