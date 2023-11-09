@@ -1,4 +1,4 @@
-import AboutPageData from "@/constants/textData";
+import textData from "@/constants/textData";
 
 export function TileCard({ icon, title }: { icon: string; title: string }) {
   return (
@@ -18,7 +18,7 @@ export function IntroductionCard() {
     <div className="p-5 w-full rounded-xl cardDarkerTheme">
       <p className="pageSubtitleTheme">Introduction</p>
       <p className="pt-5 text-base font-normal text-start textSecondaryTheme">
-        {AboutPageData.introduction}
+        {textData.aboutPageData.introduction}
       </p>
     </div>
   );
@@ -29,7 +29,7 @@ export function BackgroundCard() {
     <div className="p-5 w-full rounded-xl cardDarkerTheme">
       <p className="pageSubtitleTheme">Background</p>
       <p className="pt-5 text-base font-normal text-start textSecondaryTheme">
-        {AboutPageData.background}
+        {textData.aboutPageData.background}
       </p>
       <div className="pt-5 flex flex-col gap-2">
         <TileCard icon="🎟️" title="Name is Dileepa Lakmal Bandara" />
@@ -47,7 +47,7 @@ export function GoalsCard() {
     <div className="p-5 w-full rounded-xl cardDarkerTheme">
       <p className="pageSubtitleTheme">Goals</p>
       <p className="pt-5 text-base font-normal text-start textSecondaryTheme">
-        {AboutPageData.goals}
+        {textData.aboutPageData.goals}
       </p>
       <div className="pt-5 flex flex-col gap-2">
         <TileCard icon="🤖" title="Follow the AI Engineer Path" />
@@ -64,7 +64,7 @@ export function InterestsCard() {
     <div className="p-5 w-full rounded-xl cardDarkerTheme">
       <p className="pageSubtitleTheme">Interests</p>
       <p className="pt-5 text-base font-normal text-start textSecondaryTheme">
-        {AboutPageData.interests}
+        {textData.aboutPageData.interests}
       </p>
       <div className="pt-5 flex flex-col gap-2">
         <TileCard icon="🎬" title="Watching Movies & TV Shows" />
@@ -98,9 +98,9 @@ export function RightGrid() {
 export default function About() {
   return (
     <div className="pb-5 md:pb-10 flex flex-col justify-center items-center">
-      <p className="pageTitleTheme">{AboutPageData.title}</p>
+      <p className="pageTitleTheme">{textData.aboutPageData.title}</p>
       <p className="pt-5 text-base font-normal text-center textSecondaryTheme">
-        {AboutPageData.subtitle}
+        {textData.aboutPageData.subtitle}
       </p>
       <div className="mt-16 grid md:grid-flow-col sm:grid-flow-row gap-8 justify-start items-start">
         <LeftGrid />
