@@ -20,6 +20,28 @@ export interface EducationPageData {
     link: string;
   }>;
 }
+export interface ExperiencePageData {
+  title: string;
+  subtitle: string;
+  work: Array<{
+    title: string;
+    org: string;
+    country: string;
+    years: string;
+    status: string;
+    image: string;
+    link: string;
+  }>;
+  volunteer: Array<{
+    title: string;
+    org: string;
+    country: string;
+    years: string;
+    status: string;
+    image: string;
+    link: string;
+  }>;
+}
 
 const aboutPageData: AboutPageData = {
   title: "About",
@@ -82,6 +104,92 @@ const educationPageData: EducationPageData = {
   ],
 };
 
-const textData = { aboutPageData, educationPageData };
+const experiencePageData: ExperiencePageData = {
+  title: "Experience",
+
+  subtitle: "Explore my professional work and volunteer experience.",
+
+  work: [
+    {
+      title: "Solution Developer (Freelance)",
+      org: "Early Wings Dev",
+      country: "Sri Lanka",
+      years: "Jun 2019 - Present",
+      status:
+        "Software Development (Mobile, Desktop, Web, API), UI UX Designing, Tech Support Assistant & Data Analysis",
+      image: "ewd",
+      link: "https://lk.linkedin.com/company/early-wings-dev/",
+    },
+    {
+      title: "Trainee Software Developer (Flutter)",
+      org: "DDS Techvira",
+      country: "Sri Lanka",
+      years: "May 2021 - Nov 2021",
+      status:
+        "Android, Flutter, Dart, Firebase, Git, REST API, JSON Parsing, Android Studio, VS Code, App Releasing & UI UX Designing",
+      image: "ddst",
+      link: "https://ddstechvira.com/",
+    },
+  ],
+
+  volunteer: [
+    {
+      title: "President",
+      org: "NIBM Computing Society",
+      country: "Sri Lanka",
+      years: "Oct 2022 - Present",
+      status: "",
+      image: "nibmcs",
+      link: "https://nibmcs.org/",
+    },
+    {
+      title: "Club Lead",
+      org: "NIBM FOSS Community",
+      country: "Sri Lanka",
+      years: "Oct 2022 - Present",
+      status: "",
+      image: "nibmfossc",
+      link: "https://fossc.nibmcs.org/",
+    },
+    {
+      title: "Microsoft Learn Student Ambassador",
+      org: "Microsoft",
+      country: "Sri Lanka",
+      years: "Oct 2022 - Present",
+      status: "",
+      image: "msft",
+      link: "https://mvp.microsoft.com/studentambassadors/",
+    },
+    {
+      title: "Member",
+      org: "Microsoft Learn Student Ambassadors - Sri Lanka",
+      country: "Sri Lanka",
+      years: "Jan 2023 - Present",
+      status: "",
+      image: "mlsa",
+      link: "https://lk.linkedin.com/company/mlsasrilanka/",
+    },
+    {
+      title: "Volunteer",
+      org: "GDG Sri Lanka",
+      country: "Sri Lanka",
+      years: "Oct 2022 - Present",
+      status: "",
+      image: "gdglk",
+      link: "https://gdgsrilanka.org/",
+    },
+    {
+      title: "Volunteer",
+      org: "FOSS Sri Lanka",
+      country: "Sri Lanka",
+      years: "Oct 2023 - Present",
+      status: "",
+      image: "fosslk",
+      link: "https://foss.lk/",
+    },
+  ],
+};
+
+const textData = { aboutPageData, educationPageData, experiencePageData };
 
 export default textData;
