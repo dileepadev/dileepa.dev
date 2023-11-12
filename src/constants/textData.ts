@@ -42,6 +42,19 @@ export interface ExperiencePageData {
     link: string;
   }>;
 }
+export interface MediaPageData {
+  title: string;
+  subtitle: string;
+  log: Array<{
+    title: string;
+    org: string;
+    years: string;
+    status: string;
+    image: string;
+    link: string;
+    handler: string;
+  }>;
+}
 
 const aboutPageData: AboutPageData = {
   title: "About",
@@ -189,7 +202,38 @@ const experiencePageData: ExperiencePageData = {
     },
   ],
 };
+const mediaPageData: MediaPageData = {
+  title: "Media",
 
-const textData = { aboutPageData, educationPageData, experiencePageData };
+  subtitle: "Check out my latest articles, videos, and other content.",
+
+  log: [
+    {
+      title: "Dileepa Bandara",
+      org: "YouTube",
+      years: "Nov 2023 - Present",
+      status: "",
+      image: "youtube",
+      link: "https://youtube.com/@dileepabandara/",
+      handler: "@dileepabandara",
+    },
+    {
+      title: "Dileepa Bandara",
+      org: "Hashnode",
+      years: "Sep 2022 - Present",
+      status: "",
+      image: "hashnode",
+      link: "https://hashnode.com/@dileepabandara/",
+      handler: "@dileepabandara",
+    },
+  ],
+};
+
+const textData = {
+  aboutPageData,
+  educationPageData,
+  experiencePageData,
+  mediaPageData,
+};
 
 export default textData;
