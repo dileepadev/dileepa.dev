@@ -44,6 +44,18 @@
   @apply bg-neutral-100 dark:bg-neutral-950;
 }
 
+.borderTheme {
+  @apply border border-neutral-500 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-700;
+}
+
+.errorTheme {
+  @apply text-red-500;
+}
+
+.buttonTheme {
+  @apply bg-neutral-200 dark:bg-neutral-900 hover:bg-neutral-300 dark:hover:bg-neutral-800 text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100;
+}
+
 .footerTheme {
   @apply bg-slate-50 dark:bg-black dark:outline-neutral-900 outline-neutral-200;
 }

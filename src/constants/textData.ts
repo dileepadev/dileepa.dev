@@ -1,3 +1,5 @@
+import WebLinks from "@/constants/links";
+
 export interface AboutPageData {
   title: string;
   subtitle: string;
@@ -53,6 +55,17 @@ export interface MediaPageData {
     image: string;
     link: string;
     handler: string;
+  }>;
+}
+export interface ConnectPageData {
+  title: string;
+  subtitle: string;
+  description: string;
+  connectLinks: Array<{
+    title: string;
+    link: string;
+    handler: string;
+    icon: string;
   }>;
 }
 
@@ -228,12 +241,55 @@ const mediaPageData: MediaPageData = {
     },
   ],
 };
+const connectPageData: ConnectPageData = {
+  title: "Connect",
+
+  subtitle:
+    "Connect with me through social media and other communication channels.",
+
+  description:
+    "Let's connect! Whether you have inquiries, thoughts to share, or just want to drop a friendly message, I'd love to hear from you. Feel free to reach out through the contact form.",
+
+  connectLinks: [
+    {
+      title: "Email",
+      link: "mailto:" + WebLinks.email,
+      handler: WebLinks.email,
+      icon: "email",
+    },
+    {
+      title: "GitHub",
+      link: WebLinks.github,
+      handler: "dileepabandara",
+      icon: "github",
+    },
+    {
+      title: "LinkedIn",
+      link: WebLinks.linkedin,
+      handler: "in/dileepabandara",
+      icon: "linkedin",
+    },
+    {
+      title: "X (Twitter)",
+      link: WebLinks.xtwitter,
+      handler: "_dileepabandara",
+      icon: "xtwitter",
+    },
+    {
+      title: "YouTube",
+      link: WebLinks.youtube,
+      handler: "@dileepabandara",
+      icon: "youtube",
+    },
+  ],
+};
 
 const textData = {
   aboutPageData,
   educationPageData,
   experiencePageData,
   mediaPageData,
+  connectPageData,
 };
 
 export default textData;
