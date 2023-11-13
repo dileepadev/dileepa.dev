@@ -24,7 +24,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="relative flex flex-col h-screen">
             <NavBar />
-            <main className="mt-20 py-6 xs:mx-6 sm:mx-12 md:mx-16 flex-grow">
+            <main className="py-6 pb-5 md:pb-10 mt-20 md:mt-24 xs:mx-6 sm:mx-12 md:mx-16 flex-grow">
               {children}
             </main>
             <ThemeSwitcher />

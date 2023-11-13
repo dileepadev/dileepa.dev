@@ -11,17 +11,17 @@ export function Title() {
       <p className="text-4xl md:text-5xl font-bold text-center">
         Dileepa Bandara
       </p>
-      <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-4 pt-8 md:pt-12">
-        <p className="text-center text-lg font-medium textSecondaryTheme">
+      <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 pt-8 md:pt-12">
+        <p className="text-center text-md md:text-lg font-medium textSecondaryTheme">
           🎓 Computing Student
         </p>
-        <p className="text-center text-lg font-medium textSecondaryTheme">
+        <p className="text-center text-md md:text-lg font-medium textSecondaryTheme">
           💻 Solution Developer
         </p>
-        <p className="text-center text-lg font-medium textSecondaryTheme">
+        <p className="text-center text-md md:text-lg font-medium textSecondaryTheme">
           🌏 Community Volunteer
         </p>
-        <p className="text-center text-lg font-medium textSecondaryTheme">
+        <p className="text-center text-md md:text-lg font-medium textSecondaryTheme">
           📢 Content Creator
         </p>
       </div>
@@ -42,8 +42,8 @@ export function Title() {
 }
 
 export function ProfilePicture({ isMobile }: { isMobile: boolean }) {
-  const imageWidth = isMobile ? 250 : 350;
-  const imageHeight = isMobile ? 250 : 350;
+  const imageWidth = isMobile ? 250 : 400;
+  const imageHeight = isMobile ? 250 : 400;
   const imageViewType = isMobile ? "md:hidden md-10 mb-10" : "hidden md:block";
   return (
     <div
@@ -54,6 +54,7 @@ export function ProfilePicture({ isMobile }: { isMobile: boolean }) {
         alt="Profile picture of Dileepa Bandara"
         width={imageWidth}
         height={imageHeight}
+        quality={100}
         className="rounded-full mx-auto"
         priority
       />
@@ -63,7 +64,7 @@ export function ProfilePicture({ isMobile }: { isMobile: boolean }) {
 
 export default function Home() {
   return (
-    <div className="pt-5 md:pt-10 pb-5 md:pb-10">
+    <div className="pt-5 md:pt-20 pb-5 md:pb-40">
       <ProfilePicture isMobile={true} />
       <div className="flex flex-row items-center justify-evenly ">
         <Title />

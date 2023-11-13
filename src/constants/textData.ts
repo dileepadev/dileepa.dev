@@ -1,73 +1,11 @@
 import WebLinks from "@/constants/links";
-
-export interface AboutPageData {
-  title: string;
-  subtitle: string;
-  introduction: string;
-  background: string;
-  goals: string;
-  interests: string;
-}
-
-export interface EducationPageData {
-  title: string;
-  subtitle: string;
-  academic: Array<{
-    course: string;
-    institute: string;
-    country: string;
-    years: string;
-    status: string;
-    image: string;
-    link: string;
-  }>;
-}
-export interface ExperiencePageData {
-  title: string;
-  subtitle: string;
-  work: Array<{
-    title: string;
-    org: string;
-    country: string;
-    years: string;
-    status: string;
-    image: string;
-    link: string;
-  }>;
-  volunteer: Array<{
-    title: string;
-    org: string;
-    country: string;
-    years: string;
-    status: string;
-    image: string;
-    link: string;
-  }>;
-}
-export interface MediaPageData {
-  title: string;
-  subtitle: string;
-  log: Array<{
-    title: string;
-    org: string;
-    years: string;
-    status: string;
-    image: string;
-    link: string;
-    handler: string;
-  }>;
-}
-export interface ConnectPageData {
-  title: string;
-  subtitle: string;
-  description: string;
-  connectLinks: Array<{
-    title: string;
-    link: string;
-    handler: string;
-    icon: string;
-  }>;
-}
+import {
+  AboutPageData,
+  EducationPageData,
+  ExperiencePageData,
+  MediaPageData,
+  ConnectPageData,
+} from "@/types/interfaces";
 
 const aboutPageData: AboutPageData = {
   title: "About",
@@ -83,6 +21,29 @@ const aboutPageData: AboutPageData = {
     "It's been a few years since I stepped into the tech space. Having achieved significant milestones, I'm now dedicated to following these targets.",
 
   interests: "Let me tell you about the passions that define me.",
+
+  backgroundList: [
+    { icon: "🎟️", title: "Name is Dileepa Lakmal Bandara" },
+    { icon: "📆", title: "Born on July 24, 1997" },
+    { icon: "🌏", title: "Lives in Sri Lanka (GMT+5:30)" },
+    { icon: "👦🏽", title: "Gender is Male (He/Him/His)" },
+    { icon: "💼", title: "Works in Sinhala & English" },
+  ],
+
+  goalsList: [
+    { icon: "🤖", title: "Follow the AI Engineer Path" },
+    { icon: "💻", title: "Follow the Software Developer Path" },
+    { icon: "🚩", title: "Build a Tech Community" },
+    { icon: "🎓", title: "Pursue a Master's Degree" },
+  ],
+
+  interestsList: [
+    { icon: "🎬", title: "Watching Movies & TV Shows" },
+    { icon: "🎧", title: "Listening to Music" },
+    { icon: "🖌️", title: "Creating Contents" },
+    { icon: "📚", title: "Studying New Things" },
+    { icon: "🎤", title: "Public Speaking" },
+  ],
 };
 
 const educationPageData: EducationPageData = {
@@ -281,7 +242,17 @@ const connectPageData: ConnectPageData = {
       handler: "@dileepabandara",
       icon: "youtube",
     },
+    {
+      title: "Instagram",
+      link: WebLinks.instagram,
+      handler: "_dileepabandara",
+      icon: "instagram",
+    },
   ],
+
+  submitStatus: "SUCCESS",
+  submitMessage:
+    "Thanks for contacting me! I`ll get back to you as soon as possible. 😊",
 };
 
 const textData = {
