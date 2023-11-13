@@ -1,6 +1,6 @@
 # 🌐 Dileepa Bandara - Personal Website
 
-Welcome to my personal website project, hosted at [dileepabandara-dev.vercel.app](https://dileepabandara-dev.vercel.app/). This website is designed to showcase my portfolio, share information about me, and provide a platform for sharing my thoughts and experiences.
+Welcome to my personal website project, hosted at [dileepabandara.dev](https://dileepabandara.dev/). This website is designed to showcase my portfolio, share information about me, and provide a platform for sharing my thoughts and experiences.
 
 ## 📚 Table of Contents
 
@@ -23,7 +23,7 @@ Welcome to my personal website project, hosted at [dileepabandara-dev.vercel.app
 
 ## 📸 Captured Media
 
-![Screenshot of dileepabandara.dev](https://gh.dileepabandara.dev/public-images/projects/dileepabandara-dev-coming-soon.png)
+![Screenshot of dileepabandara.dev](https://gh.dileepabandara.dev/public-images/projects/dileepabandara.dev/1.0.0.png)
 
 ## 🌟 Features
 
@@ -45,6 +45,7 @@ This website is built using the following technologies:
 - [Next.js](https://nextjs.org/) - React framework for building static and server-side rendered websites.
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework for rapidly building custom designs.
 - [Node.js](https://nodejs.org/) - JavaScript runtime built on Chrome's V8 JavaScript engine.
+- [Resend](https://resend.com/) - Platform to build, test, and deliver transactional emails.
 
 ## 📌 Getting Started
 
@@ -104,7 +105,8 @@ To learn more about Next.js, take a look at the following resources:
 ## 🚀 Deployment
 
 - This website is hosted on [Vercel](https://vercel.com/), a cloud platform for static sites and Serverless Functions.
-- Any changes pushed to the `main` branch will be automatically deployed to [dileepabandara-dev.vercel.app](https://dileepabandara-dev.vercel.app/).
+- Any changes pushed to the `main` branch will be automatically deployed to [dileepabandara.dev](https://dileepabandara.dev/).
+- Any changes pushed to the `dev` branch will be automatically deployed to [preview.dileepabandara.dev](https://preview.dileepabandara.dev/).
 
 ## 🍃 Branches
 
