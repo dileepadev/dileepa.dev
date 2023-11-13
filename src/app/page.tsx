@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import SiteInfo from "@/config/siteInfo";
+import profilePicture from "../../public/profile_picture.jpg";
 
 const Title = () => {
   return (
@@ -50,12 +51,13 @@ const ProfilePicture = ({ isMobile }: { isMobile: boolean }) => {
       className={`flex flex-col items-center justify-center ${imageViewType}`}
     >
       <Image
-        src="/profile_picture.jpg"
+        src={profilePicture}
         alt="Profile picture of Dileepa Bandara"
         width={imageWidth}
         height={imageHeight}
         quality={100}
         className="rounded-full mx-auto"
+        placeholder="blur"
         priority
       />
     </div>

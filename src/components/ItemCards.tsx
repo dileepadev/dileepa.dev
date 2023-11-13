@@ -125,6 +125,7 @@ const bannerCard = ({ imageSrc }: { imageSrc: string }) => {
         quality={100}
         sizes="100vw, 100vw"
         className="object-cover rounded-xl"
+        placeholder="blur"
         priority
       />
     </div>
