@@ -1,16 +1,15 @@
 import ItemCards from "@/components/ItemCards";
 import textData from "@/constants/textData";
 
-export function IntroductionCard() {
+const IntroductionCard = () => {
   return (
     <ItemCards.tileCard
       title="Introduction"
       description={textData.aboutPageData.introduction}
     />
   );
-}
-
-export function BackgroundCard() {
+};
+const BackgroundCard = () => {
   return (
     <ItemCards.tileCard
       title="Background"
@@ -18,9 +17,8 @@ export function BackgroundCard() {
       listItems={textData.aboutPageData.backgroundList}
     />
   );
-}
-
-export function GoalsCard() {
+};
+const GoalsCard = () => {
   return (
     <ItemCards.tileCard
       title="Goals"
@@ -28,9 +26,8 @@ export function GoalsCard() {
       listItems={textData.aboutPageData.goalsList}
     />
   );
-}
-
-export function InterestsCard() {
+};
+const InterestsCard = () => {
   return (
     <ItemCards.tileCard
       title="Interests"
@@ -38,7 +35,7 @@ export function InterestsCard() {
       listItems={textData.aboutPageData.interestsList}
     />
   );
-}
+};
 
 export default function About() {
   return (

@@ -38,7 +38,7 @@ const tileCard = ({
   listItems,
 }: {
   title: string;
-  description: any;
+  description: string;
   listItems?: any;
 }) => {
   return (

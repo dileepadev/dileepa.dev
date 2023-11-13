@@ -5,7 +5,9 @@ import { useState } from "react";
 import { validateForm, sendEmail } from "@/utils/formUtils";
 import { FormData } from "@/types/interfaces";
 
-export function ContactForm() {
+// export function ContactForm() {}
+
+const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -126,7 +128,7 @@ export function ContactForm() {
       </form>
     </div>
   );
-}
+};
 
 export default function Connect() {
   return (

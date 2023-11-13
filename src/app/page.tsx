@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteInfo from "@/config/siteInfo";
 
-export function Title() {
+const Title = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <p className="text-2xl md:text-3xl mb-4 font-semibold text-center textSecondaryTheme">
@@ -39,9 +39,9 @@ export function Title() {
       </div>
     </div>
   );
-}
+};
 
-export function ProfilePicture({ isMobile }: { isMobile: boolean }) {
+const ProfilePicture = ({ isMobile }: { isMobile: boolean }) => {
   const imageWidth = isMobile ? 250 : 400;
   const imageHeight = isMobile ? 250 : 400;
   const imageViewType = isMobile ? "md:hidden md-10 mb-10" : "hidden md:block";
@@ -60,7 +60,7 @@ export function ProfilePicture({ isMobile }: { isMobile: boolean }) {
       />
     </div>
   );
-}
+};
 
 export default function Home() {
   return (
