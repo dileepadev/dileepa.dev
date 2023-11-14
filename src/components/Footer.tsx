@@ -15,10 +15,10 @@ const Footer = () => {
           href={WebLinks.githubRepo}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm rounded-xl px-4 py-1 cardTheme"
+          className="text-sm rounded-xl px-4 py-1 cardTheme textButtonTheme transitionButtonTheme"
           aria-label="View Source Code on GitHub"
         >
-          <div className="flex items-center textButtonTheme transitionButtonTheme">
+          <div className="flex items-center">
             <p>View Source</p>
             <FaGithub className="ml-2" />
           </div>

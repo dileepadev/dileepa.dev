@@ -167,33 +167,25 @@ const connectChannelCard = ({ listItems }: { listItems: any }) => {
       {listItems.map((item: any, index: any) => {
         const ChannelIcon = getIconComponent(item.icon);
         return (
-          <div
-            className="p-5 flex flex-col justify-center items-center rounded-xl w-full min-w-[260px] cardDarkerTheme"
+          <Link
+            href={item.link}
+            aria-label={`Link to ${item.title}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="textButtonTheme transitionButtonTheme"
             key={index}
           >
-            <Link
-              href={item.link}
-              aria-label={`Link to ${item.title}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="textButtonTheme transitionButtonTheme"
+            <div
+              className="p-5 flex flex-col justify-center items-center rounded-xl w-full min-w-[260px] cardDarkerButtonTheme"
+              key={index}
             >
               <ChannelIcon size={28} />
-            </Link>
-            <p className="pt-2 text-md font-medium textTheme">{item.title}</p>
-
-            <Link
-              href={item.link}
-              aria-label={`Link to ${item.title}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="textButtonTheme transitionButtonTheme"
-            >
+              <p className="pt-2 text-md font-medium textTheme">{item.title}</p>
               <p className="pt-2 text-sm font-normal text-start textSecondaryTheme">
                 {item.handler}
               </p>
-            </Link>
-          </div>
+            </div>
+          </Link>
         );
       })}
     </div>
