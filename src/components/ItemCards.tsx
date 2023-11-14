@@ -10,17 +10,9 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 
 // Used in tileCard
-export function ListItemRow({
-  icon,
-  title,
-  key,
-}: {
-  icon: string;
-  title: string;
-  key: any;
-}) {
+export function ListItemRow({ icon, title }: { icon: string; title: string }) {
   return (
-    <div className="flex flex-row justify-start" key={key}>
+    <div className="flex flex-row justify-start">
       <div className="flex items-center">
         <p className={"font-medium text-start text-xl textTheme"}>{icon}</p>
         <p className={"pl-4 font-medium text-start text-sm textTheme"}>
