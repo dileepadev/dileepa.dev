@@ -11,6 +11,28 @@ import { ThemeSwitcher } from "./theme/ThemeSwitcher";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const renderNavLinks = (isMobile: boolean) => (
+    <ul
+      className={`flex flex-col items-center ${
+        isMobile ? "py-2" : "md:flex-row"
+      }`}
+    >
+      {NavLinks.map((link) => (
+        <li key={link.key} className={isMobile ? "py-2" : "px-4"}>
+          <Link href={link.href}>
+            <p
+              className="font-regular text-md textButtonTheme transitionButtonTheme"
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </p>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+
   return (
     <nav className="xs:px-6 sm:px-12 md:px-16 pt-8 pb-5 fixed w-full top-0 z-10 outline outline-1 navBarTheme">
       <div className="flex flex-col md:flex-row justify-between">
@@ -34,20 +56,7 @@ export default function NavBar() {
           </div>
         </div>
         {/* 💻 Desktop NavBar Items */}
-        <div className="md:flex hidden">
-          <ul className="md:flex md:flex-row  flex flex-col items-center ">
-            {NavLinks.map((link) => (
-              <Link
-                href={link.href}
-                key={link.key}
-                className="px-4 font-regular text-md textButtonTheme transitionButtonTheme"
-                onClick={() => setMenuOpen(!menuOpen)}
-              >
-                <li>{link.label}</li>
-              </Link>
-            ))}
-          </ul>
-        </div>
+        <div className="md:flex hidden">{renderNavLinks(false)}</div>
         {/* 💻 Social Media Links */}
         <div className="md:flex hidden">
           <SocialMediaBar />
@@ -62,18 +71,7 @@ export default function NavBar() {
         }`}
       >
         <div>
-          <ul className="flex flex-col items-center">
-            {NavLinks.map((link) => (
-              <Link
-                href={link.href}
-                key={link.key}
-                className="py-2 font-regular text-md textButtonTheme transitionButtonTheme"
-                onClick={() => setMenuOpen(false)}
-              >
-                <li>{link.label}</li>
-              </Link>
-            ))}
-          </ul>
+          {renderNavLinks(true)}
           {/* 📱 Social Media Links 📱 */}
           <div className="mt-12">
             <p className="pb-4 text-center text-md font-medium textTheme">
