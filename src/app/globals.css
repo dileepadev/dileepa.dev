@@ -37,7 +37,7 @@
 }
 
 .cardTheme {
-  @apply bg-neutral-200 dark:bg-neutral-900;
+  @apply bg-neutral-200 dark:bg-neutral-900  ring-2 ring-neutral-200 dark:ring-neutral-900 hover:ring-neutral-300 dark:hover:ring-neutral-800 transition duration-300 ease-in-out;
 }
 
 .cardDarkerTheme {
