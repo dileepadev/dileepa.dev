@@ -1,6 +1,6 @@
 import ItemCards from "@/components/ItemCards";
 import textData from "@/constants/textData";
-import bannerImage from "../../../public/banner.png";
+import bannerImage from "../../../public/banner.webp";
 
 export default function Media() {
   return (

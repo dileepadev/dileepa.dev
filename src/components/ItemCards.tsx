@@ -119,6 +119,7 @@ const bannerCard = ({ imageSrc }: { imageSrc: string }) => {
         className="object-cover rounded-xl"
         placeholder="blur"
         priority
+        loading="eager"
       />
     </div>
   );

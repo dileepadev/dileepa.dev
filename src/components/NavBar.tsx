@@ -43,7 +43,7 @@ export default function NavBar() {
                 className="px-4 font-regular text-md textButtonTheme transitionButtonTheme"
                 onClick={() => setMenuOpen(!menuOpen)}
               >
-                {link.label}
+                <li>{link.label}</li>
               </Link>
             ))}
           </ul>
@@ -70,7 +70,7 @@ export default function NavBar() {
                 className="py-2 font-regular text-md textButtonTheme transitionButtonTheme"
                 onClick={() => setMenuOpen(false)}
               >
-                {link.label}
+                <li>{link.label}</li>
               </Link>
             ))}
           </ul>

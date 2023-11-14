@@ -58,6 +58,7 @@ const ProfilePicture = ({ isMobile }: { isMobile: boolean }) => {
         quality={100}
         className="rounded-full mx-auto"
         placeholder="blur"
+        loading="eager"
         priority
       />
     </div>
