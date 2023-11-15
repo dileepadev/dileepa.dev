@@ -96,6 +96,14 @@ To get a copy of this project up and running on your local machine, follow these
 
 6. You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+7. Create `.env.local` file to save environment variables. This project uses `RESEND_API_KEY` variable for [Resend](https://resend.com/) API.
+
+   This is how the `.env.local` file should look like:
+
+   ```env
+   RESEND_API_KEY=YOUR-API-KEY-HERE
+   ```
+
 ## 📘 Learn More About Next.js
 
 To learn more about Next.js, take a look at the following resources:
@@ -111,14 +119,38 @@ To learn more about Next.js, take a look at the following resources:
 
 ## 🍃 Branches
 
-- `main` - The source code for the latest stable and production-ready release of the website.
-- `dev` - New features and bug fixes that are being worked on but not yet ready for production.
-- `feature/*` - Branches used to develop new features.
-- `bugfix/*` - Branches used to fix bugs.
-- `release/*` - Branches used to prepare for new releases.
-  - `release/previous` - The latest previous stable release of the website.
-  - `release/v*.*.*` - The latest release of the website with version number `*.*.*`.
-  - `release/v1.0.0` - The first stable release of the website with version number `1.0.0`.
+- Branches are an important part of this project. They are used to develop new features, fix bugs, and make changes to the source code. The following branches are used in this project:
+
+  - `main` - The source code for the latest stable and production-ready release of the website.
+  - `dev` - New features and bug fixes that are being worked on but not yet ready for production. Only for preview upcoming changes.
+  - `feat/*` - Branches used to develop new features.
+  - `fix/*` - Branches used to fix bugs.
+  - ... and more.
+
+- Check out the [branch naming guidelines](BRANCH_NAMING_GUIDELINES.md) for more information.
+
+## 🕹️ Versioning
+
+- This project uses [Semantic Versioning](https://semver.org/) for versioning.
+- Each release is documented in the [CHANGELOG.md](CHANGELOG.md) file.
+- Visit the [releases](https://github.com/dileepabandara/dileepabandara.dev/releases) page to see the all releases.
+- Visit the [tags](https://github.com/dileepabandara/dileepabandara.dev/tags) page to see the all tags.
+- Each release is in the format of `v*.*.*`, where `*` is a number and `v` is a prefix for the tag.
+- Version numbers are incremented according to the `X.Y.Z` format.
+  - `MAJOR`: X is incremented for incompatible API changes.
+  - `MINOR`: Y is incremented for new functionality in a backwards-compatible manner.
+  - `PATCH`: Z is incremented for backwards-compatible bug fixes.
+
+**Example:**
+
+| Version | Description                                   |
+| ------- | --------------------------------------------- |
+| 0.1.0   | Early stage of development                    |
+| 1.0.0   | Initial release                               |
+| 1.1.0   | New contact form added (backwards-compatible) |
+| 1.1.1   | Fixed typo on homepage (backwards-compatible) |
+| 1.2.0   | Added new blog section (backwards-compatible) |
+| 2.0.0   | Rebrand with new theme (incompatible)         |
 
 ## 🕹️ Versioning
 

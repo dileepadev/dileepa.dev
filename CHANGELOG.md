@@ -6,7 +6,7 @@ All notable changes to this project are documented in this file.
 
 - **No changes yet.**
 
-## [1.0.0] - 2023-11-14
+## [1.0.0] - 2023-11-15
 
 - **Added (New features):**
 
@@ -25,6 +25,8 @@ All notable changes to this project are documented in this file.
   - Custom theme data at `globals.css`
   - Custom components (e.g., `ItemCards.ts`)
   - Interfaces for types (`interfaces.ts`)
+  - Pull request guidelines (`PULL_REQUEST_GUIDELINES.md`)
+  - Branch naming guidelines (`BRANCH_NAMING_GUIDELINES.md`)
 
 - **Changed (Improvements):**
 
