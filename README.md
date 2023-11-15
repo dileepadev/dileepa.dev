@@ -152,6 +152,29 @@ To learn more about Next.js, take a look at the following resources:
 | 1.2.0   | Added new blog section (backwards-compatible) |
 | 2.0.0   | Rebrand with new theme (incompatible)         |
 
+## 🕹️ Versioning
+
+- This project uses [Semantic Versioning](https://semver.org/) for versioning.
+- Each release is documented in the [CHANGELOG.md](CHANGELOG.md) file.
+- Visit the [releases](https://github.com/dileepabandara/dileepabandara.dev/releases) page to see the all releases.
+- Visit the [tags](https://github.com/dileepabandara/dileepabandara.dev/tags) page to see the all tags.
+- Each release is in the format of `v*.*.*`, where `*` is a number and `v` is a prefix for the tag.
+- Version numbers are incremented according to the `X.Y.Z` format.
+  - `MAJOR`: X is incremented for incompatible API changes.
+  - `MINOR`: Y is incremented for new functionality in a backwards-compatible manner.
+  - `PATCH`: Z is incremented for backwards-compatible bug fixes.
+
+**Example:**
+
+| Version | Description                                   |
+| ------- | --------------------------------------------- |
+| 0.1.0   | Early stage of development                    |
+| 1.0.0   | Initial release                               |
+| 1.1.0   | New contact form added (backwards-compatible) |
+| 1.1.1   | Fixed typo on homepage (backwards-compatible) |
+| 1.2.0   | Added new blog section (backwards-compatible) |
+| 2.0.0   | Rebrand with new theme (incompatible)         |
+
 ## 🖼️ Icons and Images
 
 Icons used in this website are from [React Icons](https://react-icons.github.io/react-icons) and [Heroicons](https://heroicons.com/).
