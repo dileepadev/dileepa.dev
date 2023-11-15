@@ -7,29 +7,33 @@ Thank you for your interest in contributing to dileepabandara.dev! We welcome an
 1. Fork this repository to your GitHub account. This will create a copy of this repository in your account. You can make changes to this copy without affecting the original repository.
    - For fork this repository, click the **Fork** button in the top right corner of this page or click [here](https://github.com/dileepabandara/dileepabandara.dev/fork).
 2. Clone your forked repository to your local machine.
+
    - Use the following command to clone your forked repository to your local machine.
-  
+
      ```bash
      git clone https://github.com/dileepabandara/dileepabandara.dev.git
      ```
 
 3. Create a new branch for your changes.
-   - For example, to create a new branch named `your-branch-name`, use the following command.
-  
+
+   - For example, to create a new branch named `your-branch-name`, use the following command and make sure to follow the [branch naming guidelines](BRANCH_NAMING_GUIDELINES.md).
+
      ```bash
      git checkout -b your-branch-name
      ```
 
 4. Make your changes and commit them with a descriptive commit message.
+
    - For example, to commit your changes, use the following command and make sure to follow the [commit message guidelines](COMMIT_MESSAGE_GUIDELINES.md).
-  
+
      ```bash
      git commit -m "feat: add a new feature"
      ```
 
 5. Push your changes to your forked repository.
+
    - For example, to push your changes to your forked repository, use the following command.
-  
+
      ```bash
      git push origin your-branch-name
      ```
@@ -38,7 +42,7 @@ Thank you for your interest in contributing to dileepabandara.dev! We welcome an
    - For example, to create a pull request, use the following steps.
      1. Go to your forked repository.
      2. Click the **Compare & pull request** button next to your `your-branch-name` branch.
-     3. Add a title and description for your pull request.
+     3. Add a title and description for your pull request. **Make sure to follow** the [pull request guidelines](PULL_REQUEST_GUIDELINES.md).
      4. Click **Create pull request** and remember to add the relevant labels with using the [pull request template](.github/PULL_REQUEST_TEMPLATE.md).
 
 ## Guidelines
@@ -54,10 +58,13 @@ Thank you for your interest in contributing to dileepabandara.dev! We welcome an
   - [documentation_update.md](.github/ISSUE_TEMPLATE/documentation_update.md) - Use this template to propose a change to the documentation.
   - [custom.md](.github/ISSUE_TEMPLATE/custom.md) - Use this template to submit a custom issue.
   - [PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md) - Use this template to submit a pull request.
+  - [BRANCH_NAMING_GUIDELINES.md](BRANCH_NAMING_GUIDELINES.md) - Read this file to learn about the branch naming guidelines.
+  - [CHANGELOG.md](CHANGELOG.md) - Read this file to learn about the changelog.
   - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - Read this file to learn about the code of conduct.
   - [COMMIT_MESSAGE_GUIDELINES.md](COMMIT_MESSAGE_GUIDELINES.md) - Read this file to learn about the commit message guidelines.
   - [CONTRIBUTING.md](CONTRIBUTING.md) - Read this file to learn about the contributing guidelines.
   - [LICENSE](LICENSE) - Read this file to learn about the license.
+  - [PULL_REQUEST_GUIDELINES.md](PULL_REQUEST_GUIDELINES.md) - Read this file to learn about the pull request guidelines.
   - [README.md](README.md) - Read this file to learn about the project.
   - [SECURITY.md](SECURITY.md) - Read this file to learn about the security policy.
 

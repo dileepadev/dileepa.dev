@@ -96,6 +96,14 @@ To get a copy of this project up and running on your local machine, follow these
 
 6. You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+7. Create `.env.local` file to save environment variables. This project uses `RESEND_API_KEY` variable for [Resend](https://resend.com/) API.
+
+   This is how the `.env.local` file should look like:
+
+   ```env
+   RESEND_API_KEY=YOUR-API-KEY-HERE
+   ```
+
 ## 📘 Learn More About Next.js
 
 To learn more about Next.js, take a look at the following resources:
@@ -111,14 +119,15 @@ To learn more about Next.js, take a look at the following resources:
 
 ## 🍃 Branches
 
-- `main` - The source code for the latest stable and production-ready release of the website.
-- `dev` - New features and bug fixes that are being worked on but not yet ready for production.
-- `feature/*` - Branches used to develop new features.
-- `bugfix/*` - Branches used to fix bugs.
-- `release/*` - Branches used to prepare for new releases.
-  - `release/previous` - The latest previous stable release of the website.
-  - `release/v*.*.*` - The latest release of the website with version number `*.*.*`.
-  - `release/v1.0.0` - The first stable release of the website with version number `1.0.0`.
+- Branches are an important part of this project. They are used to develop new features, fix bugs, and make changes to the source code. The following branches are used in this project:
+
+  - `main` - The source code for the latest stable and production-ready release of the website.
+  - `dev` - New features and bug fixes that are being worked on but not yet ready for production. Only for preview upcoming changes.
+  - `feat/*` - Branches used to develop new features.
+  - `fix/*` - Branches used to fix bugs.
+  - ... and more.
+
+- Check out the [branch naming guidelines](BRANCH_NAMING_GUIDELINES.md) for more information.
 
 ## 🕹️ Versioning
 
