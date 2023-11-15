@@ -4,8 +4,7 @@ import textData from "@/constants/textData";
 import { useState } from "react";
 import { validateForm, sendEmail } from "@/utils/formUtils";
 import { FormData } from "@/types/interfaces";
-
-// export function ContactForm() {}
+import { ToastComponent } from "@/components/toast";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -32,8 +31,8 @@ const ContactForm = () => {
     setErrors(formErrors);
 
     if (Object.keys(formErrors).length === 0) {
-      await sendEmail(formData);
       setIsSubmitted(true);
+      await sendEmail(formData);
     } else {
       console.log("Form validation failed. Please check the errors.");
     }
@@ -119,13 +118,8 @@ const ContactForm = () => {
         >
           Submit
         </button>
-        {isSubmitted && (
-          <ItemCards.statusCard
-            status={textData.connectPageData.submitStatus}
-            message={textData.connectPageData.submitMessage}
-          />
-        )}
       </form>
+      {isSubmitted && <ToastComponent />}
     </div>
   );
 };

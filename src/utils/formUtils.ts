@@ -1,4 +1,6 @@
 import { FormData } from "@/types/interfaces";
+import { toastStatus } from "@/components/toast";
+import { toast } from "react-toastify";
 
 export const validateForm = (formData: FormData): Partial<FormData> => {
   const errors: Partial<FormData> = {};
@@ -26,8 +28,10 @@ export const validateForm = (formData: FormData): Partial<FormData> => {
 };
 
 export const sendEmail = async (formData: FormData): Promise<void> => {
-  console.log("Sending email:", formData);
+  const toastId = toast.loading("Sending message...");
+  console.log("Sending message:", formData);
   console.log(JSON.stringify(formData));
+
   await fetch("/api/email", {
     method: "POST",
     headers: {
@@ -37,13 +41,20 @@ export const sendEmail = async (formData: FormData): Promise<void> => {
   })
     .then((res) => {
       if (res.status === 200) {
-        console.log("Email sent successfully");
+        toastStatus({ success: true, log: "Message sent!", toastId: toastId });
       } else {
-        console.log("Failed to send email");
+        toastStatus({
+          success: false,
+          log: "Failed to send message!",
+          toastId: toastId,
+        });
       }
     })
     .catch((err) => {
-      console.log("Failed to send email");
-      console.log(err);
+      toastStatus({
+        success: false,
+        log: "Failed to send message! Reason: " + err,
+        toastId: toastId,
+      });
     });
 };

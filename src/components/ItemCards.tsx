@@ -185,33 +185,33 @@ const connectChannelCard = ({ listItems }: { listItems: any }) => {
   );
 };
 
-const statusCard = ({
-  status,
-  message,
-}: {
-  status: string;
-  message: string;
-}) => {
-  return (
-    <div className="text-center py-4 lg:px-4">
-      <div className="p-2 rounded-xl bg-green-800 bg-opacity-40 backdrop-blur items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex">
-        <span className="px-2 py-1 mr-3 flex rounded-full bg-green-600 bg-opacity-40 uppercase text-xs font-semibold">
-          {status}
-        </span>
-        <span className="mr-2 text-sm font-normal text-left flex-auto">
-          {message}
-        </span>
-      </div>
-    </div>
-  );
-};
+// const statusCard = ({
+//   status,
+//   message,
+// }: {
+//   status: string;
+//   message: string;
+// }) => {
+//   return (
+//     <div className="text-center py-4 lg:px-4">
+//       <div className="p-2 rounded-xl bg-green-800 bg-opacity-40 backdrop-blur items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex">
+//         <span className="px-2 py-1 mr-3 flex rounded-full bg-green-600 bg-opacity-40 uppercase text-xs font-semibold">
+//           {status}
+//         </span>
+//         <span className="mr-2 text-sm font-normal text-left flex-auto">
+//           {message}
+//         </span>
+//       </div>
+//     </div>
+//   );
+// };
 
 const ItemCards = {
   tileCard,
   iconCard,
   bannerCard,
   connectChannelCard,
-  statusCard,
+  // statusCard,
 };
 
 export default ItemCards;
