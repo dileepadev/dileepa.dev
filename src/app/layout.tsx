@@ -1,17 +1,14 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import NavBar from "@/components/NavBar";
-import SiteInfo from "@/config/siteInfo";
 import MainFont from "@/constants/fontStyle";
 import Footer from "@/components/Footer";
 import { ThemeSwitcher } from "@/components/theme/ThemeSwitcher";
 import { ThemeProvider } from "@/components/theme/themeProvider";
+import { Metadata } from "next";
+import metadataJSON from "@/config/metaData";
 
-export const metadata: Metadata = {
-  title: SiteInfo.username,
-  description: SiteInfo.description,
-};
+export const metadata: Metadata = metadataJSON;
 
 export default function RootLayout({
   children,
