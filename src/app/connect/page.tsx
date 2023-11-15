@@ -45,7 +45,7 @@ const ContactForm = () => {
     <div className="w-full">
       <form onSubmit={handleSubmit} className="flex flex-col">
         <div className="flex flex-col">
-          <label htmlFor="name" className="text-md font-semibold textTheme">
+          <label htmlFor="name" className="text-md font-medium textTheme">
             Name
           </label>
           <input
@@ -62,7 +62,7 @@ const ContactForm = () => {
           )}
         </div>
         <div className="flex flex-col mt-5">
-          <label htmlFor="email" className="text-md font-semibold textTheme">
+          <label htmlFor="email" className="text-md font-medium textTheme">
             Email
           </label>
           <input
@@ -79,7 +79,7 @@ const ContactForm = () => {
           )}
         </div>
         <div className="flex flex-col mt-5">
-          <label htmlFor="subject" className="text-md font-semibold textTheme">
+          <label htmlFor="subject" className="text-md font-medium textTheme">
             Subject
           </label>
           <input
@@ -96,7 +96,7 @@ const ContactForm = () => {
           )}
         </div>
         <div className="flex flex-col mt-5">
-          <label htmlFor="message" className="text-md font-semibold textTheme">
+          <label htmlFor="message" className="text-md font-medium textTheme">
             Message
           </label>
           <textarea
