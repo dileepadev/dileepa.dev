@@ -2,26 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Custom Theme */
+
+.bodyTheme {
+  @apply bg-slate-50 dark:bg-black;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.textTheme {
+  @apply text-neutral-900 dark:text-neutral-100;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.textSecondaryTheme {
+  @apply text-neutral-500 dark:text-neutral-400;
+}
+
+.textButtonTheme {
+  @apply text-neutral-900 dark:text-neutral-400 hover:text-neutral-400 dark:hover:text-neutral-100 cursor-pointer;
+}
+
+.textButtonSecondaryTheme {
+  @apply text-neutral-900 dark:text-neutral-100 hover:text-neutral-400 dark:hover:text-neutral-400 cursor-pointer;
+}
+
+.pageTitleTheme {
+  @apply text-3xl font-semibold text-center text-neutral-900 dark:text-neutral-100;
+}
+
+.pageSubtitleTheme {
+  @apply text-lg font-semibold text-start text-neutral-900 dark:text-neutral-100;
+}
+
+.navBarTheme {
+  @apply bg-slate-50 dark:bg-black outline-neutral-200 dark:outline-neutral-900;
+}
+
+.cardTheme {
+  @apply bg-neutral-200 dark:bg-neutral-900  ring-2 ring-neutral-200 dark:ring-neutral-900 hover:ring-neutral-300 dark:hover:ring-neutral-800 transition duration-300 ease-in-out;
+}
+
+.cardDarkerTheme {
+  @apply bg-neutral-100 dark:bg-neutral-950 ring-2 ring-neutral-200 dark:ring-neutral-900;
+}
+
+.cardDarkerButtonTheme {
+  @apply bg-neutral-100 dark:bg-neutral-950 ring-2 ring-neutral-200 dark:ring-neutral-900 hover:ring-neutral-300 dark:hover:ring-neutral-800 transition duration-300 ease-in-out;
+}
+
+.borderTheme {
+  @apply border border-neutral-500 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-700;
+}
+
+.errorTheme {
+  @apply text-red-500;
+}
+
+.buttonTheme {
+  @apply bg-neutral-200 dark:bg-neutral-900 hover:bg-neutral-300 dark:hover:bg-neutral-800 text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100;
+}
+
+.footerTheme {
+  @apply bg-slate-50 dark:bg-black dark:outline-neutral-900 outline-neutral-200;
+}
+
+.transitionButtonTheme {
+  @apply transition duration-300 ease-in-out;
+}
+
+.dbg {
+  @apply bg-red-800;
+}
+
+/* Scrollbar Style */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #242424;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5c5c5c;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a2a2a2;
 }

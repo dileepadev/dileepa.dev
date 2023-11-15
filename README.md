@@ -1,6 +1,6 @@
 # 🌐 Dileepa Bandara - Personal Website
 
-Welcome to my personal website project, hosted at [dileepabandara-dev.vercel.app](https://dileepabandara-dev.vercel.app/). This website is designed to showcase my portfolio, share information about me, and provide a platform for sharing my thoughts and experiences.
+Welcome to my personal website project, hosted at [dileepabandara.dev](https://dileepabandara.dev/). This website is designed to showcase my portfolio, share information about me, and provide a platform for sharing my thoughts and experiences.
 
 ## 📚 Table of Contents
 
@@ -15,6 +15,7 @@ Welcome to my personal website project, hosted at [dileepabandara-dev.vercel.app
   - [📘 Learn More About Next.js](#-learn-more-about-nextjs)
   - [🚀 Deployment](#-deployment)
   - [🍃 Branches](#-branches)
+  - [🕹️ Versioning](#️-versioning)
   - [🖼️ Icons and Images](#️-icons-and-images)
   - [📜 License](#-license)
   - [💬 Contact](#-contact)
@@ -23,14 +24,14 @@ Welcome to my personal website project, hosted at [dileepabandara-dev.vercel.app
 
 ## 📸 Captured Media
 
-![Screenshot of dileepabandara.dev](https://gh.dileepabandara.dev/public-images/projects/dileepabandara-dev-coming-soon.png)
+![Screenshot of dileepabandara.dev](https://gh.dileepabandara.dev/public-images/projects/dileepabandara.dev/1.0.0.png)
 
 ## 🌟 Features
 
-- **`About`**: Get to know me, my background, and my professional journey.
+- **`About`**: Get to know my background, goals, and interests.
 - **`Education`**: Discover my academic qualifications and institutions.
-- **`Experience`**: Explore my work history and professional experiences.
-- **`Media`**: Access my blog and vlog for articles, tutorials, and videos on various topics.
+- **`Experience`**: Explore my professional work and volunteer experience.
+- **`Media`**: Check out my latest articles, videos, and other content.
 - **`Connect`**: Connect with me through social media and other communication channels.
 
 ## 🛠️ Technologies
@@ -45,6 +46,7 @@ This website is built using the following technologies:
 - [Next.js](https://nextjs.org/) - React framework for building static and server-side rendered websites.
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework for rapidly building custom designs.
 - [Node.js](https://nodejs.org/) - JavaScript runtime built on Chrome's V8 JavaScript engine.
+- [Resend](https://resend.com/) - Platform to build, test, and deliver transactional emails.
 
 ## 📌 Getting Started
 
@@ -104,7 +106,8 @@ To learn more about Next.js, take a look at the following resources:
 ## 🚀 Deployment
 
 - This website is hosted on [Vercel](https://vercel.com/), a cloud platform for static sites and Serverless Functions.
-- Any changes pushed to the `main` branch will be automatically deployed to [dileepabandara-dev.vercel.app](https://dileepabandara-dev.vercel.app/).
+- Any changes pushed to the `main` branch will be automatically deployed to [dileepabandara.dev](https://dileepabandara.dev/).
+- Any changes pushed to the `dev` branch will be automatically deployed to [preview.dileepabandara.dev](https://preview.dileepabandara.dev/).
 
 ## 🍃 Branches
 
@@ -116,6 +119,29 @@ To learn more about Next.js, take a look at the following resources:
   - `release/previous` - The latest previous stable release of the website.
   - `release/v*.*.*` - The latest release of the website with version number `*.*.*`.
   - `release/v1.0.0` - The first stable release of the website with version number `1.0.0`.
+
+## 🕹️ Versioning
+
+- This project uses [Semantic Versioning](https://semver.org/) for versioning.
+- Each release is documented in the [CHANGELOG.md](CHANGELOG.md) file.
+- Visit the [releases](https://github.com/dileepabandara/dileepabandara.dev/releases) page to see the all releases.
+- Visit the [tags](https://github.com/dileepabandara/dileepabandara.dev/tags) page to see the all tags.
+- Each release is in the format of `v*.*.*`, where `*` is a number and `v` is a prefix for the tag.
+- Version numbers are incremented according to the `X.Y.Z` format.
+  - `MAJOR`: X is incremented for incompatible API changes.
+  - `MINOR`: Y is incremented for new functionality in a backwards-compatible manner.
+  - `PATCH`: Z is incremented for backwards-compatible bug fixes.
+
+**Example:**
+
+| Version | Description                                   |
+| ------- | --------------------------------------------- |
+| 0.1.0   | Early stage of development                    |
+| 1.0.0   | Initial release                               |
+| 1.1.0   | New contact form added (backwards-compatible) |
+| 1.1.1   | Fixed typo on homepage (backwards-compatible) |
+| 1.2.0   | Added new blog section (backwards-compatible) |
+| 2.0.0   | Rebrand with new theme (incompatible)         |
 
 ## 🖼️ Icons and Images
 
