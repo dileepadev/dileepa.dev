@@ -6,6 +6,12 @@ All notable changes to this project are documented in this file.
 
 - **No changes yet.**
 
+## [1.0.1] - 2023-11-24
+
+- **Fixed (Bugs):**
+
+  - Link cards to a new username
+
 ## [1.0.0] - 2023-11-15
 
 - **Added (New features):**
@@ -54,6 +60,10 @@ All notable changes to this project are documented in this file.
 <!-- Unreleased -->
 
 [Unreleased]: https://github.com/dileepabandara/dileepabandara.dev/tree/dev
+
+<!-- 1.0.1 -->
+
+[1.0.1]: https://github.com/dileepabandara/dileepabandara.dev/compare/v1.0.0...v1.0.1
 
 <!-- 1.0.0 -->
 
