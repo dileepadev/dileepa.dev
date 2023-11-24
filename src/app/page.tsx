@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import SiteInfo from "@/config/siteInfo";
-import profilePicture from "../../public/profile_picture.jpg";
+import profilePicture from "../../public/profile.webp";
 
 const Title = () => {
   return (

@@ -10,7 +10,9 @@ const Footer = () => {
         <p className="text-sm textTheme">
           © 2023 Dileepa Bandara. All rights reserved.
         </p>
-        <p className="text-sm textTheme">Version 1.0.0 | Built with Next.js</p>
+        <p className="text-sm textTheme">
+          Version 1.0.1 | Built with Next.js 13.5.4
+        </p>
         <Link
           href={WebLinks.githubRepo}
           target="_blank"

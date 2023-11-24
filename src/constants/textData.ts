@@ -1,4 +1,5 @@
 import WebLinks from "@/constants/links";
+import { PageLinks } from "@/constants/links";
 import {
   AboutPageData,
   EducationPageData,
@@ -59,7 +60,7 @@ const educationPageData: EducationPageData = {
       years: "2021 - 2024",
       status: "Ongoing",
       image: "coventry",
-      link: "https://www.coventry.ac.uk/",
+      link: PageLinks.education.coventry,
     },
     {
       course: "Higher National Diploma in Software Engineering",
@@ -68,7 +69,7 @@ const educationPageData: EducationPageData = {
       years: "2020 - 2021",
       status: "4.0 GPA",
       image: "nibm",
-      link: "https://www.nibm.lk/",
+      link: PageLinks.education.nibm,
     },
     {
       course: "Diploma in Computer System Design",
@@ -77,16 +78,16 @@ const educationPageData: EducationPageData = {
       years: "2019 - 2020",
       status: "3.75 GPA",
       image: "nibm",
-      link: "https://www.nibm.lk/",
+      link: PageLinks.education.nibm,
     },
     {
       course: "Primary and Secondary Education",
-      institute: "Maliyadeva Model College",
+      institute: "Maliyadeva Model School",
       country: "Sri Lanka",
       years: "2003 - 2016",
       status: "GCE Advanced Level (Maths)",
-      image: "mmc",
-      link: "",
+      image: "mms",
+      link: PageLinks.education.mms,
     },
   ],
 };
@@ -98,24 +99,24 @@ const experiencePageData: ExperiencePageData = {
 
   work: [
     {
-      title: "Solution Developer (Freelance)",
+      title: "Freelance Solutions Developer",
       org: "Early Wings Dev",
       country: "Sri Lanka",
       years: "Jun 2019 - Present",
       status:
         "Software Development (Mobile, Desktop, Web, API), UI UX Designing, Tech Support Assistant & Data Analysis",
       image: "ewd",
-      link: "https://lk.linkedin.com/company/early-wings-dev/",
+      link: PageLinks.experience.ewd,
     },
     {
-      title: "Trainee Software Developer (Flutter)",
+      title: "Trainee Mobile App Developer",
       org: "DDS Techvira",
       country: "Sri Lanka",
       years: "May 2021 - Nov 2021",
       status:
         "Android, Flutter, Dart, Firebase, Git, REST API, JSON Parsing, Android Studio, VS Code, App Releasing & UI UX Designing",
       image: "ddst",
-      link: "https://ddstechvira.com/",
+      link: PageLinks.experience.ddst,
     },
   ],
 
@@ -127,7 +128,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Oct 2022 - Present",
       status: "",
       image: "nibmcs",
-      link: "https://nibmcs.org/",
+      link: PageLinks.experience.nibmcs,
     },
     {
       title: "Club Lead",
@@ -136,7 +137,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Oct 2022 - Present",
       status: "",
       image: "nibmfossc",
-      link: "https://fossc.nibmcs.org/",
+      link: PageLinks.experience.nibmfossc,
     },
     {
       title: "Microsoft Learn Student Ambassador",
@@ -145,7 +146,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Oct 2022 - Present",
       status: "",
       image: "msft",
-      link: "https://mvp.microsoft.com/studentambassadors/",
+      link: PageLinks.experience.mlsa,
     },
     {
       title: "Member",
@@ -154,7 +155,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Jan 2023 - Present",
       status: "",
       image: "mlsa",
-      link: "https://lk.linkedin.com/company/mlsasrilanka/",
+      link: PageLinks.experience.mlsaLK,
     },
     {
       title: "Volunteer",
@@ -163,7 +164,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Oct 2022 - Present",
       status: "",
       image: "gdglk",
-      link: "https://gdgsrilanka.org/",
+      link: PageLinks.experience.gdgLK,
     },
     {
       title: "Volunteer",
@@ -172,7 +173,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Oct 2023 - Present",
       status: "",
       image: "fosslk",
-      link: "https://foss.lk/",
+      link: PageLinks.experience.fossLK,
     },
   ],
 };
@@ -188,17 +189,17 @@ const mediaPageData: MediaPageData = {
       years: "Nov 2023 - Present",
       status: "",
       image: "youtube",
-      link: "https://youtube.com/@dileepabandara/",
-      handler: "@dileepabandara",
+      link: PageLinks.media.youtube,
+      handler: "@dileepadev",
     },
     {
       title: "Dileepa Bandara",
       org: "Hashnode",
-      years: "Sep 2022 - Present",
+      years: "Nov 2023 - Present",
       status: "",
       image: "hashnode",
-      link: "https://hashnode.com/@dileepabandara/",
-      handler: "@dileepabandara",
+      link: PageLinks.media.hashnode,
+      handler: "@dileepadev",
     },
   ],
 };
@@ -221,31 +222,31 @@ const connectPageData: ConnectPageData = {
     {
       title: "GitHub",
       link: WebLinks.github,
-      handler: "dileepabandara",
+      handler: "dileepadev",
       icon: "github",
     },
     {
       title: "LinkedIn",
       link: WebLinks.linkedin,
-      handler: "in/dileepabandara",
+      handler: "in/dileepadev",
       icon: "linkedin",
     },
     {
       title: "X (Twitter)",
       link: WebLinks.xtwitter,
-      handler: "_dileepabandara",
+      handler: "dileepadev",
       icon: "xtwitter",
     },
     {
       title: "YouTube",
       link: WebLinks.youtube,
-      handler: "@dileepabandara",
+      handler: "@dileepadev",
       icon: "youtube",
     },
     {
       title: "Instagram",
       link: WebLinks.instagram,
-      handler: "_dileepabandara",
+      handler: "dileepadev",
       icon: "instagram",
     },
   ],

@@ -57,15 +57,19 @@ const iconCard = ({ listItems, page }: { listItems: any; page: string }) => {
   return (
     <div className="mt-10 grid grid-cols-1 md:grid-cols-2 sm:grid-row-2 gap-4 md:gap-6">
       {listItems.map((item: any, index: any) => (
-        <div
-          className="p-5 flex flex-row rounded-xl cardDarkerTheme"
+        <Link
+          href={item.link}
+          aria-label={`Link to ${item.title}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="textButtonTheme transitionButtonTheme"
           key={index}
         >
-          <div className="flex flex-shrink-0">
-            <Link
-              href={item.link}
-              aria-label={`Link to the ${item.institute} website`}
-            >
+          <div
+            className="p-5 flex flex-row rounded-xl cardDarkerButtonTheme"
+            key={index}
+          >
+            <div className="flex flex-shrink-0">
               <Image
                 src={`/svg/${item.image}.svg`}
                 alt={`Image of the ${item.institute}`}
@@ -73,34 +77,34 @@ const iconCard = ({ listItems, page }: { listItems: any; page: string }) => {
                 height={100}
                 priority
               />
-            </Link>
+            </div>
+            <div className="ml-5 flex-flex-col">
+              <p className="text-md font-semibold textTheme">
+                {page === "Education"
+                  ? item.course
+                  : page === "Experience" || page === "Media"
+                  ? item.title
+                  : ""}
+              </p>
+              <p className="pt-2 text-sm font-normal text-start textSecondaryTheme">
+                {page === "Education"
+                  ? item.institute
+                  : page === "Experience" || page === "Media"
+                  ? item.org
+                  : ""}
+              </p>
+              <p className="pt-1 text-sm font-normal text-start textSecondaryTheme">
+                {page === "Media" ? item.handler : item.country}
+              </p>
+              <p className="pt-1 text-sm font-normal text-start textSecondaryTheme">
+                {item.years}
+              </p>
+              <p className="pt-1 text-sm font-normal text-start textSecondaryTheme">
+                {item.status}
+              </p>
+            </div>
           </div>
-          <div className="ml-5 flex-flex-col">
-            <p className="text-md font-semibold textTheme">
-              {page === "Education"
-                ? item.course
-                : page === "Experience" || page === "Media"
-                ? item.title
-                : ""}
-            </p>
-            <p className="pt-2 text-sm font-normal text-start textSecondaryTheme">
-              {page === "Education"
-                ? item.institute
-                : page === "Experience" || page === "Media"
-                ? item.org
-                : ""}
-            </p>
-            <p className="pt-1 text-sm font-normal text-start textSecondaryTheme">
-              {page === "Media" ? item.handler : item.country}
-            </p>
-            <p className="pt-1 text-sm font-normal text-start textSecondaryTheme">
-              {item.years}
-            </p>
-            <p className="pt-1 text-sm font-normal text-start textSecondaryTheme">
-              {item.status}
-            </p>
-          </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
