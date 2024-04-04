@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import NavBar from "@/components/NavBar";
-import MainFont from "@/constants/fontStyle";
+import mainFont from "@/constants/fontStyle";
 import Footer from "@/components/Footer";
 import { ThemeSwitcher } from "@/components/theme/ThemeSwitcher";
 import { ThemeProvider } from "@/components/theme/themeProvider";
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${MainFont.className} bodyTheme`}>
+      <body className={`${mainFont.className} bodyTheme`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
