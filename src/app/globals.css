@@ -36,6 +36,39 @@
   @apply bg-slate-50 dark:bg-black outline-neutral-200 dark:outline-neutral-900;
 }
 
+.selectedNavItem {
+  @apply text-neutral-900 dark:text-neutral-100;
+}
+
+.navBarSelectedItem {
+  position: relative;
+}
+
+.navBarSelectedItem::after {
+  content: "•";
+  position: absolute;
+  /* top: -90%; */
+  top: 85%;
+  left: 50%;
+  font-size: 10px;
+  transform: translateX(-50%);
+  @apply text-neutral-900 dark:text-neutral-100;
+}
+
+.navBarSelectedItemMobile {
+  position: relative;
+}
+
+.navBarSelectedItemMobile::after {
+  content: "•";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 5px);
+  font-size: 10px;
+  transform: translateY(-50%);
+  @apply text-neutral-900 dark:text-neutral-100;
+}
+
 .cardTheme {
   @apply bg-neutral-200 dark:bg-neutral-900  ring-2 ring-neutral-200 dark:ring-neutral-900 hover:ring-neutral-300 dark:hover:ring-neutral-800 transition duration-300 ease-in-out;
 }

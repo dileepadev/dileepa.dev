@@ -177,6 +177,7 @@ const experiencePageData: ExperiencePageData = {
     },
   ],
 };
+
 const mediaPageData: MediaPageData = {
   title: "Media",
 
@@ -203,6 +204,7 @@ const mediaPageData: MediaPageData = {
     },
   ],
 };
+
 const connectPageData: ConnectPageData = {
   title: "Connect",
 
