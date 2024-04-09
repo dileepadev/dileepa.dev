@@ -1,6 +1,6 @@
 # 🌐 Dileepa Bandara - Personal Website
 
-Welcome to my personal website project, hosted at [dileepabandara.dev](https://dileepabandara.dev/). This website is designed to showcase my portfolio, share information about me, and provide a platform for sharing my thoughts and experiences.
+Welcome to my personal website project, hosted at [dileepa.dev](https://dileepa.dev/). This website is designed to showcase my portfolio, share information about me, and provide a platform for sharing my thoughts and experiences.
 
 ## 📚 Table of Contents
 
@@ -24,7 +24,7 @@ Welcome to my personal website project, hosted at [dileepabandara.dev](https://d
 
 ## 📸 Captured Media
 
-![Screenshot of dileepabandara.dev](https://gh.dileepabandara.dev/public-images/projects/dileepabandara.dev/1.0.0.png)
+![Screenshot of dileepa.dev](https://gh.dileepa.dev/public-images/projects/dileepa.dev/1.0.0.png)
 
 ## 🌟 Features
 
@@ -62,7 +62,7 @@ To get a copy of this project up and running on your local machine, follow these
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/dileepabandara/dileepabandara.dev.git
+   git clone https://github.com/dileepadev/dileepa.dev.git
    ```
 
 2. Navigate to the project directory:
@@ -114,8 +114,8 @@ To learn more about Next.js, take a look at the following resources:
 ## 🚀 Deployment
 
 - This website is hosted on [Vercel](https://vercel.com/), a cloud platform for static sites and Serverless Functions.
-- Any changes pushed to the `main` branch will be automatically deployed to [dileepabandara.dev](https://dileepabandara.dev/).
-- Any changes pushed to the `dev` branch will be automatically deployed to [preview.dileepabandara.dev](https://preview.dileepabandara.dev/).
+- Any changes pushed to the `main` branch will be automatically deployed to [dileepa.dev](https://dileepa.dev/).
+- Any changes pushed to the `dev` branch will be automatically deployed to [preview.dileepa.dev](https://preview.dileepa.dev/).
 
 ## 🍃 Branches
 
@@ -133,8 +133,8 @@ To learn more about Next.js, take a look at the following resources:
 
 - This project uses [Semantic Versioning](https://semver.org/) for versioning.
 - Each release is documented in the [CHANGELOG.md](CHANGELOG.md) file.
-- Visit the [releases](https://github.com/dileepabandara/dileepabandara.dev/releases) page to see the all releases.
-- Visit the [tags](https://github.com/dileepabandara/dileepabandara.dev/tags) page to see the all tags.
+- Visit the [releases](https://github.com/dileepadev/dileepa.dev/releases) page to see the all releases.
+- Visit the [tags](https://github.com/dileepadev/dileepa.dev/tags) page to see the all tags.
 - Each release is in the format of `v*.*.*`, where `*` is a number and `v` is a prefix for the tag.
 - Version numbers are incremented according to the `X.Y.Z` format.
   - `MAJOR`: X is incremented for incompatible API changes.
@@ -159,12 +159,12 @@ Icons used in this website are from [React Icons](https://react-icons.github.io/
 ## 📜 License
 
 This project is licensed under the MIT License.  
-MIT © [Dileepa Bandara](https://dileepabandara.dev)  
+MIT © [Dileepa Bandara](https://dileepa.dev)  
 See the license file here: [LICENSE](LICENSE)
 
 ## 💬 Contact
 
-If you have any questions or comments about this project, please feel free to reach out to me at [contact@dileepabandara.dev](mailto:contact@dileepabandara.dev).
+If you have any questions or comments about this project, please feel free to reach out to me at [contact@dileepa.dev](mailto:contact@dileepa.dev).
 
 ## 💙 Contributing
 

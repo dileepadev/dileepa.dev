@@ -3,7 +3,7 @@ name: 📝 Documentation Update
 about: Propose a change to the project documentation
 title: "📝 Docs: Enter a short description of the issue"
 labels: "documentation"
-assignees: "dileepabandara"
+assignees: "dileepadev"
 ---
 
 ## 📝 Documentation Update

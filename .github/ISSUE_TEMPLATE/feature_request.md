@@ -3,7 +3,7 @@ name: 🌱 Feature Request
 about: Suggest a feature for this project
 title: "🌱 Feature: Enter a short description of the issue"
 labels: "feature request"
-assignees: "dileepabandara"
+assignees: "dileepadev"
 ---
 
 ## 🌱 Feature Request

@@ -5,9 +5,9 @@ export default class WebLinks {
   public static readonly xtwitter: string = "https://twitter.com/dileepadev";
   public static readonly youtube: string = "https://youtube.com/@dileepadev";
   public static readonly instagram: string = "https://instagram.com/dileepadev";
-  public static readonly email: string = "contact@dileepabandara.dev";
+  public static readonly email: string = "contact@dileepa.dev";
   public static readonly githubRepo: string =
-    "https://github.com/dileepadev/dileepabandara.dev";
+    "https://github.com/dileepadev/dileepa.dev";
 }
 
 export const NavLinks = [

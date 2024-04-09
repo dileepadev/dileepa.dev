@@ -69,7 +69,7 @@ const ContactForm = () => {
             type="email"
             name="email"
             id="email"
-            placeholder="Enter your email here (e.g. contact@dileepabandara.dev)"
+            placeholder="Enter your email here (e.g. contact@dileepa.dev)"
             className={placeHolderTheme}
             value={formData.email}
             onChange={handleChange}

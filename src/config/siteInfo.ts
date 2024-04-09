@@ -4,8 +4,8 @@ export default class SiteInfo {
     "Computing Student | Solution Developer | Community Volunteer | Content Creator";
   public static readonly description: string =
     "Hi, everyone! I'm a Computing Student, Solution Developer, Community Volunteer and Content Creator.";
-  public static readonly email: string = "contact@dileepabandara.dev";
-  public static readonly domain: string = "dileepabandara.dev";
+  public static readonly email: string = "contact@dileepa.dev";
+  public static readonly domain: string = "dileepa.dev";
   public static readonly keywords: string =
     "Dileepa Bandara, Personal Website, Computing Student, Solution Developer, Community Volunteer, Content Creator, Sri Lanka";
 }

@@ -59,16 +59,16 @@ All notable changes to this project are documented in this file.
 
 <!-- Unreleased -->
 
-[Unreleased]: https://github.com/dileepabandara/dileepabandara.dev/tree/dev
+[Unreleased]: https://github.com/dileepadev/dileepa.dev/tree/dev
 
 <!-- 1.0.1 -->
 
-[1.0.1]: https://github.com/dileepabandara/dileepabandara.dev/compare/v1.0.0...v1.0.1
+[1.0.1]: https://github.com/dileepadev/dileepa.dev/compare/v1.0.0...v1.0.1
 
 <!-- 1.0.0 -->
 
-[1.0.0]: https://github.com/dileepabandara/dileepabandara.dev/compare/v0.1.0...v1.0.0
+[1.0.0]: https://github.com/dileepadev/dileepa.dev/compare/v0.1.0...v1.0.0
 
 <!-- 0.1.0 -->
 
-[0.1.0]: https://github.com/dileepabandara/dileepabandara.dev/releases/tag/v0.1.0
+[0.1.0]: https://github.com/dileepadev/dileepa.dev/releases/tag/v0.1.0

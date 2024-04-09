@@ -1,17 +1,17 @@
-# Contributing to dileepabandara.dev
+# Contributing to dileepa.dev
 
-Thank you for your interest in contributing to dileepabandara.dev! We welcome any contributions, including bug fixes, feature enhancements, documentation improvements, and other general improvements.
+Thank you for your interest in contributing to dileepa.dev! We welcome any contributions, including bug fixes, feature enhancements, documentation improvements, and other general improvements.
 
 ## Getting Started
 
 1. Fork this repository to your GitHub account. This will create a copy of this repository in your account. You can make changes to this copy without affecting the original repository.
-   - For fork this repository, click the **Fork** button in the top right corner of this page or click [here](https://github.com/dileepabandara/dileepabandara.dev/fork).
+   - For fork this repository, click the **Fork** button in the top right corner of this page or click [here](https://github.com/dileepadev/dileepa.dev/fork).
 2. Clone your forked repository to your local machine.
 
    - Use the following command to clone your forked repository to your local machine.
 
      ```bash
-     git clone https://github.com/dileepabandara/dileepabandara.dev.git
+     git clone https://github.com/dileepadev/dileepa.dev.git
      ```
 
 3. Create a new branch for your changes.
@@ -76,6 +76,6 @@ Read the full code of conduct [here](CODE_OF_CONDUCT.md).
 
 ## Contact
 
-If you have any questions, feel free to contact via [GitHub Discussions](https://github.com/dileepabandara/dileepabandara.dev/discussions).
+If you have any questions, feel free to contact via [GitHub Discussions](https://github.com/dileepadev/dileepa.dev/discussions).
 
-Or, you can contact me via email at <contact@dileepabandara.dev>.
+Or, you can contact me via email at <contact@dileepa.dev>.
