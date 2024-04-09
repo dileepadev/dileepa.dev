@@ -1,54 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
-import SiteInfo from "@/config/siteInfo";
 import profilePicture from "../../public/profile.webp";
 
-const Title = () => {
-  return (
-    <div className="flex flex-col items-center justify-center">
-      <p className="text-2xl md:text-3xl mb-4 font-semibold text-center textSecondaryTheme">
-        Hi, everyone! I&apos;m
-      </p>
-      <p className="text-4xl md:text-5xl font-bold text-center">
-        Dileepa Bandara
-      </p>
-      <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 pt-8 md:pt-12">
-        <p className="text-center text-md md:text-lg font-medium textSecondaryTheme">
-          🎓 Computing Student
-        </p>
-        <p className="text-center text-md md:text-lg font-medium textSecondaryTheme">
-          💻 Solution Developer
-        </p>
-        <p className="text-center text-md md:text-lg font-medium textSecondaryTheme">
-          🌏 Community Volunteer
-        </p>
-        <p className="text-center text-md md:text-lg font-medium textSecondaryTheme">
-          📢 Content Creator
-        </p>
-      </div>
-      <div className="flex flex-col items-center justify-center pt-10 md:pt-16">
-        <div className="flex md:flex-row xs:flex-col gap-2">
-          <p className="text-center textTheme">Looking to contact?</p>
-          <p className="text-center textTheme">Send me an email ✨ </p>
-        </div>
-        <Link
-          href={`mailto:${SiteInfo.email}`}
-          className="pt-2 text-wd textButtonTheme transitionButtonTheme"
-        >
-          <span className="ml-2">{SiteInfo.email}</span>
-        </Link>
-      </div>
-    </div>
-  );
-};
-
 const ProfilePicture = ({ isMobile }: { isMobile: boolean }) => {
-  const imageWidth = isMobile ? 250 : 400;
-  const imageHeight = isMobile ? 250 : 400;
+  const imageWidth = isMobile ? 200 : 300;
+  const imageHeight = isMobile ? 200 : 300;
   const imageViewType = isMobile ? "md:hidden md-10 mb-10" : "hidden md:block";
   return (
     <div
-      className={`flex flex-col items-center justify-center ${imageViewType}`}
+      className={`pt-8 flex flex-col items-center justify-center ${imageViewType}`}
     >
       <Image
         src={profilePicture}
@@ -67,11 +26,28 @@ const ProfilePicture = ({ isMobile }: { isMobile: boolean }) => {
 
 export default function Home() {
   return (
-    <div className="pt-5 md:pt-20 pb-5 md:pb-40">
-      <ProfilePicture isMobile={true} />
-      <div className="flex flex-row items-center justify-evenly ">
-        <Title />
+    <div className="md:h-[40rem] h-[38rem] w-full bodyTheme  dark:bg-grid-white/[0.16] bg-grid-black/[0.18] relative flex items-start justify-center">
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bodyTheme [mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)]"></div>
+      <div className="flex flex-col items-center justify-evenly relative">
+        <h1 className="text-3xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b textGradientTheme bg-opacity-50">
+          Hi, everyone!
+          <br />
+          I&apos;m Dileepa Bandara.
+        </h1>
+        <p className="mt-8 font-normal text-base md:text-lg textTertiaryTheme max-w-4xl text-center mx-auto px-4 md:px-0">
+          Welcome to my profile. I&apos;m a student and developer who loves to
+          solve problems while helping others by leveraging Artificial
+          Intelligence, Software Development, and Cloud Computing technologies.
+        </p>
         <ProfilePicture isMobile={false} />
+        <ProfilePicture isMobile={true} />
+        <div className="relative rounded-full md:mt-9 -mt-1.5 px-3 py-1 text-sm leading-6 cardDarkerButtonTheme">
+          Seeking contact?{" "}
+          <a href="/connect" className="font-semibold textTheme">
+            <span className="absolute inset-0" aria-hidden="true" />
+            Let&apos;s connect! 💬<span aria-hidden="true"></span>
+          </a>
+        </div>
       </div>
     </div>
   );
