@@ -8,6 +8,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { calculateDuration } from "@/utils/dateUtils";
 
 // Used in tileCard
 export function ListItemRow({ icon, title }: { icon: string; title: string }) {
@@ -57,19 +58,19 @@ const iconCard = ({ listItems, page }: { listItems: any; page: string }) => {
   return (
     <div className="mt-10 grid grid-cols-1 md:grid-cols-2 sm:grid-row-2 gap-4 md:gap-6">
       {listItems.map((item: any, index: any) => (
-        <Link
-          href={item.link}
-          aria-label={`Link to ${item.title}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="textButtonTheme transitionButtonTheme"
+        <div
+          className="p-5 flex flex-row rounded-xl cardDarkerButtonTheme"
           key={index}
         >
-          <div
-            className="p-5 flex flex-row rounded-xl cardDarkerButtonTheme"
-            key={index}
-          >
-            <div className="flex flex-shrink-0">
+          <div className="flex flex-shrink-0">
+            <Link
+              href={item.link}
+              aria-label={`Link to ${item.title}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="textButtonTheme transitionButtonTheme"
+              key={index}
+            >
               <Image
                 src={`/svg/${item.image}.svg`}
                 alt={`Image of the ${item.institute}`}
@@ -77,34 +78,102 @@ const iconCard = ({ listItems, page }: { listItems: any; page: string }) => {
                 height={100}
                 priority
               />
-            </div>
-            <div className="ml-5 flex-flex-col">
-              <p className="text-md font-semibold textTheme">
-                {page === "Education"
-                  ? item.course
-                  : page === "Experience" || page === "Media"
-                  ? item.title
-                  : ""}
-              </p>
-              <p className="pt-2 text-sm font-normal text-start textSecondaryTheme">
-                {page === "Education"
-                  ? item.institute
-                  : page === "Experience" || page === "Media"
-                  ? item.org
-                  : ""}
-              </p>
-              <p className="pt-1 text-sm font-normal text-start textSecondaryTheme">
-                {page === "Media" ? item.handler : item.country}
-              </p>
-              <p className="pt-1 text-sm font-normal text-start textSecondaryTheme">
-                {item.years}
-              </p>
-              <p className="pt-1 text-sm font-normal text-start textSecondaryTheme">
-                {item.status}
-              </p>
-            </div>
+            </Link>
           </div>
-        </Link>
+          <div className="ml-5 flex-flex-col">
+            <p className="text-base font-semibold textTheme">
+              {page === "Education"
+                ? item.course
+                : page === "Experience" || page === "Media"
+                ? item.title
+                : page === "Volunteering"
+                ? item.org
+                : ""}
+            </p>
+            <p className="pt-0 text-base font-normal text-start textSecondaryTheme">
+              {page === "Education"
+                ? item.institute
+                : page === "Experience" || page === "Media"
+                ? item.org
+                : page === "Volunteering"
+                ? item.title
+                : ""}
+            </p>
+            <p className="pt-0 text-sm font-normal text-start textSecondaryTheme">
+              {item.years}
+              <span className="hidden md:inline">
+                {" "}
+                · {calculateDuration(item.years)}
+              </span>
+            </p>
+            <p className="pt-0 text-sm font-normal text-start textSecondaryTheme">
+              {page === "Media" ? item.handler : item.location}
+            </p>
+            {item.status ? <hr className="mt-2 mb-2 divider" /> : <></>}
+            <p className="pt-1 text-sm font-normal text-start textSecondaryTheme">
+              {item.status}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+// Used in Experience page: Projects
+const projectSmallCard = ({ listItems }: { listItems: any }) => {
+  const top4Items = listItems.slice(0, 4);
+
+  return (
+    <div className="mt-10 grid grid-cols-1 md:grid-cols-4 sm:grid-row-2 gap-4 md:gap-6">
+      {top4Items.map((item: any, index: any) => (
+        <div
+          key={index}
+          className="mt-2 rounded-xl overflow-hidden cardDarkerButtonTheme"
+        >
+          <Image
+            src={`/webp/${item.image}.webp`}
+            alt={`Image of the ${item.title}`}
+            height={300}
+            width={400}
+          />
+          <div className="px-6 py-4">
+            <div className="text-md font-semibold textTheme">{item.title}</div>
+            <p className="pt-2 textSecondaryTheme text-sm">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+// Used in Experience page: Tools & Technologies
+const toolsSmallCard = ({ listItems }: { listItems: any }) => {
+  return (
+    <div className="mt-4 flex flex-wrap gap-4 justify-center">
+      {listItems.map((item: any, index: any) => (
+        <div
+          key={index}
+          className="mt-2 p-2 flex items-center text-center rounded-xl overflow-hidden cardDarkerButtonTheme"
+        >
+          <Image
+            src={`/svg/tools/${item.image}.svg`}
+            alt={`Image of the ${item.title}`}
+            className="mr-2 hidden dark:block"
+            width={24}
+            height={24}
+          />
+          <Image
+            src={`/svg/tools/${item.imageL}.svg`}
+            alt={`Image of the ${item.title}`}
+            className="mr-2 dark:hidden block"
+            width={24}
+            height={24}
+          />
+          <p className="textSecondaryTheme text-sm">{item.title}</p>
+        </div>
       ))}
     </div>
   );
@@ -213,6 +282,8 @@ const connectChannelCard = ({ listItems }: { listItems: any }) => {
 const ItemCards = {
   tileCard,
   iconCard,
+  projectSmallCard,
+  toolsSmallCard,
   bannerCard,
   connectChannelCard,
   // statusCard,

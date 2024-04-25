@@ -25,7 +25,7 @@ export interface EducationPageData {
   academic: Array<{
     course: string;
     institute: string;
-    country: string;
+    location: string;
     years: string;
     status: string;
     image: string;
@@ -35,20 +35,66 @@ export interface EducationPageData {
 
 export interface ExperiencePageData {
   title: string;
-  subtitle: string;
+  subtitle: {
+    work: string;
+    projects: string;
+    tools: string;
+    volunteer: string;
+  };
   work: Array<{
     title: string;
     org: string;
-    country: string;
+    location: string;
     years: string;
     status: string;
+    image: string;
+    link: string;
+  }>;
+  projects: Array<{
+    title: string;
+    description: string;
+    image: string;
+    keyWords: Array<string>;
+    link: string;
+  }>;
+  toolsFrontBack: Array<{
+    title: string;
+    description: string;
+    image: string;
+    imageL: string;
+    link: string;
+  }>;
+  toolsCloud: Array<{
+    title: string;
+    description: string;
+    image: string;
+    imageL: string;
+    link: string;
+  }>;
+  toolsAIML: Array<{
+    title: string;
+    description: string;
+    image: string;
+    imageL: string;
+    link: string;
+  }>;
+  toolsPM: Array<{
+    title: string;
+    description: string;
+    image: string;
+    imageL: string;
+    link: string;
+  }>;
+  workingAreas: Array<{
+    name: string;
+    description: string;
     image: string;
     link: string;
   }>;
   volunteer: Array<{
     title: string;
     org: string;
-    country: string;
+    location: string;
     years: string;
     status: string;
     image: string;
