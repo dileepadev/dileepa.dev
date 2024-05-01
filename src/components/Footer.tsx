@@ -2,16 +2,18 @@ import Link from "next/link";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import WebLinks from "@/constants/links";
+import packageJson from "../../package.json";
 
 const Footer = () => {
   return (
     <div>
       <div className="flex flex-col gap-2 justify-center items-center pb-5 pt-5 outline outline-1 footerTheme">
         <p className="text-sm textTheme">
-          © 2023 Dileepa Bandara. All rights reserved.
+          Copyright © {new Date().getFullYear()} Dileepa Bandara
         </p>
         <p className="text-sm textTheme">
-          Version 1.0.1 | Built with Next.js 13.5.4
+          Version {packageJson.version} | Built with Next.js{" "}
+          {packageJson.dependencies.next}
         </p>
         <Link
           href={WebLinks.githubRepo}

@@ -1,21 +1,48 @@
 export interface AboutPageData {
-  title: string;
-  subtitle: string;
-  introduction: string;
-  background: string;
-  goals: string;
-  interests: string;
-  backgroundList?: Array<{
-    icon: string;
+  title: {
+    acquainted: string;
+    achievements: string;
+    testimonials: string;
+  };
+  subtitle: {
+    acquainted: string;
+    achievements: string;
+    testimonials: string;
+  };
+  itemCardDescription: {
+    introduction: string;
+    background: string;
+    goals: string;
+    interests: string;
+  };
+  itemCardList: {
+    backgroundList?: Array<{
+      icon: string;
+      title: string;
+    }>;
+    goalsList?: Array<{
+      icon: string;
+      title: string;
+    }>;
+    interestsList?: Array<{
+      icon: string;
+      title: string;
+    }>;
+  };
+  achievementsList: Array<{
     title: string;
+    date: string;
+    description: string;
   }>;
-  goalsList?: Array<{
-    icon: string;
+  testimonials: Array<{
+    name: string;
     title: string;
-  }>;
-  interestsList?: Array<{
-    icon: string;
-    title: string;
+    org: string;
+    image: string;
+    connection: string;
+    profileLink: string;
+    testimonialLink: string;
+    testimonial: string;
   }>;
 }
 
@@ -25,7 +52,7 @@ export interface EducationPageData {
   academic: Array<{
     course: string;
     institute: string;
-    country: string;
+    location: string;
     years: string;
     status: string;
     image: string;
@@ -35,20 +62,67 @@ export interface EducationPageData {
 
 export interface ExperiencePageData {
   title: string;
-  subtitle: string;
+  subtitle: {
+    work: string;
+    projects: string;
+    tools: string;
+    volunteer: string;
+  };
   work: Array<{
     title: string;
     org: string;
-    country: string;
+    location: string;
     years: string;
     status: string;
     image: string;
     link: string;
   }>;
+  projects: Array<{
+    title: string;
+    description: string;
+    image: string;
+    keyWords: Array<string>;
+    link: string;
+  }>;
+  toolsFrontBack: Array<{
+    title: string;
+    description: string;
+    image: string;
+    imageL: string;
+    link: string;
+  }>;
+  toolsCloud: Array<{
+    title: string;
+    description: string;
+    image: string;
+    imageL: string;
+    link: string;
+  }>;
+  toolsAIML: Array<{
+    title: string;
+    description: string;
+    image: string;
+    imageL: string;
+    link: string;
+  }>;
+  toolsCode: Array<{
+    title: string;
+    description: string;
+    image: string;
+    imageL: string;
+    link: string;
+  }>;
+  toolsPM: Array<{
+    title: string;
+    description: string;
+    image: string;
+    imageL: string;
+    link: string;
+  }>;
   volunteer: Array<{
     title: string;
     org: string;
-    country: string;
+    location: string;
     years: string;
     status: string;
     image: string;
@@ -56,8 +130,26 @@ export interface ExperiencePageData {
   }>;
 }
 export interface MediaPageData {
-  title: string;
-  subtitle: string;
+  title: {
+    events: string;
+    csc: string;
+  };
+  subtitle: {
+    events: string;
+    csc: string;
+  };
+  eventsList: Array<{
+    title: string;
+    date: string;
+    time: string;
+    venue: string;
+    description: string;
+    image: string;
+    link: string;
+    role: Array<string>;
+    organizer: Array<string>;
+    organizerImage: Array<string>;
+  }>;
   log: Array<{
     title: string;
     org: string;

@@ -3,10 +3,12 @@ name: 🌱 Feature Request
 about: Suggest a feature for this project
 title: "🌱 Feature: Enter a short description of the issue"
 labels: "feature request"
-assignees: "dileepabandara"
+assignees: "dileepadev"
 ---
 
 ## 🌱 Feature Request
+
+**ℹ️ Note: Please remove any sections that are not relevant. Check this example at [Issue #10](https://github.com/dileepadev/dileepa.dev/issues/10)**
 
 ### 📜 Description
 
