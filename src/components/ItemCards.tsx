@@ -6,10 +6,14 @@ import {
   FaInstagram,
   FaLinkedin,
   FaYoutube,
+  FaRegCalendarAlt,
+  FaRegClock,
+  FaRegIdCard,
 } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
-import { FaXTwitter, FaLink } from "react-icons/fa6";
+import { FaXTwitter, FaLocationDot } from "react-icons/fa6";
 import { calculateDuration } from "@/utils/dateUtils";
+import { IoIdCardOutline } from "react-icons/io5";
 
 // Used in tileCard
 export function ListItemRow({ icon, title }: { icon: string; title: string }) {
@@ -258,10 +262,100 @@ const bannerCard = ({ imageSrc }: { imageSrc: string }) => {
         quality={100}
         sizes="100vw, 100vw"
         className="object-cover rounded-xl"
-        placeholder="blur"
+        // placeholder="blur"
         priority
         loading="eager"
       />
+    </div>
+  );
+};
+
+// Used in Media page
+const eventsCard = ({ listItems }: { listItems: any }) => {
+  return (
+    <div className="mt-10 grid grid-cols-1 md:grid-cols-3 sm:grid-row-2 gap-4 md:gap-6">
+      {listItems.map((item: any, index: any) => (
+        <div
+          key={index}
+          className="mt-2 rounded-xl overflow-hidden cardDarkerButtonTheme"
+        >
+          {/* <Image
+            src={`/${item.image}.webp`}
+            alt={`Image of the ${item.title}`}
+            height={300}
+            width={900}
+          /> */}
+          <div className="px-6 py-4">
+            <div className="text-md font-semibold textTheme">{item.title}</div>
+            <p className="pt-1 textSecondaryTheme text-sm">
+              {item.description}
+            </p>
+            <div className="flex flex-row pt-4 items-center">
+              <FaRegCalendarAlt size={16} className="textTheme" />
+              <p className="pl-2 text-sm font-normal text-start textSecondaryTheme">
+                {item.date}
+              </p>
+            </div>
+            <div className="flex flex-row pt-2 items-center">
+              <FaRegClock size={16} className="textTheme" />
+              <p className="pl-2 text-sm font-normal text-start textSecondaryTheme">
+                {item.time}
+              </p>
+            </div>
+            <div className="flex flex-row pt-2 items-center">
+              <FaLocationDot size={16} className="textTheme" />
+              <p className="pl-2 text-sm font-normal text-start textSecondaryTheme">
+                {item.venue}
+              </p>
+            </div>
+            <div className="flex flex-row pt-2 items-center">
+              <IoIdCardOutline size={16} className="textTheme" />
+              <p className="pl-2 text-sm font-normal text-start textSecondaryTheme">
+                {item.role}
+              </p>
+            </div>
+            {item.organizer && item.organizer.length > 0 && (
+              <div className="mt-4">
+                <p className="text-sm font-semibold text-start textTheme">
+                  {/* {item.organizer.length > 1 ? "Organizations" : "Organization"} */}
+                  In collaboration with
+                </p>
+                <div className="flex flex-col mt-2">
+                  {item.organizer.map(
+                    (organizer: string, organizerIndex: number) => (
+                      <div
+                        key={organizerIndex}
+                        className="flex items-center justify-start text-sm font-normal text-start textSecondaryTheme mt-2"
+                      >
+                        {item.organizerImage &&
+                          item.organizerImage.length > 0 &&
+                          item.organizerImage[organizerIndex] && (
+                            <Link
+                              href={item.link}
+                              aria-label={`Link to ${item.title}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="textButtonTheme transitionButtonTheme mr-2"
+                            >
+                              <Image
+                                src={`/svg/org/${item.organizerImage[organizerIndex]}.svg`}
+                                alt={`Image of the ${item.title}`}
+                                width={30}
+                                height={30}
+                                priority
+                              />
+                            </Link>
+                          )}
+                        <p>{organizer}</p>
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
@@ -354,6 +448,7 @@ const ItemCards = {
   projectSmallCard,
   toolsSmallCard,
   bannerCard,
+  eventsCard,
   connectChannelCard,
   // statusCard,
 };

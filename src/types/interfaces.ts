@@ -130,8 +130,26 @@ export interface ExperiencePageData {
   }>;
 }
 export interface MediaPageData {
-  title: string;
-  subtitle: string;
+  title: {
+    events: string;
+    csc: string;
+  };
+  subtitle: {
+    events: string;
+    csc: string;
+  };
+  eventsList: Array<{
+    title: string;
+    date: string;
+    time: string;
+    venue: string;
+    description: string;
+    image: string;
+    link: string;
+    role: Array<string>;
+    organizer: Array<string>;
+    organizerImage: Array<string>;
+  }>;
   log: Array<{
     title: string;
     org: string;

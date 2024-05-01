@@ -773,9 +773,147 @@ const experiencePageData: ExperiencePageData = {
 };
 
 const mediaPageData: MediaPageData = {
-  title: "Media",
+  title: {
+    events: "Event Highlights",
+    csc: "Cloud Skills Challenges",
+  },
+  subtitle: {
+    events:
+      "A snapshot of memorable sessions, meetups, and workshops I've participated in.",
+    csc: "A collection of Cloud Skills Challenges I've hosted.",
+  },
 
-  subtitle: "Check out my latest articles, videos, and other content.",
+  eventsList: [
+    {
+      title: "Building, Deploying, and Consuming ML Models with Azure ML",
+      date: "28th February 2024",
+      time: "12:30 PM - 2:00 PM (UTC+05:30)",
+      venue: "Google Meet (Online)",
+      description:
+        "A hands-on workshop to introduce the Azure Machine Learning platform for building, deploying, and consuming machine learning models.",
+      image: "banner",
+      link: "#",
+      role: ["Speaker"],
+      organizer: [
+        "Amihacks 2k24 by Amity University Gwalior",
+        "Microsoft Learn Student Ambassadors",
+      ],
+      organizerImage: ["ami", "mlsa"],
+    },
+    {
+      title: "Microsoft Imagine Cup 2024 - NIBM Awareness Session",
+      date: "20th December 2023",
+      time: "7:30 PM - 9:00 PM (UTC+05:30)",
+      venue: "Microsoft Teams (Online)",
+      description:
+        "An awareness session for NIBM students to learn about the Microsoft Imagine Cup 2024 competition and how to participate.",
+      image: "banner",
+      link: "#",
+      role: ["Host, Speaker"],
+      organizer: [
+        "NIBM Computing Society",
+        "Microsoft Learn Student Ambassadors",
+      ],
+      organizerImage: ["nibmcs", "mlsa"],
+    },
+    {
+      title: "Navigating Azure OpenAl Service as a Beginner",
+      date: "01st December 2023",
+      time: "8:00 PM - 9:30 PM (UTC+05:30)",
+      venue: "Microsoft Teams (Online)",
+      description:
+        "A beginner-friendly session includes hands-on practice demos to explore the Azure OpenAl service and its capabilities for AI-powered applications.",
+      image: "banner",
+      link: "#",
+      role: ["Host, Speaker"],
+      organizer: ["Microsoft Learn Student Ambassadors"],
+      organizerImage: ["mlsa"],
+    },
+    {
+      title: "Web development with Microsoft tools",
+      date: "19th August 2023",
+      time: "8:00 PM - 9:30 PM (UTC+05:30)",
+      venue: "Microsoft Teams (Online)",
+      description:
+        "A session to guide beginners through building their first web application using Microsoft tools and services.",
+      image: "banner",
+      link: "#",
+      role: ["Host, Speaker"],
+      organizer: ["Microsoft Learn Student Ambassadors"],
+      organizerImage: ["mlsa"],
+    },
+    {
+      title: "Microsoft Build After Party - NIBM Meetup",
+      date: "04th July 2023",
+      time: "3:00 PM - 6:00 PM (UTC+05:30)",
+      venue: "NIBM Colombo (In-Person)",
+      description:
+        "A post-event meetup to discuss the highlights of Microsoft Build 2023 and share insights on the latest announcements and technologies.",
+      image: "banner",
+      link: "#",
+      role: ["Host, Speaker"],
+      organizer: [
+        "NIBM Computing Society",
+        "Microsoft Learn Student Ambassadors",
+      ],
+      organizerImage: ["nibmcs", "mlsa"],
+    },
+    {
+      title: "Build your first web app with Node.js",
+      date: "25th March 2023",
+      time: "3:00 PM - 4:00 PM (UTC+05:30)",
+      venue: "Microsoft Sri Lanka (In-Person)",
+      description:
+        "A hands-on workshop to guide beginners through building their first web application using Node.js and Express.js.",
+      image: "banner",
+      link: "#",
+      role: ["Co-Host, Speaker"],
+      organizer: ["Microsoft Learn Student Ambassadors - Sri Lanka"],
+      organizerImage: ["mlsa"],
+    },
+    {
+      title: "Getting Started with Microsoft 365",
+      date: "07th March 2023",
+      time: "1:00 PM - 3:00 PM (UTC+05:30)",
+      venue: "NIBM Kurunegala (In-Person)",
+      description:
+        "An introductory session to explore the features and benefits of Microsoft 365 for students and educators.",
+      image: "banner",
+      link: "#",
+      role: ["Host, Speaker"],
+      organizer: ["Microsoft Learn Student Ambassadors"],
+      organizerImage: ["mlsa"],
+    },
+    {
+      title: "Introduction to Azure",
+      date: "24th February 2023",
+      time: "10:00 AM - 12:00 PM (UTC+05:30)",
+      venue: "NIBM Colombo (In-Person)",
+      description:
+        "A beginner-friendly workshop to introduce the fundamentals of Azure cloud services and how to get started with Azure.",
+      image: "banner",
+      link: "#",
+      role: ["Host, Speaker"],
+      organizer: [
+        "NIBM Computing Society",
+        "Microsoft Learn Student Ambassadors",
+      ],
+      organizerImage: ["nibmcs", "mlsa"],
+    },
+    {
+      title: "FOSS Community Meetup - NIBM",
+      date: "14th January 2023",
+      time: "10:00 AM - 12:00 PM (UTC+05:30)",
+      venue: "NIBM Colombo (In-Person)",
+      description:
+        "A community meetup to discuss the latest trends in open-source software and how to contribute to FOSS projects.",
+      image: "banner",
+      link: "#",
+      role: ["Co-Host, Speaker"],
+      organizer: ["NIBM Computing Society", "FOSS Sri Lanka"],
+      organizerImage: ["nibmcs", "fosslk"],
+    },
+  ],
 
   log: [
     {
