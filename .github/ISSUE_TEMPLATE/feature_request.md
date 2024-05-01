@@ -10,7 +10,6 @@ assignees: "dileepadev"
 
 **ℹ️ Note: Please remove any sections that are not relevant. Check this example at [Issue #10](https://github.com/dileepadev/dileepa.dev/issues/10)**
 
-
 ### 📜 Description
 
 [Provide a clear and concise description of the feature you are requesting. Explain the problem you're trying to solve or the opportunity you want to seize.]
