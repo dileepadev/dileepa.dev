@@ -6,6 +6,58 @@ All notable changes to this project are documented in this file.
 
 - **No changes yet.**
 
+## [1.1.0] - 2024-05-01
+
+- **Added (New features):**
+
+  - New font to Inter
+  - Add pageHeaderTheme
+
+- **Changed (Improvements):**
+  
+  - Update dependencies
+    - version [1.0.1 -> 1.1.0]
+    - next [13.5.4 -> 14.1.4]
+    - react-icons [4.11.0 -> 5.0.1]
+    - react-toastify [9.1.3 -> 10.0.5]
+    - resend [2.0.0 -> 3.2.0]
+    - next-themes [0.2.1 -> 0.3.0]
+    - @vercel/analytics [1.1.1 -> 1.2.2]
+    - autoprefixer [10 -> 10.0.1]
+    - eslint-config-next [13.5.4 -> 14.1.4]
+    - tailwindcss [3 -> 3.3.0]
+  - Update header and footer
+  - Update home page
+  - Update experience pag
+    - Add Projects section
+    - Add Tools & Technologies section
+    - Update latest experience data
+    - Add new 4 sections
+    - Update theme details & ItemCards
+    - Update interface & links
+  - Update about page
+  - Update about cards
+  - Add achievements section
+  - Add section for LinkedIn recommendations
+  - Update education page
+    - Add new cards and layout design
+  - Update media page
+    - Add event highlights
+    - Remove banner and log details
+  - Update connect page
+    - Change section layout format
+  - Update documents
+    - Update README.md
+    - Remove extra inputs from ISSUE_TEMPLATE/feature_request.md
+
+- **Fixed (Bugs):**
+
+  - Replace unsupported links
+  - Experience page missing items
+    - Fix WingzDev dates
+    - Add missing tools & technologies
+    - Fix broken links in communities
+
 ## [1.0.1] - 2023-11-24
 
 - **Fixed (Bugs):**
@@ -60,6 +112,10 @@ All notable changes to this project are documented in this file.
 <!-- Unreleased -->
 
 [Unreleased]: https://github.com/dileepadev/dileepa.dev/tree/dev
+
+<!-- 1.1.0 -->
+
+[1.1.0]: https://github.com/dileepadev/dileepa.dev/compare/v1.0.1...v1.1.0
 
 <!-- 1.0.1 -->
 
