@@ -10,6 +10,15 @@ export default function SocialMediaBar() {
   return (
     <div className="flex flex-row items-center justify-center">
       <Link
+        href={WebLinks.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mr-4 textButtonTheme transitionButtonTheme"
+        aria-label={`Visit Linkedin profile of ${SiteInfo.username}`}
+      >
+        <FaLinkedinIn size={iconSize} />
+      </Link>
+      <Link
         href={`${WebLinks.github}`}
         target="_blank"
         rel="noopener noreferrer"
@@ -26,15 +35,6 @@ export default function SocialMediaBar() {
         aria-label={`Visit Twitter profile of ${SiteInfo.username}`}
       >
         <FaXTwitter size={iconSize} />
-      </Link>
-      <Link
-        href={WebLinks.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mr-4 textButtonTheme transitionButtonTheme"
-        aria-label={`Visit Linkedin profile of ${SiteInfo.username}`}
-      >
-        <FaLinkedinIn size={iconSize} />
       </Link>
       <Link
         href={WebLinks.youtube}

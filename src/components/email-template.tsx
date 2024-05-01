@@ -15,7 +15,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 }) => (
   <div>
     <h2>Website Contact Form</h2>
-    <h3>dileepabandara.dev</h3>
+    <h3>dileepa.dev</h3>
     <p>
       <strong>Name:</strong> {name}
     </p>

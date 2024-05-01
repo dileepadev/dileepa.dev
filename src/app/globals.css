@@ -16,6 +16,14 @@
   @apply text-neutral-500 dark:text-neutral-400;
 }
 
+.textTertiaryTheme {
+  @apply text-neutral-700 dark:text-neutral-400;
+}
+
+.textGradientTheme {
+  @apply from-neutral-800 to-neutral-600 dark:from-neutral-50 dark:to-neutral-400;
+}
+
 .textButtonTheme {
   @apply text-neutral-900 dark:text-neutral-400 hover:text-neutral-400 dark:hover:text-neutral-100 cursor-pointer;
 }
@@ -24,16 +32,57 @@
   @apply text-neutral-900 dark:text-neutral-100 hover:text-neutral-400 dark:hover:text-neutral-400 cursor-pointer;
 }
 
+.pageHeaderTheme {
+  @apply text-3xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-600 dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50;
+}
+
 .pageTitleTheme {
-  @apply text-3xl font-semibold text-center text-neutral-900 dark:text-neutral-100;
+  @apply text-2xl md:text-3xl font-semibold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-600 dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50;
 }
 
 .pageSubtitleTheme {
-  @apply text-lg font-semibold text-start text-neutral-900 dark:text-neutral-100;
+  @apply text-base font-normal text-center textSecondaryTheme;
+}
+
+.cardTitleTheme {
+  @apply text-lg md:text-xl font-semibold text-start bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-50 dark:to-neutral-200 bg-opacity-50;
 }
 
 .navBarTheme {
   @apply bg-slate-50 dark:bg-black outline-neutral-200 dark:outline-neutral-900;
+}
+
+.selectedNavItem {
+  @apply text-neutral-900 dark:text-neutral-100;
+}
+
+.navBarSelectedItem {
+  position: relative;
+}
+
+.navBarSelectedItem::after {
+  content: "•";
+  position: absolute;
+  /* top: -90%; */
+  top: 85%;
+  left: 50%;
+  font-size: 10px;
+  transform: translateX(-50%);
+  @apply text-neutral-900 dark:text-neutral-100;
+}
+
+.navBarSelectedItemMobile {
+  position: relative;
+}
+
+.navBarSelectedItemMobile::after {
+  content: "•";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 5px);
+  font-size: 10px;
+  transform: translateY(-50%);
+  @apply text-neutral-900 dark:text-neutral-100;
 }
 
 .cardTheme {
@@ -46,6 +95,14 @@
 
 .cardDarkerButtonTheme {
   @apply bg-neutral-100 dark:bg-neutral-950 ring-2 ring-neutral-200 dark:ring-neutral-900 hover:ring-neutral-300 dark:hover:ring-neutral-800 transition duration-300 ease-in-out;
+}
+
+.chipTheme {
+  @apply bg-neutral-300 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 rounded-full;
+}
+
+.timeLineTheme {
+  @apply before:bg-slate-300  after:bg-slate-600 after:border-slate-200;
 }
 
 .borderTheme {
@@ -70,6 +127,14 @@
 
 .dbg {
   @apply bg-red-800;
+}
+
+.divider {
+  @apply h-px border-t-0 bg-neutral-400 dark:bg-neutral-700 opacity-60;
+}
+
+.gradientDivider {
+  @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent to-transparent opacity-60 via-neutral-500 dark:via-neutral-400;
 }
 
 /* Scrollbar Style */

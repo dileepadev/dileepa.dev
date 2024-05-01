@@ -4,18 +4,17 @@ import textData from "@/constants/textData";
 
 export default function Education() {
   return (
-    <section>
-      <div className="flex flex-col justify-center items-center">
-        <p className="pageTitleTheme">{textData.educationPageData.title}</p>
-        <p className="pt-5 text-base font-normal text-center textSecondaryTheme">
-          {textData.educationPageData.subtitle}
-        </p>
-      </div>
-      <SectionTitle title="🎓 Academic Qualifications" />
-      <ItemCards.iconCard
-        listItems={textData.educationPageData.academic}
-        page="Education"
-      />
-    </section>
+    <div>
+      <section key="Academic">
+        <SectionTitle
+          title="Academic Education"
+          subTitle={textData.educationPageData.subtitle}
+        />
+        <ItemCards.iconCard
+          listItems={textData.educationPageData.academic}
+          page="Education"
+        />
+      </section>
+    </div>
   );
 }

@@ -3,7 +3,7 @@ name: 📢 Feedback
 about: Provide feedback for this project
 title: "📢 Feedback: Enter a short description of the issue"
 labels: "feedback"
-assignees: "dileepabandara"
+assignees: "dileepadev"
 ---
 
 ## 📢 Feedback

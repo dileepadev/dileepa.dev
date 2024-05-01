@@ -3,7 +3,7 @@ name: 🐞 Bug Report
 about: Create a report to help us improve
 title: "🐞 Bug: Enter a short description of the issue"
 labels: "bug"
-assignees: "dileepabandara"
+assignees: "dileepadev"
 ---
 
 ## 🐞 Bug Report

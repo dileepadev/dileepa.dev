@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 import { NavLinks } from "@/constants/links";
 import IconClose from "./icons/IconClose";
@@ -11,6 +12,7 @@ import { ThemeSwitcher } from "./theme/ThemeSwitcher";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const renderNavLinks = (isMobile: boolean) => (
     <ul
@@ -22,7 +24,15 @@ export default function NavBar() {
         <li key={link.key} className={isMobile ? "py-2" : "px-4"}>
           <Link href={link.href}>
             <p
-              className="font-regular text-md textButtonTheme transitionButtonTheme"
+              className={`font-regular text-md textButtonTheme transitionButtonTheme ${
+                link.href === pathname && !isMobile
+                  ? "navBarSelectedItem selectedNavItem"
+                  : ""
+              } ${
+                link.href === pathname && isMobile
+                  ? "navBarSelectedItemMobile selectedNavItem"
+                  : ""
+              } `}
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
@@ -34,7 +44,7 @@ export default function NavBar() {
   );
 
   return (
-    <nav className="xs:px-6 sm:px-12 md:px-16 pt-8 pb-5 fixed w-full top-0 z-10 outline outline-1 navBarTheme">
+    <nav className="xs:px-6 sm:px-12 md:px-16 pt-8 pb-5 fixed w-full top-0 z-10 outline outline-5 navBarTheme">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="flex items-center justify-between">
           {/* ⚙️ Logo */}

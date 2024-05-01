@@ -1,10 +1,10 @@
 # Security Policy
 
-The dileepabandara.dev project/repository management team takes security issues very seriously. We appreciate your efforts to responsibly disclose any security vulnerabilities you find.
+The dileepa.dev project/repository management team takes security issues very seriously. We appreciate your efforts to responsibly disclose any security vulnerabilities you find.
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability, please send an email to **<contact@dileepabandara.dev>**. Please do not create a public issue for the vulnerability.
+If you discover a security vulnerability, please send an email to **<contact@dileepa.dev>**. Please do not create a public issue for the vulnerability.
 
 Your email should include the following information:
 
@@ -35,4 +35,4 @@ Maintainers are responsible for the security of the project. This includes:
 - We will release a fix as soon as possible, depending on the complexity of the issue.
 - We will communicate the vulnerability and any patches or workarounds to our users.
 
-Thank you for your help in making dileepabandara.dev project/repository a more secure place.
+Thank you for your help in making dileepa.dev project/repository a more secure place.
