@@ -161,15 +161,15 @@ const aboutPageData: AboutPageData = {
 const educationPageData: EducationPageData = {
   title: "Education",
 
-  subtitle: "Discover my academic qualifications and institutions.",
+  subtitle: "Discover the stages of my academic learning journey.",
 
   academic: [
     {
       course: "BSc (Hons) Computing",
       institute: "Coventry University",
       location: "United Kingdom",
-      years: "2021 - 2024",
-      status: "Ongoing",
+      years: "Nov 2021 - Feb 2024",
+      status: "First Class Honours",
       image: "coventry",
       link: PageLinks.education.coventry,
     },
@@ -177,7 +177,7 @@ const educationPageData: EducationPageData = {
       course: "Higher National Diploma in Software Engineering",
       institute: "National Institute of Business Management",
       location: "Sri Lanka",
-      years: "2020 - 2021",
+      years: "Apr 2020 - Aug 2021",
       status: "4.0 GPA",
       image: "nibm",
       link: PageLinks.education.nibm,
@@ -186,7 +186,7 @@ const educationPageData: EducationPageData = {
       course: "Diploma in Computer System Design",
       institute: "National Institute of Business Management",
       location: "Sri Lanka",
-      years: "2019 - 2020",
+      years: "Mar 2019 - Aug 2020",
       status: "3.75 GPA",
       image: "nibm",
       link: PageLinks.education.nibm,
@@ -195,7 +195,7 @@ const educationPageData: EducationPageData = {
       course: "Primary and Secondary Education",
       institute: "Maliyadeva Model School",
       location: "Sri Lanka",
-      years: "2003 - 2016",
+      years: "Jan 2003 - Dec 2016",
       status: "GCE Advanced Level (Maths)",
       image: "mms",
       link: PageLinks.education.mms,
