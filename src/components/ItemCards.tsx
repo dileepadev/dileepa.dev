@@ -7,7 +7,8 @@ import {
   FaLinkedin,
   FaYoutube,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FiExternalLink } from "react-icons/fi";
+import { FaXTwitter, FaLink } from "react-icons/fa6";
 import { calculateDuration } from "@/utils/dateUtils";
 
 // Used in tileCard
@@ -15,8 +16,10 @@ export function ListItemRow({ icon, title }: { icon: string; title: string }) {
   return (
     <div className="flex flex-row justify-start">
       <div className="flex items-center">
-        <p className={"font-medium text-start text-xl textTheme"}>{icon}</p>
-        <p className={"pl-4 font-medium text-start text-sm textTheme"}>
+        <p className={"font-medium text-start text-xl textSecondaryTheme"}>
+          {icon}
+        </p>
+        <p className={"pl-4 font-medium text-start text-sm textSecondaryTheme"}>
           {title}
         </p>
       </div>
@@ -35,8 +38,8 @@ const tileCard = ({
   listItems?: any;
 }) => {
   return (
-    <div className="p-5 w-full rounded-xl cardDarkerTheme">
-      <p className="pageSubtitleTheme">{title}</p>
+    <div className="p-5 w-full rounded-xl cardDarkerButtonTheme">
+      <p className="cardTitleTheme">{title}</p>
       <p className="pt-5 text-base font-normal text-start textSecondaryTheme">
         {description}
       </p>
@@ -49,6 +52,71 @@ const tileCard = ({
       ) : (
         <></>
       )}
+    </div>
+  );
+};
+
+const testimonialCard = ({
+  listItems,
+}: {
+  listItems: Array<{
+    name: string;
+    title: string;
+    testimonial: string;
+  }>;
+}) => {
+  return (
+    <div className="mt-10 grid grid-cols-1 md:grid-cols-3 sm:grid-row-2 gap-4 md:gap-6">
+      {listItems.map((item: any, index: any) => (
+        <div
+          className="p-5 flex flex-col items-center rounded-xl cardDarkerButtonTheme"
+          key={index}
+        >
+          <div className="flex flex-col items-center">
+            <Link
+              href={item.profileLink}
+              aria-label={`Link to ${item.name}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="textButtonTheme transitionButtonTheme  pt-2"
+            >
+              <div className="flex flex-shrink-0">
+                <Image
+                  src={`/webp/${item.image}.webp`}
+                  alt={`Image of the ${item.name}`}
+                  className="rounded-full items-center"
+                  width={100}
+                  height={100}
+                  priority
+                />
+              </div>
+            </Link>
+            <p className="pt-4 text-md font-semibold textTheme">{item.name}</p>
+            <p className="pt-0 text-sm font-normal text-center textSecondaryTheme">
+              {item.title}
+            </p>
+            <p className="pt-0 text-sm font-normal text-center textSecondaryTheme">
+              {item.org}
+            </p>
+          </div>
+          <p className="pt-5 text-sm font-normal text-center textSecondaryTheme">
+            &quot;{item.testimonial}&quot;
+          </p>
+          <Link
+            href={item.testimonialLink}
+            aria-label={`Link to ${item.title}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pt-4 textButtonTheme transitionButtonTheme"
+            key={index}
+          >
+            <div className="flex flex-row items-center">
+              <FiExternalLink size={18} />
+              <span className="pl-1 text-sm">View Source</span>
+            </div>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 };
@@ -281,6 +349,7 @@ const connectChannelCard = ({ listItems }: { listItems: any }) => {
 
 const ItemCards = {
   tileCard,
+  testimonialCard,
   iconCard,
   projectSmallCard,
   toolsSmallCard,

@@ -19,6 +19,16 @@ export const NavLinks = [
 ];
 
 export const PageLinks = {
+  about: {
+    linkedInRecommendations:
+      "https://linkedin.com/in/dileepadev/#recommendations",
+    prabhath: "https://linkedin.com/in/dprabhath/",
+    ruwandika: "https://linkedin.com/in/ruwandika/",
+    isuru: "https://linkedin.com/in/isuru-devinda-1996323m/",
+    nimesh: "https://www.linkedin.com/in/nimeshkasun/",
+    eranga: "https://linkedin.com/in/eranga-perera-b82127170/",
+    buwaneka: "https://linkedin.com/in/buwaneka-jayasundara/",
+  },
   education: {
     nibm: "https://www.nibm.lk/",
     coventry: "https://www.coventry.ac.uk/",

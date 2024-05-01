@@ -1,21 +1,48 @@
 export interface AboutPageData {
-  title: string;
-  subtitle: string;
-  introduction: string;
-  background: string;
-  goals: string;
-  interests: string;
-  backgroundList?: Array<{
-    icon: string;
+  title: {
+    acquainted: string;
+    achievements: string;
+    testimonials: string;
+  };
+  subtitle: {
+    acquainted: string;
+    achievements: string;
+    testimonials: string;
+  };
+  itemCardDescription: {
+    introduction: string;
+    background: string;
+    goals: string;
+    interests: string;
+  };
+  itemCardList: {
+    backgroundList?: Array<{
+      icon: string;
+      title: string;
+    }>;
+    goalsList?: Array<{
+      icon: string;
+      title: string;
+    }>;
+    interestsList?: Array<{
+      icon: string;
+      title: string;
+    }>;
+  };
+  achievementsList: Array<{
     title: string;
+    date: string;
+    description: string;
   }>;
-  goalsList?: Array<{
-    icon: string;
+  testimonials: Array<{
+    name: string;
     title: string;
-  }>;
-  interestsList?: Array<{
-    icon: string;
-    title: string;
+    org: string;
+    image: string;
+    connection: string;
+    profileLink: string;
+    testimonialLink: string;
+    testimonial: string;
   }>;
 }
 

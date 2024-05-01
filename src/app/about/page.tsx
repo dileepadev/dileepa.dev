@@ -1,57 +1,83 @@
 import ItemCards from "@/components/ItemCards";
+import SectionTitle from "@/components/SectionTitle";
+import { TimelineItem } from "@/components/TimeLine";
 import textData from "@/constants/textData";
 
-const IntroductionCard = () => {
+const Acquainted = () => {
   return (
-    <ItemCards.tileCard
-      title="Introduction"
-      description={textData.aboutPageData.introduction}
-    />
+    <section id="acquainted">
+      <SectionTitle
+        title={textData.aboutPageData.title.acquainted}
+        subTitle={textData.aboutPageData.subtitle.acquainted}
+      />
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 sm:grid-row-2 gap-4 md:gap-6">
+        <ItemCards.tileCard
+          title="Introduction"
+          description={textData.aboutPageData.itemCardDescription.introduction}
+        />
+        <ItemCards.tileCard
+          title="Background"
+          description={textData.aboutPageData.itemCardDescription.background}
+          listItems={textData.aboutPageData.itemCardList.backgroundList}
+        />
+        <ItemCards.tileCard
+          title="Goals"
+          description={textData.aboutPageData.itemCardDescription.goals}
+          listItems={textData.aboutPageData.itemCardList.goalsList}
+        />
+        <ItemCards.tileCard
+          title="Interests"
+          description={textData.aboutPageData.itemCardDescription.interests}
+          listItems={textData.aboutPageData.itemCardList.interestsList}
+        />
+      </div>
+    </section>
   );
 };
-const BackgroundCard = () => {
+
+const Achievements = () => {
   return (
-    <ItemCards.tileCard
-      title="Background"
-      description={textData.aboutPageData.background}
-      listItems={textData.aboutPageData.backgroundList}
-    />
+    <section id="achievements">
+      <SectionTitle
+        title={textData.aboutPageData.title.achievements}
+        subTitle={textData.aboutPageData.subtitle.achievements}
+      />
+      <div className="w-full max-w-3xl mx-auto py-6 md:py-12">
+        {textData.aboutPageData.achievementsList.map((achievement, index) => (
+          <TimelineItem
+            key={index}
+            title={achievement.title}
+            date={achievement.date}
+            description={achievement.description}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
-const GoalsCard = () => {
+
+const Recommendations = () => {
   return (
-    <ItemCards.tileCard
-      title="Goals"
-      description={textData.aboutPageData.goals}
-      listItems={textData.aboutPageData.goalsList}
-    />
-  );
-};
-const InterestsCard = () => {
-  return (
-    <ItemCards.tileCard
-      title="Interests"
-      description={textData.aboutPageData.interests}
-      listItems={textData.aboutPageData.interestsList}
-    />
+    <section id="recommendations">
+      <SectionTitle
+        title={textData.aboutPageData.title.testimonials}
+        subTitle={textData.aboutPageData.subtitle.testimonials}
+      />
+      <ItemCards.testimonialCard
+        listItems={textData.aboutPageData.testimonials}
+      />
+    </section>
   );
 };
 
 export default function About() {
   return (
-    <section>
-      <div className="flex flex-col justify-center items-center">
-        <p className="pageTitleTheme">{textData.aboutPageData.title}</p>
-        <p className="pt-5 text-base font-normal text-center textSecondaryTheme">
-          {textData.aboutPageData.subtitle}
-        </p>
-      </div>
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 sm:grid-row-2 gap-4 md:gap-6">
-        <IntroductionCard />
-        <BackgroundCard />
-        <GoalsCard />
-        <InterestsCard />
-      </div>
-    </section>
+    <div>
+      <Acquainted />
+      <hr className="my-12 gradientDivider" />
+      <Achievements />
+      <hr className="my-12 gradientDivider" />
+      <Recommendations />
+    </div>
   );
 }

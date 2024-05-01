@@ -41,11 +41,11 @@
 }
 
 .pageSubtitleTheme {
-  @apply text-xl md:text-2xl font-semibold text-start text-neutral-900 dark:text-neutral-100;
+  @apply text-base font-normal text-center textSecondaryTheme;
 }
 
-.pageSubtitle2Theme {
-  @apply text-base font-normal text-center textSecondaryTheme;
+.cardTitleTheme {
+  @apply text-lg md:text-xl font-semibold text-start bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-50 dark:to-neutral-200 bg-opacity-50;
 }
 
 .navBarTheme {
@@ -95,6 +95,14 @@
 
 .cardDarkerButtonTheme {
   @apply bg-neutral-100 dark:bg-neutral-950 ring-2 ring-neutral-200 dark:ring-neutral-900 hover:ring-neutral-300 dark:hover:ring-neutral-800 transition duration-300 ease-in-out;
+}
+
+.chipTheme {
+  @apply bg-neutral-300 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 rounded-full;
+}
+
+.timeLineTheme {
+  @apply before:bg-slate-300  after:bg-slate-600 after:border-slate-200;
 }
 
 .borderTheme {

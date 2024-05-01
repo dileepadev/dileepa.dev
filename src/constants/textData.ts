@@ -9,41 +9,152 @@ import {
 } from "@/types/interfaces";
 
 const aboutPageData: AboutPageData = {
-  title: "About",
+  title: {
+    acquainted: "Let's Get Acquainted",
+    achievements: "Achievements",
+    testimonials: "What Others Say",
+  },
+  subtitle: {
+    acquainted:
+      "This is a brief overview about my background, goals, and interests.",
+    achievements:
+      "Technical and non-technical milestones that changed my life.",
+    testimonials:
+      "Insights and experiences shared by colleagues, mentors, and collaborators.",
+  },
 
-  subtitle: "Get to know my background, goals, and interests.",
+  itemCardDescription: {
+    introduction:
+      "Hi everyone! I'm a computing student, solutions developer, and community volunteer. Exploring the fascinating fields of Software Development, Artificial Intelligence, and Cloud Computing technologies, I have a keen interest in and excitement for discovering new things as a student. My passion aligns with enjoying solving problems with code and creating useful applications using computing skills as a solution developer. While I'm doing this, I believe in giving back to the community and sharing my knowledge with others. So, I volunteer for various communities and create content that can help people achieve their goals and improve their lives.",
+    background: "These are some intriguing facts about my personal details.",
+    goals: "I've set these main goals for my career development.",
+    interests: "I'm passionate about these activities and hobbies.",
+  },
 
-  introduction:
-    "Hi, everyone! I'm a computing student, solution developer, community volunteer, and content creator. As a student, I have a keen interest in and excitement for discovering new things, especially in the area of technology. My passion aligns with enjoying solving problems with code and creating useful applications using computing skills as a solution developer. I also care about giving back to the community and sharing my knowledge with others. That's why I volunteer for various communities and create content that can help people achieve their goals and improve their lives.",
+  itemCardList: {
+    backgroundList: [
+      { icon: "🔖", title: "Name: Dileepa Lakmal Bandara" },
+      { icon: "🎂", title: "Birthday: July 24th" },
+      { icon: "👨🏽", title: "Gender: Male (He/Him/His)" },
+      { icon: "🌏", title: "Location: Sri Lanka (GMT+5:30)" },
+      { icon: "💬", title: "Communicate: English & Sinhala" },
+    ],
 
-  background: "These are some intriguing facts about my personal details.",
+    goalsList: [
+      { icon: "🤖", title: "Follow: AI Engineering" },
+      { icon: "💻", title: "Practice: Software Development" },
+      { icon: "🚩", title: "Support: Tech Communities" },
+      { icon: "🎓", title: "Complete: Master's Degree" },
+    ],
 
-  goals:
-    "It's been a few years since I stepped into the tech space. Having achieved significant milestones, I'm now dedicated to following these targets.",
+    interestsList: [
+      { icon: "🎬", title: "Watch: Movies & TV Shows" },
+      { icon: "🎧", title: "Listen: Songs & Music" },
+      { icon: "🖌️", title: "Create: Contents & Media" },
+      { icon: "🔍", title: "Explore: New Things" },
+    ],
+  },
 
-  interests: "Let me tell you about the passions that define me.",
-
-  backgroundList: [
-    { icon: "🎟️", title: "Name is Dileepa Lakmal Bandara" },
-    { icon: "📆", title: "Born on July 24, 1997" },
-    { icon: "🌏", title: "Lives in Sri Lanka (GMT+5:30)" },
-    { icon: "👦🏽", title: "Gender is Male (He/Him/His)" },
-    { icon: "💼", title: "Works in Sinhala & English" },
+  achievementsList: [
+    {
+      title: "Gold Microsoft Learn Student Ambassador",
+      date: "Feb 2024",
+      description:
+        "Received the highest milestone within the Microsoft Learn Student Ambassadors program, in recognition of exceptional dedication and impactful contributions to both the community and technology.",
+    },
+    {
+      title: "Completed 10+ Events as a Speaker",
+      date: "Dec 2023",
+      description:
+        "Delivered engaging presentations on various topics, including Software Development, AI, and Cloud Computing, at tech events and meetups, inspiring and educating audiences on the latest trends and technologies.",
+    },
+    {
+      title: "Established NIBM Computing Society",
+      date: "Oct 2022",
+      description:
+        "Started the NIBM Computing Society, a student-led organization dedicated to fostering a culture of innovation, learning, and collaboration among computing students at the National Institute of Business Management.",
+    },
+    {
+      title: "Colors Award",
+      date: "Jan 2018",
+      description:
+        "Received the prestigious Colors Award for outstanding achievements in academics, extracurricular activities, and community service, recognizing exceptional leadership and contributions to the school community at Maliyadeva Model School.",
+    },
+    {
+      title: "President's Scout Award",
+      date: "Jan 2016",
+      description:
+        "Earned the President's Scout Award, the highest rank in the Sri Lanka Scout Association, for demonstrating exceptional leadership, service, and commitment to the principles of scouting.",
+    },
   ],
 
-  goalsList: [
-    { icon: "🤖", title: "Follow the AI Engineer Path" },
-    { icon: "💻", title: "Follow the Software Developer Path" },
-    { icon: "🚩", title: "Build a Tech Community" },
-    { icon: "🎓", title: "Pursue a Master's Degree" },
-  ],
-
-  interestsList: [
-    { icon: "🎬", title: "Watching Movies & TV Shows" },
-    { icon: "🎧", title: "Listening to Music" },
-    { icon: "🖌️", title: "Creating Contents" },
-    { icon: "📚", title: "Studying New Things" },
-    { icon: "🎤", title: "Public Speaking" },
+  testimonials: [
+    {
+      name: "Prabhath Mannapperuma",
+      title: "Partner Technology Strategist",
+      org: "@Microsoft",
+      image: "prabhath",
+      connection: "",
+      profileLink: PageLinks.about.prabhath,
+      testimonialLink: PageLinks.about.linkedInRecommendations,
+      testimonial:
+        "I highly recommend Dileepa Bandara as a Microsoft Learn Student Ambassador. Over the past few years, I've witnessed his unwavering commitment to community engagement and his proactive efforts in collaborating with fellow students. Dileepa's dedication to giving back and his impactful contributions make him a valuable asset to any company or project.",
+    },
+    {
+      name: "Ruwandika Wijesiri",
+      title: "Technical Lead",
+      org: "@Sysco LABS",
+      image: "ruwandika",
+      connection: "",
+      profileLink: PageLinks.about.ruwandika,
+      testimonialLink: PageLinks.about.linkedInRecommendations,
+      testimonial:
+        "I was impressed by his technical skills and the potential he had at the time I was teaching him, making him one of the hardworking & talented students at the institute. He is very much passionate about writing code and solving problems through the development of creative and innovative software solutions and tends to stay up to date with the latest technologies as well.",
+    },
+    {
+      name: "Isuru Devinda De Silva",
+      title: "Co-Founder",
+      org: "@DDS Techvira",
+      image: "isuru",
+      connection: "",
+      profileLink: PageLinks.about.isuru,
+      testimonialLink: PageLinks.about.linkedInRecommendations,
+      testimonial:
+        "I’m amazed by Dileepa’s ability to Flutter, a skill he uses to his benefit when making presentations to clients and colleagues. He is a highly focused person as well as analytical and can add to any team he is a part of. His energy to make things happen was contagious and it helped us achieve great goals. One of the best analysts we had for sure.",
+    },
+    {
+      name: "Nimesh Ekanayake",
+      title: "Technical Consultant",
+      org: "@Platned",
+      image: "nimesh",
+      connection: "",
+      profileLink: PageLinks.about.nimesh,
+      testimonialLink: PageLinks.about.linkedInRecommendations,
+      testimonial:
+        "Dileepa possesses exceptional skills in community building, leadership, and technical expertise, making a significant impact on the success of our initiatives. His passion for empowering fellow students and fostering a culture of continuous learning is truly inspiring. It has been a pleasure working alongside Dileepa, and I am confident that his skills and commitment will continue to shine in future endeavors.",
+    },
+    {
+      name: "Eranga Perera",
+      title: "Consultant / Lecturer",
+      org: "@NIBM",
+      image: "eranga",
+      connection: "",
+      profileLink: PageLinks.about.eranga,
+      testimonialLink: PageLinks.about.linkedInRecommendations,
+      testimonial:
+        "What truly impressed me about Dileepa was their proactive approach to problem-solving. They exhibited a strong analytical mindset, often thinking outside the box to find innovative solutions. Their eagerness to explore new technologies and apply them practically was commendable and reflected in their work. I am delighted to recommend them highly for their exceptional dedication to the IT field.",
+    },
+    {
+      name: "Buwaneka Jayasundara",
+      title: "DevOps Engineer",
+      org: "@Affiniti Innovations",
+      image: "buwaneka",
+      connection: "",
+      profileLink: PageLinks.about.buwaneka,
+      testimonialLink: PageLinks.about.linkedInRecommendations,
+      testimonial:
+        "Dileepa and I collaborated on a challenging mobile app project centered around visualizing data predicted by ML algorithms. As a Flutter developer, Dileepa demonstrated exceptional coding skills and a profound understanding of Google Cloud services, contributing significantly to the success of our project. His problem-solving abilities are exemplary, consistently finding innovative solutions to complex challenges.",
+    },
   ],
 };
 
