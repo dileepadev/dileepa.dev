@@ -5,6 +5,7 @@ import { useState } from "react";
 import { validateForm, sendEmail } from "@/utils/formUtils";
 import { FormData } from "@/types/interfaces";
 import { ToastComponent } from "@/components/toast";
+import SectionTitle from "@/components/SectionTitle";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -126,19 +127,19 @@ const ContactForm = () => {
 
 export default function Connect() {
   return (
-    <section>
-      <div className="flex flex-col justify-center items-center">
-        <p className="pageTitleTheme">{textData.connectPageData.title}</p>
-        <p className="pt-5 text-base font-normal text-center textSecondaryTheme">
-          {textData.connectPageData.subtitle}
-        </p>
-      </div>
-      <div className="mt-16 flex xs:flex-col sm:flex-col md:flex-row lg:flex-row xs:gap-8 sm:gap-8 md:gap-16 lg:gap-24">
-        <ContactForm />
-        <ItemCards.connectChannelCard
-          listItems={textData.connectPageData.connectLinks}
+    <div>
+      <section key="Connect">
+        <SectionTitle
+          title={textData.connectPageData.title}
+          subTitle={textData.connectPageData.subtitle}
         />
-      </div>
-    </section>
+        <div className="mt-16 flex xs:flex-col sm:flex-col md:flex-row lg:flex-row xs:gap-8 sm:gap-8 md:gap-16 lg:gap-24">
+          <ContactForm />
+          <ItemCards.connectChannelCard
+            listItems={textData.connectPageData.connectLinks}
+          />
+        </div>
+      </section>
+    </div>
   );
 }
