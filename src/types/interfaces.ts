@@ -105,17 +105,18 @@ export interface ExperiencePageData {
     imageL: string;
     link: string;
   }>;
-  toolsPM: Array<{
+  toolsCode: Array<{
     title: string;
     description: string;
     image: string;
     imageL: string;
     link: string;
   }>;
-  workingAreas: Array<{
-    name: string;
+  toolsPM: Array<{
+    title: string;
     description: string;
     image: string;
+    imageL: string;
     link: string;
   }>;
   volunteer: Array<{

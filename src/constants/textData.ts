@@ -220,7 +220,7 @@ const experiencePageData: ExperiencePageData = {
       title: "Freelance Solutions Developer",
       org: "WingzDev · Self-Employed",
       location: "Sri Lanka · Remote",
-      years: "Jun 2019 - Present",
+      years: "Jun 2019 - Dec 2023",
       status:
         "Software Development (Mobile, Desktop, Web, API), UI UX Designing, Tech Support Assistant, SEO, Data Analysis, AI/ML, Cloud Computing",
       image: "wd",
@@ -357,6 +357,13 @@ const experiencePageData: ExperiencePageData = {
       link: "",
     },
     {
+      title: "Express.js",
+      description: "A web application framework for Node.js.",
+      image: "express",
+      imageL: "express-l",
+      link: "",
+    },
+    {
       title: "React.js",
       description: "A JavaScript library for building user interfaces.",
       image: "reactjs",
@@ -368,6 +375,14 @@ const experiencePageData: ExperiencePageData = {
       description: "A React framework for building production-ready apps.",
       image: "nextjs",
       imageL: "nextjs",
+      link: "",
+    },
+    {
+      title: "GraphQL",
+      description:
+        "A query language for APIs and a runtime for executing those queries by using a type system you define for your data.",
+      image: "graphql",
+      imageL: "graphql",
       link: "",
     },
     {
@@ -429,14 +444,6 @@ const experiencePageData: ExperiencePageData = {
         "A class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
       image: "java",
       imageL: "java",
-      link: "",
-    },
-    {
-      title: "GraphQL",
-      description:
-        "A query language for APIs and a runtime for executing those queries by using a type system you define for your data.",
-      image: "graphql",
-      imageL: "graphql",
       link: "",
     },
   ],
@@ -587,7 +594,8 @@ const experiencePageData: ExperiencePageData = {
       link: "",
     },
   ],
-  toolsPM: [
+
+  toolsCode: [
     {
       title: "Visual Studio Code",
       description:
@@ -613,11 +621,27 @@ const experiencePageData: ExperiencePageData = {
       link: "",
     },
     {
-      title: "Google Colab",
+      title: "IntelliJ IDEA",
       description:
-        "A free cloud service that supports free GPU and TPU for deep learning.",
-      image: "googlecolab",
-      imageL: "googlecolab",
+        "A Java integrated development environment for developing computer software.",
+      image: "intellijidea",
+      imageL: "intellijidea",
+      link: "",
+    },
+    {
+      title: "PyCharm",
+      description:
+        "An integrated development environment used in computer programming, specifically for the Python language.",
+      image: "pycharm",
+      imageL: "pycharm",
+      link: "",
+    },
+    {
+      title: "Codespaces",
+      description:
+        "A cloud-based development environment that is integrated into GitHub.",
+      image: "codespaces",
+      imageL: "codespaces",
       link: "",
     },
     {
@@ -629,6 +653,24 @@ const experiencePageData: ExperiencePageData = {
       link: "",
     },
     {
+      title: "Google Colab",
+      description:
+        "A free cloud service that supports free GPU and TPU for deep learning.",
+      image: "googlecolab",
+      imageL: "googlecolab",
+      link: "",
+    },
+  ],
+
+  toolsPM: [
+    {
+      title: "ClickUp",
+      description: "A cloud-based collaboration and project management tool.",
+      image: "clickup",
+      imageL: "clickup",
+      link: "",
+    },
+    {
       title: "Jira",
       description:
         "A proprietary issue tracking product developed by Atlassian.",
@@ -637,10 +679,11 @@ const experiencePageData: ExperiencePageData = {
       link: "",
     },
     {
-      title: "ClickUp",
-      description: "A cloud-based collaboration and project management tool.",
-      image: "clickup",
-      imageL: "clickup",
+      title: "Microsoft 365",
+      description:
+        "A line of subscription services offered by Microsoft as part of the Microsoft Office product line.",
+      image: "microsoft365",
+      imageL: "microsoft365",
       link: "",
     },
     {
@@ -650,27 +693,6 @@ const experiencePageData: ExperiencePageData = {
       image: "figma",
       imageL: "figma",
       link: "",
-    },
-  ],
-
-  workingAreas: [
-    {
-      name: "Web Development",
-      description: "",
-      image: "python",
-      link: PageLinks.experience.work,
-    },
-    {
-      name: "Mobile Development",
-      description: "",
-      image: "python",
-      link: PageLinks.experience.work,
-    },
-    {
-      name: "Project Management",
-      description: "",
-      image: "python",
-      link: PageLinks.experience.work,
     },
   ],
 
@@ -700,7 +722,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Jan 2024 - Present",
       status: "",
       image: "aicsl",
-      link: PageLinks.experience.fossLK,
+      link: PageLinks.experience.aicsl,
     },
     {
       title: "Volunteer",
@@ -709,7 +731,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Jan 2024 - Present",
       status: "",
       image: "sldf",
-      link: PageLinks.experience.fossLK,
+      link: PageLinks.experience.sldf,
     },
     {
       title: "Volunteer",

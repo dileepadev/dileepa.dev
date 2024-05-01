@@ -66,7 +66,13 @@ export default function Experience() {
           listItems={textData.experiencePageData.toolsAIML}
         />
         <p className="mt-8 text-md font-semibold textTheme text-center">
-          Code Editors, Project Management & Designing
+          Code Editors & IDEs
+        </p>
+        <ItemCards.toolsSmallCard
+          listItems={textData.experiencePageData.toolsCode}
+        />
+        <p className="mt-8 text-md font-semibold textTheme text-center">
+          Project Management & Designing
         </p>
         <ItemCards.toolsSmallCard
           listItems={textData.experiencePageData.toolsPM}
