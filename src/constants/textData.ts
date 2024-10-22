@@ -57,10 +57,28 @@ const aboutPageData: AboutPageData = {
 
   achievementsList: [
     {
+      title: "Intern Software Engineer",
+      date: "Sep 2024",
+      description:
+        "Started an internship as a Software Engineer at Random Software Ltd, working on AI, Software Engineering, and Cloud Computing projects.",
+    },
+    {
+      title: "LinkedIn Top Artificial Intelligence (AI) Voice",
+      date: "Feb 2024",
+      description:
+        "Community Top Voice. People on LinkedIn find Dileepa Bandara an insightful contributor in AI skill.",
+    },
+    {
       title: "Gold Microsoft Learn Student Ambassador",
       date: "Feb 2024",
       description:
         "Received the highest milestone within the Microsoft Learn Student Ambassadors program, in recognition of exceptional dedication and impactful contributions to both the community and technology.",
+    },
+    {
+      title: "Found Microsoft Learn Student Club - NIBM",
+      date: "Jan 2024",
+      description:
+        "Established the Microsoft Learn Student Club at the National Institute of Business Management, a student-led community dedicated to empowering students with technical skills and career opportunities in technology.",
     },
     {
       title: "Completed 10+ Events as a Speaker",
@@ -165,6 +183,15 @@ const educationPageData: EducationPageData = {
 
   academic: [
     {
+      course: "Postgraduate Education",
+      institute: "National Institute of Business Management",
+      location: "Sri Lanka",
+      years: "Feb 2024 - Present",
+      status: "In Progress",
+      image: "nibm",
+      link: PageLinks.education.nibm,
+    },
+    {
       course: "BSc (Hons) Computing",
       institute: "Coventry University",
       location: "United Kingdom",
@@ -217,6 +244,28 @@ const experiencePageData: ExperiencePageData = {
 
   work: [
     {
+      title: "Intern Software Engineer",
+      org: "Random Software Ltd · Internship",
+      location: "Sri Lanka · Remote",
+      years: "Sep 2024 - Present",
+      status:
+        "Artificial Intelligence · Software Engineering · C# · .NET · JavaScript · TypeScript · Angular · Node.js · Azure · AWS · Team Collaboration · Automotive Aftermarket",
+      image: "rsl-l",
+      imageL: "rsl-d",
+      link: PageLinks.experience.rsl,
+    },
+    {
+      title: "Professional Development",
+      org: "Career Break",
+      location: "Sri Lanka · Remote",
+      years: "Jan 2024 - Sep 2024",
+      status:
+        "Development Skills: Artificial Intelligence · Software Engineering · Cloud Computing · Azure · C# · .NET · Python · Leadership · Public Speaking · Content Creation",
+      image: "pd",
+      imageL: "pd",
+      link: PageLinks.experience.pd,
+    },
+    {
       title: "Freelance Solutions Developer",
       org: "WingzDev · Self-Employed",
       location: "Sri Lanka · Remote",
@@ -224,6 +273,7 @@ const experiencePageData: ExperiencePageData = {
       status:
         "Software Development (Mobile, Desktop, Web, API), UI UX Designing, Tech Support Assistant, SEO, Data Analysis, AI/ML, Cloud Computing",
       image: "wd",
+      imageL: "wd",
       link: PageLinks.experience.wd,
     },
     {
@@ -234,6 +284,7 @@ const experiencePageData: ExperiencePageData = {
       status:
         "Flutter, Dart, Android, Firebase, SQL, Git, GitHub, REST API, JSON Parsing, Android Studio, VS Code, App Releasing & UI UX Designing",
       image: "ddst",
+      imageL: "ddst",
       link: PageLinks.experience.ddst,
     },
   ],
@@ -725,10 +776,19 @@ const experiencePageData: ExperiencePageData = {
       link: PageLinks.experience.aicsl,
     },
     {
+      title: "Founder & Mentor",
+      org: "Microsoft Learn Student Club - NIBM",
+      location: "Sri Lanka",
+      years: "Jan 2024 - Present",
+      status: "",
+      image: "mlsc-nibm",
+      link: PageLinks.experience.mlscnibm,
+    },
+    {
       title: "Volunteer",
       org: "Sri Lanka Developer Forum",
       location: "Sri Lanka",
-      years: "Jan 2024 - Present",
+      years: "Jan 2024 - Jun 2024",
       status: "",
       image: "sldf",
       link: PageLinks.experience.sldf,
@@ -779,11 +839,89 @@ const mediaPageData: MediaPageData = {
   },
   subtitle: {
     events:
-      "A snapshot of memorable sessions, meetups, and workshops I've participated in.",
+      "A snapshot of memorable sessions, meetups, and workshops I did as a speaker.",
     csc: "A collection of Cloud Skills Challenges I've hosted.",
   },
 
   eventsList: [
+    {
+      title: "Season of AI - NIBM Galle",
+      date: "31st August 2024",
+      time: "07:00 PM - 10:00 PM (UTC+05:30)",
+      venue: "Microsoft Teams (Online)",
+      description:
+        "Season of AI is a global Microsoft Community Pilot program taking place at various locations around the world, focusing on the latest advancements in Microsoft AI.",
+      image: "banner",
+      link: "#",
+      role: ["Speaker"],
+      organizer: ["Microsoft Learn Student Ambassadors"],
+      organizerImage: ["mlsa"],
+    },
+    {
+      title: "Season of AI - NIBM Kurunegala",
+      date: "26th August 2024",
+      time: "03:00 PM - 04:30 PM (UTC+05:30)",
+      venue: "NIBM Kurunegala (In-Person)",
+      description:
+        "Season of AI is a global Microsoft Community Pilot program taking place at various locations around the world, focusing on the latest advancements in Microsoft AI.",
+      image: "banner",
+      link: "#",
+      role: ["Speaker"],
+      organizer: ["Microsoft Learn Student Ambassadors"],
+      organizerImage: ["mlsa"],
+    },
+    {
+      title: "Microsoft Azure Artificial Intelligence Career Paths",
+      date: "28th June 2024",
+      time: "09:00 AM - 04:00 PM (UTC+05:30)",
+      venue: "NIBM Kandy (In-Person)",
+      description:
+        "This workshop offered comprehensive guidelines for embarking on a career in artificial intelligence, leveraging the power of Azure AI services.",
+      image: "banner",
+      link: "#",
+      role: ["Speaker"],
+      organizer: ["Microsoft Learn Student Ambassadors"],
+      organizerImage: ["mlsa"],
+    },
+    {
+      title: "Build AI Solutions with Microsoft Technologies",
+      date: "13th May 2024",
+      time: "09:00 AM - 03:00 PM (UTC+05:30)",
+      venue: "NIBM Kurunegala (In-Person)",
+      description:
+        "A practical workshop on building AI solutions using Microsoft technologies, including Azure AI services and tools.",
+      image: "banner",
+      link: "#",
+      role: ["Speaker"],
+      organizer: ["Microsoft Learn Student Ambassadors"],
+      organizerImage: ["mlsa"],
+    },
+    {
+      title: "Exploring Azure Services for Web Apps",
+      date: "02nd May 2024",
+      time: "07:00 PM - 08:30 PM (UTC+05:30)",
+      venue: "Microsoft Teams (Online)",
+      description:
+        "This event provided a beginner-friendly introduction to Azure fundamentals and explored its capabilities for web apps.",
+      image: "banner",
+      link: "#",
+      role: ["Speaker"],
+      organizer: ["Microsoft Learn Student Ambassadors"],
+      organizerImage: ["mlsa"],
+    },
+    {
+      title: "Productivity with Azure AI Studio",
+      date: "23rd April 2024",
+      time: "07:00 PM - 08:00 PM (UTC+05:30)",
+      venue: "Microsoft Teams (Online)",
+      description:
+        "A hands-on introduction to Azure AI Studio, a powerful tool for building, training, and deploying machine learning models.",
+      image: "banner",
+      link: "#",
+      role: ["Speaker"],
+      organizer: ["Microsoft Learn Student Ambassadors"],
+      organizerImage: ["mlsa"],
+    },
     {
       title: "Building, Deploying, and Consuming ML Models with Azure ML",
       date: "28th February 2024",
@@ -799,6 +937,19 @@ const mediaPageData: MediaPageData = {
         "Microsoft Learn Student Ambassadors",
       ],
       organizerImage: ["ami", "mlsa"],
+    },
+    {
+      title: "Sri Lanka Developer Forum - January Meetup",
+      date: "18th January 2024",
+      time: "06:30 PM - 07:00 PM (UTC+05:30)",
+      venue: "Microsoft Sri Lanka (In-Person)",
+      description:
+        "A monthly meetup of the Sri Lanka Developer Forum community to discuss the latest trends in Microsoft technologies and software development.",
+      image: "banner",
+      link: "#",
+      role: ["Speaker"],
+      organizer: ["Sri Lanka Developer Forum"],
+      organizerImage: ["sldf"],
     },
     {
       title: "Microsoft Imagine Cup 2024 - NIBM Awareness Session",
