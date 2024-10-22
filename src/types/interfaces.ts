@@ -120,48 +120,6 @@ export interface ExperiencePageData {
     imageL: string;
     link: string;
   }>;
-  projects: Array<{
-    title: string;
-    description: string;
-    image: string;
-    keyWords: Array<string>;
-    link: string;
-  }>;
-  toolsFrontBack: Array<{
-    title: string;
-    description: string;
-    image: string;
-    imageL: string;
-    link: string;
-  }>;
-  toolsCloud: Array<{
-    title: string;
-    description: string;
-    image: string;
-    imageL: string;
-    link: string;
-  }>;
-  toolsAIML: Array<{
-    title: string;
-    description: string;
-    image: string;
-    imageL: string;
-    link: string;
-  }>;
-  toolsCode: Array<{
-    title: string;
-    description: string;
-    image: string;
-    imageL: string;
-    link: string;
-  }>;
-  toolsPM: Array<{
-    title: string;
-    description: string;
-    image: string;
-    imageL: string;
-    link: string;
-  }>;
   volunteer: Array<{
     title: string;
     org: string;
