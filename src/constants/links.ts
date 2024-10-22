@@ -35,6 +35,8 @@ export const PageLinks = {
     mms: "https://www.maliyadevaadarshappa.lk/",
   },
   experience: {
+    rsl: "https://linkedin.com/company/randomsoftware/",
+    pd: "",
     wd: "https://linkedin.com/company/wingzdev/",
     ddst: "https://linkedin.com/company/dds-techvira/",
     projects: WebLinks.github + "?tab=repositories",

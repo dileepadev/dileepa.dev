@@ -75,6 +75,7 @@ export interface ExperiencePageData {
     years: string;
     status: string;
     image: string;
+    imageL: string;
     link: string;
   }>;
   projects: Array<{

@@ -146,6 +146,15 @@ const iconCard = ({ listItems, page }: { listItems: any; page: string }) => {
               <Image
                 src={`/svg/${item.image}.svg`}
                 alt={`Image of the ${item.institute}`}
+                className="mr-2 hidden dark:block"
+                width={100}
+                height={100}
+                priority
+              />
+              <Image
+                src={`/svg/${item.imageL}.svg`}
+                alt={`Image of the ${item.institute}`}
+                className="mr-2 dark:hidden block"
                 width={100}
                 height={100}
                 priority

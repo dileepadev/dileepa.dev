@@ -217,6 +217,28 @@ const experiencePageData: ExperiencePageData = {
 
   work: [
     {
+      title: "Intern Software Engineer",
+      org: "Random Software Ltd · Internship",
+      location: "Sri Lanka · Remote",
+      years: "Sep 2024 - Present",
+      status:
+        "Artificial Intelligence · Software Engineering · C# · .NET · JavaScript · TypeScript · Angular · Node.js · Azure · AWS · Team Collaboration · Automotive Aftermarket",
+      image: "rsl-l",
+      imageL: "rsl-d",
+      link: PageLinks.experience.rsl,
+    },
+    {
+      title: "Professional Development",
+      org: "Career Break",
+      location: "Sri Lanka · Remote",
+      years: "Jan 2024 - Sep 2024",
+      status:
+        "Development Skills: Artificial Intelligence · Software Engineering · Cloud Computing · Azure · C# · .NET · Python · Leadership · Public Speaking · Content Creation",
+      image: "pd",
+      imageL: "pd",
+      link: PageLinks.experience.pd,
+    },
+    {
       title: "Freelance Solutions Developer",
       org: "WingzDev · Self-Employed",
       location: "Sri Lanka · Remote",
@@ -224,6 +246,7 @@ const experiencePageData: ExperiencePageData = {
       status:
         "Software Development (Mobile, Desktop, Web, API), UI UX Designing, Tech Support Assistant, SEO, Data Analysis, AI/ML, Cloud Computing",
       image: "wd",
+      imageL: "wd",
       link: PageLinks.experience.wd,
     },
     {
@@ -234,6 +257,7 @@ const experiencePageData: ExperiencePageData = {
       status:
         "Flutter, Dart, Android, Firebase, SQL, Git, GitHub, REST API, JSON Parsing, Android Studio, VS Code, App Releasing & UI UX Designing",
       image: "ddst",
+      imageL: "ddst",
       link: PageLinks.experience.ddst,
     },
   ],
