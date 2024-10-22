@@ -57,10 +57,28 @@ const aboutPageData: AboutPageData = {
 
   achievementsList: [
     {
+      title: "Intern Software Engineer",
+      date: "Sep 2024",
+      description:
+        "Started an internship as a Software Engineer at Random Software Ltd, working on AI, Software Engineering, and Cloud Computing projects.",
+    },
+    {
+      title: "LinkedIn Top Artificial Intelligence (AI) Voice",
+      date: "Feb 2024",
+      description:
+        "Community Top Voice. People on LinkedIn find Dileepa Bandara an insightful contributor in AI skill.",
+    },
+    {
       title: "Gold Microsoft Learn Student Ambassador",
       date: "Feb 2024",
       description:
         "Received the highest milestone within the Microsoft Learn Student Ambassadors program, in recognition of exceptional dedication and impactful contributions to both the community and technology.",
+    },
+    {
+      title: "Found Microsoft Learn Student Club - NIBM",
+      date: "Jan 2024",
+      description:
+        "Established the Microsoft Learn Student Club at the National Institute of Business Management, a student-led community dedicated to empowering students with technical skills and career opportunities in technology.",
     },
     {
       title: "Completed 10+ Events as a Speaker",
