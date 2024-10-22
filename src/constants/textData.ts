@@ -165,6 +165,15 @@ const educationPageData: EducationPageData = {
 
   academic: [
     {
+      course: "Postgraduate Education",
+      institute: "National Institute of Business Management",
+      location: "Sri Lanka",
+      years: "Feb 2024 - Present",
+      status: "In Progress",
+      image: "nibm",
+      link: PageLinks.education.nibm,
+    },
+    {
       course: "BSc (Hons) Computing",
       institute: "Coventry University",
       location: "United Kingdom",
