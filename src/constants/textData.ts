@@ -776,6 +776,15 @@ const experiencePageData: ExperiencePageData = {
       link: PageLinks.experience.aicsl,
     },
     {
+      title: "Founder & Mentor",
+      org: "Microsoft Learn Student Club - NIBM",
+      location: "Sri Lanka",
+      years: "Jan 2024 - Present",
+      status: "",
+      image: "mlsc-nibm",
+      link: PageLinks.experience.mlscnibm,
+    },
+    {
       title: "Volunteer",
       org: "Sri Lanka Developer Forum",
       location: "Sri Lanka",

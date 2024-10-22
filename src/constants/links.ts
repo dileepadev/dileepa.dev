@@ -43,6 +43,7 @@ export const PageLinks = {
     mlsa: "https://mvp.microsoft.com/studentambassadors/",
     mlsaLK: "https://linkedin.com/company/mlsasrilanka/",
     aicsl: "https://linkedin.com/company/aicsl/",
+    mlscnibm: "https://linkedin.com/company/mlscnibm/",
     sldf: "https://facebook.com/groups/sldevelopers/",
     gdgLK: "https://gdg.community.dev/gdg-sri-lanka/",
     fossLK: "https://foss.lk/",
