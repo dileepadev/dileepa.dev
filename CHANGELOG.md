@@ -6,6 +6,17 @@ All notable changes to this project are documented in this file.
 
 - **No changes yet.**
 
+## [1.1.1] - 2024-10-23
+
+- **Fixed (Bugs):**
+
+  - chore: Upgrade to 1.1.1 - package.json
+  - Add Experience Page - Career Break & RSL
+  - Add Education Page - Postgraduate Education
+  - Add Media Page - Missing event details
+  - Add missing achievements
+  - Add MLSC - NIBM
+
 ## [1.1.0] - 2024-05-01
 
 - **Added (New features):**
