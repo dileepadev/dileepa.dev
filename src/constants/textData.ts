@@ -189,6 +189,7 @@ const educationPageData: EducationPageData = {
       years: "Feb 2024 - Present",
       status: "In Progress",
       image: "nibm",
+      imageL: "nibm",
       link: PageLinks.education.nibm,
     },
     {
@@ -198,6 +199,7 @@ const educationPageData: EducationPageData = {
       years: "Nov 2021 - Feb 2024",
       status: "First Class Honours",
       image: "coventry",
+      imageL: "coventry",
       link: PageLinks.education.coventry,
     },
     {
@@ -207,6 +209,7 @@ const educationPageData: EducationPageData = {
       years: "Apr 2020 - Aug 2021",
       status: "4.0 GPA",
       image: "nibm",
+      imageL: "nibm",
       link: PageLinks.education.nibm,
     },
     {
@@ -216,6 +219,7 @@ const educationPageData: EducationPageData = {
       years: "Mar 2019 - Aug 2020",
       status: "3.75 GPA",
       image: "nibm",
+      imageL: "nibm",
       link: PageLinks.education.nibm,
     },
     {
@@ -225,6 +229,7 @@ const educationPageData: EducationPageData = {
       years: "Jan 2003 - Dec 2016",
       status: "GCE Advanced Level (Maths)",
       image: "mms",
+      imageL: "mms",
       link: PageLinks.education.mms,
     },
   ],
@@ -755,6 +760,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Oct 2022 - Present",
       status: "",
       image: "msft",
+      imageL: "msft",
       link: PageLinks.experience.mlsa,
     },
     {
@@ -764,6 +770,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Jan 2023 - Present",
       status: "",
       image: "mlsa",
+      imageL: "mlsa",
       link: PageLinks.experience.mlsaLK,
     },
     {
@@ -773,6 +780,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Jan 2024 - Present",
       status: "",
       image: "aicsl",
+      imageL: "aicsl",
       link: PageLinks.experience.aicsl,
     },
     {
@@ -782,6 +790,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Jan 2024 - Present",
       status: "",
       image: "mlsc-nibm",
+      imageL: "mlsc-nibm",
       link: PageLinks.experience.mlscnibm,
     },
     {
@@ -791,6 +800,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Jan 2024 - Jun 2024",
       status: "",
       image: "sldf",
+      imageL: "sldf",
       link: PageLinks.experience.sldf,
     },
     {
@@ -800,6 +810,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Oct 2022 - Present",
       status: "",
       image: "gdglk",
+      imageL: "gdglk",
       link: PageLinks.experience.gdgLK,
     },
     {
@@ -809,6 +820,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Oct 2023 - Present",
       status: "",
       image: "fosslk",
+      imageL: "fosslk",
       link: PageLinks.experience.fossLK,
     },
     {
@@ -818,6 +830,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Oct 2022 - Dec 2023",
       status: "",
       image: "nibmcs",
+      imageL: "nibmcs",
       link: PageLinks.experience.nibmcs,
     },
     {
@@ -827,6 +840,7 @@ const experiencePageData: ExperiencePageData = {
       years: "Oct 2022 - Dec 2023",
       status: "",
       image: "nibmfossc",
+      imageL: "nibmfossc",
       link: PageLinks.experience.nibmfossc,
     },
   ],
