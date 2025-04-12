@@ -39,7 +39,7 @@ All notable changes to this project are documented in this file.
     - tailwindcss [3 -> 3.3.0]
   - Update header and footer
   - Update home page
-  - Update experience pag
+  - Update experience page
     - Add Projects section
     - Add Tools & Technologies section
     - Update latest experience data
