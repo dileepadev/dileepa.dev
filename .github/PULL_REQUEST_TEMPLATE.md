@@ -30,15 +30,23 @@ title: "<type>(<branch>): <message> [#issue_number]"
 
 <!-- [REQUIRED] Tick all that apply -->
 
-- [ ] I've read the [CONTRIBUTING.md](../CONTRIBUTING.md).
-- [ ] I agree to follow the [Code of Conduct](../CODE_OF_CONDUCT.md).
-- [ ] Documentation has been updated if necessary.
+- [x] I've followed the [CONTRIBUTING.md](CONTRIBUTING.md).
+- [x] I've followed the [Commit Message Guidelines](COMMIT_MESSAGE_GUIDELINES.md).
+- [x] I've followed the [Branch Naming Guidelines](BRANCH_NAMING_GUIDELINES.md).
+- [x] I agree to follow the [Pull Request Guidelines](PULL_REQUEST_GUIDELINES.md).
+- [x] I agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+- [x] Documentation has been updated where necessary.
+- [x] I've tested the changes where applicable.
+
+<!-- example:
 - [ ] I've tested the changes where applicable:
   - [ ] Screen sizes (mobile/tablet/desktop)
   - [ ] Browsers (Chrome/Firefox/Safari/etc.)
   - [ ] Devices (iPhone/Android/Laptop/etc.)
   - [ ] Operating Systems (Windows/macOS/Linux)
   - [ ] Theme modes (Dark mode / Light mode)
+
+-->
 
 ## 💬 Additional Comments
 
