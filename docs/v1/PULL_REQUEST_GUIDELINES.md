@@ -34,4 +34,4 @@ The pull request title should follow the format:
 - `docs(readme): Update installation instructions`
 - `style(main): Format code according to style guide`
 
-Please adhere to this naming convention to maintain consistency and clarity.
+Please adhere to this naming convention to maintain consistency and clarity
