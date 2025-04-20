@@ -7,42 +7,16 @@ import { useState, useRef } from "react";
 import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { HiX, HiOutlineMenuAlt4 } from "react-icons/hi";
 import { navItems, socialLinks, emailAddress } from "@/data/links";
+import {
+  scrollToSection as smoothScrollToSection,
+  scrollToTop as smoothScrollToTop,
+} from "@/utils/scroll";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
 
-  const scrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    sectionId: string
-  ) => {
-    e.preventDefault();
-    const section = document.getElementById(sectionId);
-
-    if (section) {
-      const header = headerRef.current;
-      const headerHeight = header ? header.getBoundingClientRect().height : 0;
-
-      const offsetTop =
-        section.getBoundingClientRect().top + window.scrollY - headerHeight;
-
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-
-      setIsMobileMenuOpen(false);
-    }
-  };
-
-  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-    setIsMobileMenuOpen(false);
-  };
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <header
@@ -54,7 +28,7 @@ const Navigation = () => {
           <Link
             href="#hero"
             className="text-black hover:text-gray-700 transition-colors"
-            onClick={scrollToTop}
+            onClick={(e) => smoothScrollToTop(e, closeMobileMenu)}
           >
             Dileepa Bandara
           </Link>
@@ -66,7 +40,7 @@ const Navigation = () => {
               key={item.id}
               href={`#${item.id}`}
               className="text-gray-700 hover:text-black transition-colors"
-              onClick={(e) => scrollToSection(e, item.id)}
+              onClick={(e) => smoothScrollToSection(e, item.id)}
             >
               {item.name}
             </Link>
@@ -119,7 +93,9 @@ const Navigation = () => {
                 key={item.id}
                 href={`#${item.id}`}
                 className="py-2 w-full text-center text-gray-800 hover:bg-gray-100 hover:text-black transition-colors"
-                onClick={(e) => scrollToSection(e, item.id)}
+                onClick={(e) =>
+                  smoothScrollToSection(e, item.id, closeMobileMenu)
+                }
               >
                 {item.name}
               </a>

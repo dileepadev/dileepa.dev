@@ -3,33 +3,9 @@
 import type React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { scrollToSection } from "@/utils/scroll";
 
 const Hero = () => {
-  // Smooth scroll function
-  const scrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    sectionId: string
-  ) => {
-    e.preventDefault();
-    const section = document.getElementById(sectionId);
-
-    if (section) {
-      // Get header height to offset the scroll position
-      const header = document.querySelector("header");
-      const headerHeight = header ? header.getBoundingClientRect().height : 0;
-
-      // Calculate the position to scroll to
-      const offsetTop =
-        section.getBoundingClientRect().top + window.scrollY - headerHeight;
-
-      // Smooth scroll to the section
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <div className="pt-10 pb-20 md:pt-16 md:pb-32 container mx-auto px-4">
       <div className="flex flex-col items-center text-center">
@@ -60,7 +36,7 @@ const Hero = () => {
             <Link
               href="#connect"
               className="bg-neutral-900 text-white py-2 px-4 rounded-md hover:bg-black transition duration-300"
-              onClick={(e) => scrollToSection(e, "connect")}
+              onClick={(e) => scrollToSection(e, "connect")} // Use imported function
             >
               Get in Touch
             </Link>
