@@ -19,15 +19,12 @@ const Navigation = () => {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header
-      ref={headerRef}
-      className="sticky top-0 z-50 bg-white border-b border-gray-200"
-    >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="font-semibold text-lg">
+    <header ref={headerRef} className="bodyColor sticky top-0 z-50">
+      <div className="container mx-auto px-4 py-5 flex justify-between items-center">
+        <div className="textButtonSecondaryColor buttonTransition font-medium text-base">
           <Link
             href="#hero"
-            className="text-black hover:text-gray-700 transition-colors"
+            className="cursor-pointer"
             onClick={(e) => smoothScrollToTop(e, closeMobileMenu)}
           >
             Dileepa Bandara
@@ -39,7 +36,7 @@ const Navigation = () => {
             <Link
               key={item.id}
               href={`#${item.id}`}
-              className="text-gray-700 hover:text-black transition-colors"
+              className="textButtonColor buttonTransition cursor-pointer"
               onClick={(e) => smoothScrollToSection(e, item.id)}
             >
               {item.name}
@@ -51,21 +48,21 @@ const Navigation = () => {
           <Link
             href={socialLinks.github ?? "#"}
             target="_blank"
-            className="text-gray-700 hover:text-black transition-colors"
+            className="textButtonColor buttonTransition cursor-pointer"
           >
             <FaGithub size={20} />
           </Link>
           <Link
             href={socialLinks.linkedin ?? "#"}
             target="_blank"
-            className="text-gray-700 hover:text-black transition-colors"
+            className="textButtonColor buttonTransition cursor-pointer"
           >
             <FaLinkedinIn size={20} />
           </Link>
           <Link
             href={`mailto:${emailAddress}`}
             target="_blank"
-            className="text-gray-700 hover:text-black transition-colors"
+            className="textButtonColor buttonTransition cursor-pointer"
           >
             <FaEnvelope size={20} />
           </Link>
@@ -75,7 +72,7 @@ const Navigation = () => {
           <button
             type="button"
             title="Toggle Navigation Menu"
-            className="focus:outline-none text-gray-700 hover:text-black hover:bg-gray-100 p-1 rounded transition-colors duration-200"
+            className="textButtonColor buttonTransition cursor-pointer focus:outline-none p-1 rounded"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -87,12 +84,12 @@ const Navigation = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 mt-0 py-2 bg-white rounded-b-md shadow-lg flex flex-col items-center z-40">
+          <div className="bodyColor borderColor md:hidden absolute top-full left-0 right-0 mt-0 py-2 rounded-b-md shadow-lg flex flex-col items-center z-40">
             {navItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="py-2 w-full text-center text-gray-800 hover:bg-gray-100 hover:text-black transition-colors"
+                className="textButtonColor buttonTransition cursor-pointer py-2 w-full text-center"
                 onClick={(e) =>
                   smoothScrollToSection(e, item.id, closeMobileMenu)
                 }
@@ -100,25 +97,25 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
-            <div className="mt-2 pt-2 border-t border-gray-200 w-full px-4 py-2 flex justify-center space-x-6">
+            <div className="borderColor mt-8 pt-4 px-4 py-2 border-t w-full flex justify-center space-x-6">
               <Link
                 href={socialLinks.github ?? "#"}
                 target="_blank"
-                className="text-gray-700 hover:text-black transition-colors"
+                className="textButtonColor buttonTransition cursor-pointer"
               >
                 <FaGithub size={20} />
               </Link>
               <Link
                 href={socialLinks.linkedin ?? "#"}
                 target="_blank"
-                className="text-gray-700 hover:text-black transition-colors"
+                className="textButtonColor buttonTransition cursor-pointer"
               >
                 <FaLinkedinIn size={20} />
               </Link>
               <Link
                 href={`mailto:${emailAddress}`}
                 target="_blank"
-                className="text-gray-700 hover:text-black transition-colors"
+                className="textButtonColor buttonTransition cursor-pointer"
               >
                 <FaEnvelope size={20} />
               </Link>
