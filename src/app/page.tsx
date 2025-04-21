@@ -48,6 +48,7 @@ export default function Home() {
         <section id="hero">
           <Hero />
         </section>
+        <hr className="gradientDividerTheme" />
         <About />
         <Experience />
         <Education />

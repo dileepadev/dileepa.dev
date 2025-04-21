@@ -83,3 +83,14 @@
 .buttonTransition {
   @apply transition duration-300 ease-in-out;
 }
+.sectionTransition {
+  @apply transition duration-300 ease-in-out;
+}
+
+/* Divider Themes */
+.dividerTheme {
+  @apply h-px border-t-0 bg-neutral-400 dark:bg-neutral-700 opacity-60;
+}
+.gradientDividerTheme {
+  @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent to-transparent opacity-60 via-neutral-500 dark:via-neutral-400;
+}
