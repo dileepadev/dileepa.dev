@@ -19,6 +19,17 @@
   @apply text-neutral-900 
   dark:text-neutral-100;
 }
+.textSecondaryColor {
+  @apply text-neutral-500 dark:text-neutral-400;
+}
+.textGradientColor {
+  @apply text-transparent 
+  bg-gradient-to-r 
+  from-neutral-600 
+  to-neutral-900 
+  dark:from-neutral-50 
+  dark:to-neutral-400;
+}
 
 /* Button Colors */
 .buttonColor {
