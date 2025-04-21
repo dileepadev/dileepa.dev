@@ -50,6 +50,18 @@
   dark:hover:text-neutral-100;
 }
 
+/* Outline Colors */
+.outlineColor {
+  @apply outline-neutral-300 
+  dark:outline-neutral-900;
+}
+
+/* Shadow Colors */
+.navbarShadowColor {
+  @apply shadow-neutral-300 
+  dark:shadow-neutral-950;
+}
+
 /* Border Colors */
 .borderColor {
   @apply border-neutral-300 

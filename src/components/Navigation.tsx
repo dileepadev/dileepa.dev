@@ -19,7 +19,10 @@ const Navigation = () => {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header ref={headerRef} className="bodyColor sticky top-0 z-50">
+    <header
+      ref={headerRef}
+      className="bodyColor outlineColor navbarShadowColor outline-2 shadow-md sticky top-0 z-50"
+    >
       <div className="container mx-auto px-4 py-5 flex justify-between items-center">
         <div className="textButtonSecondaryColor buttonTransition font-medium text-base">
           <Link
@@ -84,7 +87,7 @@ const Navigation = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="bodyColor borderColor md:hidden absolute top-full left-0 right-0 mt-0 py-2 rounded-b-md shadow-lg flex flex-col items-center z-40">
+          <div className="bodyColor md:hidden absolute top-full left-0 right-0 mt-0 py-2 rounded-b-md shadow-lg flex flex-col items-center z-40">
             {navItems.map((item) => (
               <a
                 key={item.id}
@@ -97,7 +100,7 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
-            <div className="borderColor mt-8 pt-4 px-4 py-2 border-t w-full flex justify-center space-x-6">
+            <div className="borderColor border-t mt-8 pt-4 px-4 py-2 w-full flex justify-center space-x-6">
               <Link
                 href={socialLinks.github ?? "#"}
                 target="_blank"
