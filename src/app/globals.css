@@ -94,3 +94,18 @@
 .gradientDividerTheme {
   @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent to-transparent opacity-60 via-neutral-500 dark:via-neutral-400;
 }
+
+/* Scrollbar Style */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #242424;
+}
+::-webkit-scrollbar-thumb {
+  background: #5c5c5c;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a2a2a2;
+}
