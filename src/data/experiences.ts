@@ -2,7 +2,7 @@ export const experiences = [
   {
     title: "Associate AI Engineer",
     company: "Random Software Ltd",
-    companyUrl: "https://randomsoftware.net",
+    url: "https://randomsoftware.net",
     period: "Apr 2025 - Present",
     description:
       "Developing and deploying AI solutions for software applications. Collaborating with cross-functional teams to integrate AI solutions into existing products and initiating new projects.",
@@ -21,7 +21,7 @@ export const experiences = [
   {
     title: "Intern Software Engineer",
     company: "Random Software Ltd",
-    companyUrl: "https://randomsoftware.net",
+    url: "https://randomsoftware.net",
     period: "Sep 2024 - Apr 2025",
     description:
       "Assisted in building software applications. Worked on creating PoCs and prototypes for AI-driven features. Gained hands-on experience in software development and cloud technologies.",
@@ -40,7 +40,7 @@ export const experiences = [
   {
     title: "Freelance Solutions Developer",
     company: "WingzDev",
-    companyUrl: "https://linkedin.com/company/wingzdev",
+    url: "https://linkedin.com/company/wingzdev",
     period: "Jun 2019 - Dec 2023",
     description:
       "Developed custom software solutions for various clients. Focused on creating user-friendly applications and optimizing existing systems. Developed expertise in project management and client communication.",
@@ -59,7 +59,7 @@ export const experiences = [
   {
     title: "Trainee Mobile App Developer",
     company: "DDS Techvira",
-    companyUrl: "https://ddstechvira.com",
+    url: "https://ddstechvira.com",
     period: "May 2021 - Nov 2021",
     description:
       "Worked on mobile app development projects using Flutter and Dart. Collaborated with designers and developers to create user-friendly applications. Acquired experience in mobile app lifecycle and deployment.",

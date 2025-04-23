@@ -18,7 +18,7 @@ const Education = () => {
               <div className="circleGradientColor absolute w-4 h-4 rounded-full -left-[9px]"></div>
               <div className="flex items-start gap-4">
                 {/* Desktop Logo */}
-                <div className="primaryCardTheme hidden md:block w-16 h-16 relative flex-shrink-0 rounded-md overflow-hidden">
+                <div className="primaryCardTheme hidden md:block w-20 h-20 relative flex-shrink-0 rounded-md overflow-hidden">
                   {/* Light mode logo */}
                   <Image
                     src={edu.logoLightMode || "/placeholder.svg"}
@@ -40,7 +40,7 @@ const Education = () => {
                 </div>
                 <div className="flex-1">
                   {/* Mobile Logo */}
-                  <div className="primaryCardTheme borderColor block md:hidden mb-2 w-12 h-12 relative rounded-md overflow-hidden border">
+                  <div className="primaryCardTheme borderColor block md:hidden mb-4 w-18 h-18 relative rounded-md overflow-hidden border">
                     {/* Light mode logo */}
                     <Image
                       src={edu.logoLightMode || "/placeholder.svg"}
