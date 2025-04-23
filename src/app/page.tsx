@@ -56,6 +56,7 @@ export default function Home() {
         <Education />
         <hr className="gradientDividerTheme" />
         <Community />
+        <hr className="gradientDividerTheme" />
         <Connect />
       </main>
 

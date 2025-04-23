@@ -43,6 +43,15 @@
   hover:text-neutral-900
   dark:hover:text-neutral-100;
 }
+
+.buttonSecondaryColor {
+  @apply bg-neutral-900 
+  dark:bg-neutral-100 
+  text-neutral-100 
+  dark:text-neutral-900 
+  hover:bg-neutral-800 
+  dark:hover:bg-neutral-200;
+}
 .textButtonColor {
   @apply text-neutral-900 
   dark:text-neutral-400 
@@ -106,6 +115,10 @@
   duration-300 
   ease-in-out;
 }
+.secondaryCardTheme {
+  @apply bg-neutral-100 
+  dark:bg-neutral-950;
+}
 .miniCardChipTheme {
   @apply bg-neutral-800 
   dark:bg-neutral-200 
@@ -159,6 +172,25 @@
   dark:bg-neutral-100 
   text-neutral-100 
   dark:text-neutral-900;
+}
+
+/* TextField Theme */
+.textFieldTheme {
+  @apply bg-neutral-100 
+  dark:bg-neutral-950 
+  text-neutral-500 
+  dark:text-neutral-400 
+  placeholder:text-neutral-500 
+  dark:placeholder:text-neutral-400
+  border-1
+  border-neutral-300 
+  dark:border-neutral-800
+  focus:ring-1
+  focus:ring-neutral-700
+  focus:border-transparent
+  rounded-md 
+  outline-none 
+  transition-all;
 }
 
 /* Scrollbar Style */
