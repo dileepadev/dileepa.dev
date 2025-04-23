@@ -6,7 +6,7 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 const Footer = () => {
   return (
-    <footer className="py-6 bg-gray-50 dark:bg-black textColor border-t border-gray-200">
+    <footer className="bodyColor outlineColor py-6 textColor outline-2 shadow-md mt-8">
       {" "}
       <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
         {" "}
@@ -25,7 +25,7 @@ const Footer = () => {
           >
             <FaGithub className="mr-1.5" size={14} /> <span>View Source</span>
           </Link>
-          <span className="text-neutral-300">|</span>
+          <span className="textColor">|</span>
           <Link
             href={`${socialLinks.github}/dileepa.dev/releases/tag/v1.2.0`}
             target="_blank"
@@ -36,7 +36,7 @@ const Footer = () => {
             <FaCodeBranch className="mr-1.5" size={14} />{" "}
             <span>v{packageJson.version}</span>
           </Link>
-          <span className="text-neutral-300">|</span> <ThemeSwitcher />
+          <span className="textColor">|</span> <ThemeSwitcher />
         </div>
       </div>
     </footer>
