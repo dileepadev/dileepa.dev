@@ -106,6 +106,12 @@
   duration-300 
   ease-in-out;
 }
+.miniCardChipTheme {
+  @apply bg-neutral-800 
+  dark:bg-neutral-200 
+  text-neutral-100
+  dark:text-neutral-900;
+}
 
 /* Transitions */
 .buttonTransition {
@@ -137,6 +143,22 @@
   via-neutral-500 
   dark:via-neutral-400
   opacity-60;
+}
+
+/* Pagination Item Colors */
+.paginationItemColor {
+  @apply bg-neutral-200 
+  dark:bg-neutral-900 
+  text-neutral-900 
+  dark:text-neutral-100 
+  hover:bg-neutral-300 
+  dark:hover:bg-neutral-800;
+}
+.paginationItemActiveColor {
+  @apply bg-neutral-900 
+  dark:bg-neutral-100 
+  text-neutral-100 
+  dark:text-neutral-900;
 }
 
 /* Scrollbar Style */
