@@ -50,6 +50,7 @@ export default function Home() {
         </section>
         <hr className="gradientDividerTheme" />
         <About />
+        <hr className="gradientDividerTheme" />
         <Experience />
         <Education />
         <Community />

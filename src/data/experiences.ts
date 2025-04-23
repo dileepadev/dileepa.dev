@@ -15,7 +15,8 @@ export const experiences = [
       "Azure",
       "OpenAI",
     ],
-    logo: "companies/rsl-d.svg",
+    logoLightMode: "companies/rsl-d.svg",
+    logoDarkMode: "companies/rsl-l.svg",
   },
   {
     title: "Intern Software Engineer",
@@ -33,7 +34,8 @@ export const experiences = [
       "Python",
       "Azure",
     ],
-    logo: "companies/rsl-d.svg",
+    logoLightMode: "companies/rsl-d.svg",
+    logoDarkMode: "companies/rsl-l.svg",
   },
   {
     title: "Freelance Solutions Developer",
@@ -51,7 +53,8 @@ export const experiences = [
       "SEO",
       "Data Analysis",
     ],
-    logo: "companies/wd.svg",
+    logoLightMode: "companies/wd.svg",
+    logoDarkMode: "companies/wd.svg",
   },
   {
     title: "Trainee Mobile App Developer",
@@ -69,6 +72,7 @@ export const experiences = [
       "SQL",
       "Git",
     ],
-    logo: "companies/ddst.svg",
+    logoLightMode: "companies/ddst.svg",
+    logoDarkMode: "companies/ddst.svg",
   },
 ];

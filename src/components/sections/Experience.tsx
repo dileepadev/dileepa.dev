@@ -4,67 +4,89 @@ import { skills } from "@/data/skills";
 
 const Experience = () => {
   return (
-    <section
-      id="experience"
-      className="py-20 bg-white transition-all duration-300"
-    >
+    <section id="experience" className="sectionTransition py-20">
       <div className="container mx-auto px-8">
-        <h2 className="md:text-3xl text-2xl font-bold mb-12 text-center text-gray-900">
-          Work Experience
+        <h2 className="md:text-3xl text-2xl font-bold mb-12 text-center">
+          <span className="textGradientColor bg-clip-text">
+            Work Experience
+          </span>
         </h2>
         <div className="max-w-3xl mx-auto space-y-12">
           {experiences.map((job) => (
             <div
               key={`${job.company}-${job.title}`}
-              className="relative pl-8 border-l-2 border-gray-300 animate-on-scroll"
+              className="borderConnectorColor relative pl-8 border-l-2 animate-on-scroll"
             >
-              <div className="absolute w-4 h-4 bg-black rounded-full -left-[9px] top-1"></div>
+              <div className="circleGradientColor absolute w-4 h-4 rounded-full -left-[9px]"></div>
               <div className="flex items-start gap-4">
                 {/* Desktop Logo */}
-                <div className="hidden md:block w-16 h-16 relative flex-shrink-0 bg-white rounded-md overflow-hidden border border-gray-200">
+                <div className="primaryCardTheme hidden md:block w-16 h-16 relative flex-shrink-0 rounded-md overflow-hidden">
+                  {/* Light mode logo */}
                   <Image
-                    src={job.logo || "/placeholder.svg"}
+                    src={job.logoLightMode || "/placeholder.svg"}
                     alt={`${job.company} logo`}
                     fill
-                    className="object-contain p-2"
+                    className="object-contain p-2 block dark:hidden"
+                  />
+                  {/* Dark mode logo */}
+                  <Image
+                    src={
+                      job.logoDarkMode ||
+                      job.logoLightMode ||
+                      "/placeholder.svg"
+                    }
+                    alt={`${job.company} logo`}
+                    fill
+                    className="object-contain p-2 hidden dark:block"
                   />
                 </div>
                 <div className="flex-1">
                   {/* Mobile Logo */}
-                  <div className="block md:hidden mb-2 w-12 h-12 relative bg-white rounded-md overflow-hidden border border-gray-200">
+                  <div className="primaryCardTheme borderColor block md:hidden mb-2 w-12 h-12 relative rounded-md overflow-hidden border">
+                    {/* Light mode logo */}
                     <Image
-                      src={job.logo || "/placeholder.svg"}
+                      src={job.logoLightMode || "/placeholder.svg"}
                       alt={`${job.company} logo`}
                       fill
-                      className="object-contain p-1"
+                      className="object-contain p-1 block dark:hidden"
+                    />
+                    {/* Dark mode logo */}
+                    <Image
+                      src={
+                        job.logoDarkMode ||
+                        job.logoLightMode ||
+                        "/placeholder.svg"
+                      }
+                      alt={`${job.company} logo`}
+                      fill
+                      className="object-contain p-1 hidden dark:block"
                     />
                   </div>
-                  <h3 className="md:text-lg text-base font-bold text-gray-900">
+                  <h3 className="textColor md:text-lg text-base font-bold">
                     {job.title}
                   </h3>
                   <div className="mb-2">
-                    <div className="md:text-lg text-base text-gray-700 font-medium flex items-center">
+                    <div className="textButtonColor buttonTransition text-sm md:text-base flex items-center">
                       <a
                         href={job.companyUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-black transition-colors duration-200"
                       >
                         {job.company}
                       </a>
                     </div>
-                    <div className="text-sm md:text-base text-gray-500">
+                    <div className="textSecondaryColor text-sm md:text-base">
                       {job.period}
                     </div>
                   </div>
-                  <p className="text-base md:text-lg text-gray-700 mb-3">
+                  <p className="textSecondaryColor text-sm md:text-base mb-3">
                     {job.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {job.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 text-sm md:text-base rounded-full"
+                        className="primaryCardTheme shadow-sm px-3 py-1 text-xs md:text-sm rounded-full"
                       >
                         {tech}
                       </span>
@@ -75,18 +97,19 @@ const Experience = () => {
             </div>
           ))}
         </div>
-        <p className="text-center md:text-2xl text-xl text-gray-700 font-bold mt-20 mb-6 animate-on-scroll">
-          Technologies I Regularly Work With
-        </p>
+        <h3 className="md:text-2xl text-xl font-bold text-center mt-20 mb-6 animate-on-scroll">
+          <span className="textGradientColor bg-clip-text">
+            Technologies I Regularly Work With
+          </span>
+        </h3>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto animate-on-scroll">
           {skills.map((skill) => (
             <div
               key={skill.label}
-              className="bg-white p-4 rounded-lg shadow-sm bg-gradient-card flex flex-col items-center justify-center"
+              className="primaryCardTheme shadow-sm p-4 rounded-lg flex flex-col items-center justify-center"
             >
               <div className="mb-2 h-10 w-10 relative">
                 {" "}
-                {/* Container for sizing */}
                 <Image
                   src={skill.imageUrl}
                   alt={`${skill.label} logo`}
@@ -96,9 +119,7 @@ const Experience = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="text-base text-gray-700 font-medium">
-                {skill.label}
-              </div>
+              <div className="text-base font-medium">{skill.label}</div>
             </div>
           ))}
         </div>

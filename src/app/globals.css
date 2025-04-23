@@ -20,7 +20,8 @@
   dark:text-neutral-100;
 }
 .textSecondaryColor {
-  @apply text-neutral-500 dark:text-neutral-400;
+  @apply text-neutral-500 
+  dark:text-neutral-400;
 }
 .textGradientColor {
   @apply text-transparent 
@@ -79,20 +80,63 @@
   dark:border-neutral-800;
 }
 
+/* Timeline Elements Colors */
+.circleGradientColor {
+  @apply bg-gradient-to-r 
+  from-neutral-300 
+  to-neutral-600 
+  dark:from-neutral-300 
+  dark:to-neutral-800;
+}
+.borderConnectorColor {
+  @apply border-neutral-400 
+  dark:border-neutral-700;
+}
+
+/* Card Theme */
+.primaryCardTheme {
+  @apply bg-neutral-100 
+  dark:bg-neutral-950 
+  ring-1 
+  ring-neutral-200 
+  dark:ring-neutral-900 
+  hover:ring-neutral-300 
+  dark:hover:ring-neutral-800 
+  transition 
+  duration-300 
+  ease-in-out;
+}
+
 /* Transitions */
 .buttonTransition {
-  @apply transition duration-300 ease-in-out;
+  @apply transition 
+  duration-300 
+  ease-in-out;
 }
 .sectionTransition {
-  @apply transition duration-300 ease-in-out;
+  @apply transition 
+  duration-300 
+  ease-in-out;
 }
 
 /* Divider Themes */
 .dividerTheme {
-  @apply h-px border-t-0 bg-neutral-400 dark:bg-neutral-700 opacity-60;
+  @apply h-px
+  border-t-0 
+  bg-neutral-400 
+  dark:bg-neutral-700 
+  opacity-60;
 }
 .gradientDividerTheme {
-  @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent to-transparent opacity-60 via-neutral-500 dark:via-neutral-400;
+  @apply h-px 
+  border-t-0 
+  bg-transparent 
+  bg-gradient-to-r 
+  from-transparent 
+  to-transparent 
+  via-neutral-500 
+  dark:via-neutral-400
+  opacity-60;
 }
 
 /* Scrollbar Style */
