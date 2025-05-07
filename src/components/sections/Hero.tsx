@@ -1,23 +1,27 @@
-"use client";
-
-import type React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { scrollToSection } from "@/utils/scroll";
+import ClientLink from "@/components/ClientLink";
+import { getAboutData } from "@/lib/api";
 
-const Hero = () => {
+export default async function Hero() {
+  const aboutData = await getAboutData();
   return (
-    <div className="pt-10 pb-20 md:pt-16 md:pb-32 container mx-auto px-4">
+    <section
+      id="hero"
+      className="pt-10 pb-20 md:pt-16 md:pb-32 container mx-auto px-4"
+    >
       <div className="flex flex-col items-center text-center">
         {/* Profile Image at the top */}
         <div className="mb-10 animate-on-scroll">
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden">
             <Image
-              src="/profile.webp"
+              src={aboutData.images.profileWebp || "/placeholder.webp"}
               alt="Dileepa Bandara"
               loading="eager"
+              placeholder="blur"
+              blurDataURL="/placeholder.webp"
               priority
-              fill
+              width={800}
+              height={800}
               className="object-cover"
             />
           </div>
@@ -27,7 +31,7 @@ const Hero = () => {
         <div className="animate-on-scroll max-w-2xl">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="textGradientColor bg-clip-text">
-              Dileepa Bandara
+              {aboutData.name}
             </span>
           </h1>
           <p className="textSecondaryColor md:text-xl text-lg mb-8 leading-relaxed">
@@ -35,18 +39,10 @@ const Hero = () => {
             intelligent solutions that make a difference.
           </p>
           <div className="flex gap-4 justify-center">
-            <Link
-              href="#connect"
-              className="buttonColor borderColor buttonTransition md:text-lg text-base py-2 px-4 rounded-md"
-              onClick={(e) => scrollToSection(e, "connect")}
-            >
-              Get in Touch
-            </Link>
+            <ClientLink href="#connect">Get in Touch</ClientLink>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Hero;
+}
