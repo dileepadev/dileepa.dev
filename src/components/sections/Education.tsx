@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { educationData } from "@/data/education";
+import { getEducationsData } from "@/lib/api";
 
-const Education = () => {
+export default async function Education() {
+  const educationData = await getEducationsData();
   return (
     <section id="education" className="sectionTransition py-20">
       <div className="container mx-auto px-8">
@@ -21,19 +22,21 @@ const Education = () => {
                 <div className="primaryCardTheme hidden md:block w-20 h-20 relative flex-shrink-0 rounded-md overflow-hidden">
                   {/* Light mode logo */}
                   <Image
-                    src={edu.logoLightMode || "/placeholder.svg"}
+                    src={edu.logo.dark || "/placeholder.webp"}
                     alt={`${edu.institution} logo`}
+                    loading="eager"
+                    placeholder="blur"
+                    blurDataURL="/placeholder.webp"
                     fill
                     className="object-contain p-2 block dark:hidden"
                   />
                   {/* Dark mode logo */}
                   <Image
-                    src={
-                      edu.logoDarkMode ||
-                      edu.logoLightMode ||
-                      "/placeholder.svg"
-                    }
+                    src={edu.logo.light || edu.logo.dark || "/placeholder.webp"}
                     alt={`${edu.institution} logo`}
+                    loading="eager"
+                    placeholder="blur"
+                    blurDataURL="/placeholder.webp"
                     fill
                     className="object-contain p-2 hidden dark:block"
                   />
@@ -43,19 +46,23 @@ const Education = () => {
                   <div className="primaryCardTheme borderColor block md:hidden mb-4 w-18 h-18 relative rounded-md overflow-hidden border">
                     {/* Light mode logo */}
                     <Image
-                      src={edu.logoLightMode || "/placeholder.svg"}
+                      src={edu.logo.dark || "/placeholder.webp"}
                       alt={`${edu.institution} logo`}
+                      loading="eager"
+                      placeholder="blur"
+                      blurDataURL="/placeholder.webp"
                       fill
                       className="object-contain p-1 block dark:hidden"
                     />
                     {/* Dark mode logo */}
                     <Image
                       src={
-                        edu.logoDarkMode ||
-                        edu.logoLightMode ||
-                        "/placeholder.svg"
+                        edu.logo.light || edu.logo.dark || "/placeholder.webp"
                       }
                       alt={`${edu.institution} logo`}
+                      loading="eager"
+                      placeholder="blur"
+                      blurDataURL="/placeholder.webp"
                       fill
                       className="object-contain p-1 hidden dark:block"
                     />
@@ -88,6 +95,4 @@ const Education = () => {
       </div>
     </section>
   );
-};
-
-export default Education;
+}
