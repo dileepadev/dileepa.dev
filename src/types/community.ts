@@ -3,7 +3,7 @@ export interface CommunityLogo {
   dark: string;
 }
 
-export interface Community {
+export interface CommunityData {
   _id: string;
   name: string;
   role: string;

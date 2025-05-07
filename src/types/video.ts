@@ -1,4 +1,4 @@
-export interface Video {
+export interface VideoData {
   _id: string;
   title: string;
   views: string;

@@ -1,6 +1,11 @@
 import { AboutData } from "@/types/about";
-import { Experience } from "@/types/experience";
+import { BlogData } from "@/types/blog";
+import { CommunityData } from "@/types/community";
+import { EducationData } from "@/types/education";
+import { EventData } from "@/types/event";
+import { ExperienceData } from "@/types/experience";
 import { Tools } from "@/types/tools";
+import { VideoData } from "@/types/video";
 
 export async function getAboutData(): Promise<AboutData> {
   const res = await fetch("https://api.dileepa.dev/about", {
@@ -12,7 +17,7 @@ export async function getAboutData(): Promise<AboutData> {
   return res.json();
 }
 
-export async function getExperiencesData(): Promise<Experience[]> {
+export async function getExperiencesData(): Promise<ExperienceData[]> {
   const res = await fetch("https://api.dileepa.dev/experiences");
   if (!res.ok) {
     throw new Error("Failed to fetch experience data");
@@ -28,7 +33,7 @@ export async function getToolsData(): Promise<Tools[]> {
   return res.json();
 }
 
-export async function getEducationsData(): Promise<Experience[]> {
+export async function getEducationsData(): Promise<EducationData[]> {
   const res = await fetch("https://api.dileepa.dev/educations");
   if (!res.ok) {
     throw new Error("Failed to fetch education data");
@@ -36,7 +41,7 @@ export async function getEducationsData(): Promise<Experience[]> {
   return res.json();
 }
 
-export async function getCommunitiesData(): Promise<Experience[]> {
+export async function getCommunitiesData(): Promise<CommunityData[]> {
   const res = await fetch("https://api.dileepa.dev/communities");
   if (!res.ok) {
     throw new Error("Failed to fetch community data");
@@ -44,7 +49,7 @@ export async function getCommunitiesData(): Promise<Experience[]> {
   return res.json();
 }
 
-export async function getEventsData(): Promise<Experience[]> {
+export async function getEventsData(): Promise<EventData[]> {
   const res = await fetch("https://api.dileepa.dev/events");
   if (!res.ok) {
     throw new Error("Failed to fetch events data");
@@ -52,7 +57,7 @@ export async function getEventsData(): Promise<Experience[]> {
   return res.json();
 }
 
-export async function getVideosData(): Promise<Experience[]> {
+export async function getVideosData(): Promise<VideoData[]> {
   const res = await fetch("https://api.dileepa.dev/videos");
   if (!res.ok) {
     throw new Error("Failed to fetch videos data");
@@ -60,7 +65,7 @@ export async function getVideosData(): Promise<Experience[]> {
   return res.json();
 }
 
-export async function getBlogsData(): Promise<Experience[]> {
+export async function getBlogsData(): Promise<BlogData[]> {
   const res = await fetch("https://api.dileepa.dev/blogs");
   if (!res.ok) {
     throw new Error("Failed to fetch blogs data");

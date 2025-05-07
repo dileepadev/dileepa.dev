@@ -3,7 +3,7 @@ export interface ExperienceLogo {
   dark: string;
 }
 
-export interface Experience {
+export interface ExperienceData {
   _id: string;
   title: string;
   company: string;
