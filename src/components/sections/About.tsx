@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { getAboutData } from "@/lib/api";
 
-const About = () => {
+export default async function About() {
+  const aboutData = await getAboutData();
+
   return (
     <section id="about" className="sectionTransition py-20">
       <div className="container mx-auto px-8">
@@ -9,10 +12,7 @@ const About = () => {
         </h2>
         <div className="max-w-3xl mx-auto animate-on-scroll">
           <p className="textSecondaryColor text-base md:text-lg mb-6">
-            I&apos;m an Associate AI Engineer with expertise in artificial
-            intelligence, software development, and cloud computing. I enjoy
-            solving real-world problems through code and building impactful
-            solutions that improve people&apos;s lives.
+            {aboutData.description}
           </p>
           <p className="textSecondaryColor text-base md:text-lg mb-6">
             With hands-on experience in Python, TypeScript, and Azure, I
@@ -28,9 +28,11 @@ const About = () => {
             creating content to help others grow and reach their goals.
           </p>
           <Image
-            src="/banner.webp"
+            src={aboutData.images.bannerWebp || "/placeholder.webp"}
             alt="About Me"
             loading="eager"
+            placeholder="blur"
+            blurDataURL="/placeholder.webp"
             priority
             width={800}
             height={400}
@@ -40,6 +42,4 @@ const About = () => {
       </div>
     </section>
   );
-};
-
-export default About;
+}
