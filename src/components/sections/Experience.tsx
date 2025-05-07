@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { experiences } from "@/data/experiences";
-import { skills } from "@/data/skills";
+import { getExperiencesData, getToolsData } from "@/lib/api";
 
-const Experience = () => {
+export default async function Experience() {
+  const experienceData = await getExperiencesData();
+  const toolsData = await getToolsData();
   return (
     <section id="experience" className="sectionTransition py-20">
       <div className="container mx-auto px-8">
@@ -12,9 +13,9 @@ const Experience = () => {
           </span>
         </h2>
         <div className="max-w-3xl mx-auto space-y-12">
-          {experiences.map((job) => (
+          {experienceData.map((job) => (
             <div
-              key={`${job.company}-${job.title}`}
+              key={job._id}
               className="borderConnectorColor relative pl-8 border-l-2 animate-on-scroll"
             >
               <div className="circleGradientColor absolute w-4 h-4 rounded-full -left-[9px]"></div>
@@ -23,19 +24,21 @@ const Experience = () => {
                 <div className="primaryCardTheme hidden md:block w-20 h-20 relative flex-shrink-0 rounded-md overflow-hidden">
                   {/* Light mode logo */}
                   <Image
-                    src={job.logoLightMode || "/placeholder.svg"}
+                    src={job.logo.dark || "/placeholder.webp"}
                     alt={`${job.company} logo`}
+                    loading="eager"
+                    placeholder="blur"
+                    blurDataURL="/placeholder.webp"
                     fill
                     className="object-contain p-2 block dark:hidden"
                   />
                   {/* Dark mode logo */}
                   <Image
-                    src={
-                      job.logoDarkMode ||
-                      job.logoLightMode ||
-                      "/placeholder.svg"
-                    }
+                    src={job.logo.light || job.logo.dark || "/placeholder.webp"}
                     alt={`${job.company} logo`}
+                    loading="eager"
+                    placeholder="blur"
+                    blurDataURL="/placeholder.webp"
                     fill
                     className="object-contain p-2 hidden dark:block"
                   />
@@ -45,19 +48,23 @@ const Experience = () => {
                   <div className="primaryCardTheme borderColor block md:hidden mb-4 w-18 h-18 relative rounded-md overflow-hidden border">
                     {/* Light mode logo */}
                     <Image
-                      src={job.logoLightMode || "/placeholder.svg"}
+                      src={job.logo.dark || "/placeholder.webp"}
                       alt={`${job.company} logo`}
+                      loading="eager"
+                      placeholder="blur"
+                      blurDataURL="/placeholder.webp"
                       fill
                       className="object-contain p-1 block dark:hidden"
                     />
                     {/* Dark mode logo */}
                     <Image
                       src={
-                        job.logoDarkMode ||
-                        job.logoLightMode ||
-                        "/placeholder.svg"
+                        job.logo.light || job.logo.dark || "/placeholder.webp"
                       }
                       alt={`${job.company} logo`}
+                      loading="eager"
+                      placeholder="blur"
+                      blurDataURL="/placeholder.webp"
                       fill
                       className="object-contain p-1 hidden dark:block"
                     />
@@ -103,29 +110,29 @@ const Experience = () => {
           </span>
         </h3>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto animate-on-scroll">
-          {skills.map((skill) => (
+          {toolsData.map((tool) => (
             <div
-              key={skill.label}
+              key={tool._id}
               className="primaryCardTheme shadow-sm p-4 rounded-lg flex flex-col items-center justify-center"
             >
               <div className="mb-2 h-10 w-10 relative">
                 {" "}
                 <Image
-                  src={skill.imageUrl}
-                  alt={`${skill.label} logo`}
+                  src={tool.logo.dark || "/placeholder.webp"}
+                  alt={`${tool.name} logo`}
                   loading="eager"
+                  placeholder="blur"
+                  blurDataURL="/placeholder.webp"
                   priority
                   fill
                   className="object-cover"
                 />
               </div>
-              <div className="text-base font-medium">{skill.label}</div>
+              <div className="text-base font-medium">{tool.name}</div>
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default Experience;
+}
