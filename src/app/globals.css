@@ -59,7 +59,7 @@
   dark:hover:text-neutral-100;
 }
 .textButtonSecondaryColor {
-  @apply text-neutral-900 
+  @apply text-neutral-600 
   dark:text-neutral-100 
   hover:text-neutral-400 
   dark:hover:text-neutral-400;

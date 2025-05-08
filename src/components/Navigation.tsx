@@ -3,7 +3,7 @@
 import Link from "next/link";
 import type React from "react";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { HiX, HiOutlineMenuAlt4 } from "react-icons/hi";
 import { navItems, socialLinks, emailAddress } from "@/data/links";
@@ -14,7 +14,26 @@ import {
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeId, setActiveId] = useState<string>("");
   const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const offset = headerRef.current?.clientHeight || 0;
+      let current = "";
+      navItems.forEach((item) => {
+        const elem = document.getElementById(item.id);
+        if (elem && scrollPosition + offset >= elem.offsetTop) {
+          current = item.id;
+        }
+      });
+      setActiveId(current);
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
@@ -28,7 +47,10 @@ const Navigation = () => {
           <Link
             href="#hero"
             className="cursor-pointer"
-            onClick={(e) => smoothScrollToTop(e, closeMobileMenu)}
+            onClick={(e) => {
+              smoothScrollToTop(e, closeMobileMenu);
+              setActiveId("");
+            }}
           >
             Dileepa Bandara
           </Link>
@@ -39,8 +61,15 @@ const Navigation = () => {
             <Link
               key={item.id}
               href={`#${item.id}`}
-              className="textButtonColor buttonTransition cursor-pointer"
-              onClick={(e) => smoothScrollToSection(e, item.id)}
+              className={`${
+                activeId === item.id
+                  ? "textButtonSecondaryColor"
+                  : "textButtonColor"
+              } buttonTransition cursor-pointer`}
+              onClick={(e) => {
+                smoothScrollToSection(e, item.id);
+                setActiveId(item.id);
+              }}
             >
               {item.name}
             </Link>
@@ -92,10 +121,15 @@ const Navigation = () => {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="textButtonColor buttonTransition cursor-pointer py-2 w-full text-center"
-                onClick={(e) =>
-                  smoothScrollToSection(e, item.id, closeMobileMenu)
-                }
+                className={`${
+                  activeId === item.id
+                    ? "textButtonSecondaryColor"
+                    : "textButtonColor"
+                } buttonTransition cursor-pointer py-2 w-full text-center`}
+                onClick={(e) => {
+                  smoothScrollToSection(e, item.id, closeMobileMenu);
+                  setActiveId(item.id);
+                }}
               >
                 {item.name}
               </a>
