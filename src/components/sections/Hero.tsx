@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ClientLink from "@/components/ClientLink";
+import CTAButton from "../CTAButton";
 import { getAboutData } from "@/lib/api";
 
 export default async function Hero() {
@@ -39,7 +39,7 @@ export default async function Hero() {
             intelligent solutions that make a difference.
           </p>
           <div className="flex gap-4 justify-center">
-            <ClientLink href="#connect">Get in Touch</ClientLink>
+            <CTAButton href="#connect">Get in Touch</CTAButton>
           </div>
         </div>
       </div>

@@ -1,5 +1,3 @@
-// page.tsx (Server Component)
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import About from "@/components/sections/About";
@@ -13,7 +11,6 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Navigation />
-
       <main className="pt-8 md:pt-4">
         <Hero />
         <hr className="gradientDividerTheme" />
@@ -27,7 +24,6 @@ export default function Home() {
         <hr className="gradientDividerTheme" />
         <Connect />
       </main>
-
       <Footer />
     </div>
   );

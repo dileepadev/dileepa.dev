@@ -1,10 +1,9 @@
-// components/ClientLink.tsx
 "use client";
 
 import Link from "next/link";
 import { scrollToSection } from "@/utils/scroll";
 
-export default function ClientLink({
+export default function CTAButton({
   href,
   children,
 }: {
