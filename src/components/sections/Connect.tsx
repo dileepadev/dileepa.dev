@@ -56,11 +56,12 @@ const Connect = () => {
                       htmlFor="name"
                       className="textColor block text-sm font-medium mb-2"
                     >
-                      Name
+                      Name <span className="requiredMark">*</span>
                     </label>
                     <input
                       type="text"
                       id="name"
+                      required
                       className="textFieldTheme w-full px-4 py-2"
                       placeholder="Your name"
                     />
@@ -70,11 +71,12 @@ const Connect = () => {
                       htmlFor="email"
                       className="textColor block text-sm font-medium mb-2"
                     >
-                      Email
+                      Email <span className="requiredMark">*</span>
                     </label>
                     <input
                       type="email"
                       id="email"
+                      required
                       className="textFieldTheme w-full px-4 py-2"
                       placeholder="Your email"
                     />
@@ -85,11 +87,12 @@ const Connect = () => {
                     htmlFor="subject"
                     className="textColor block text-sm font-medium mb-2"
                   >
-                    Subject
+                    Subject <span className="requiredMark">*</span>
                   </label>
                   <input
                     type="text"
                     id="subject"
+                    required
                     className="textFieldTheme w-full px-4 py-2"
                     placeholder="Subject"
                   />
@@ -99,11 +102,12 @@ const Connect = () => {
                     htmlFor="message"
                     className="textColor block text-sm font-medium mb-2"
                   >
-                    Message
+                    Message <span className="requiredMark">*</span>
                   </label>
                   <textarea
                     id="message"
                     rows={4}
+                    required
                     className="textFieldTheme w-full px-4 py-2"
                     placeholder="Your message"
                   ></textarea>
