@@ -56,13 +56,13 @@ export default async function CommunityPage() {
         </div>
 
         {/* Videos */}
-        <div className="max-w-3xl mx-auto mb-16">
+        <div className="max-w-3xl mx-auto">
           <h3 className="md:text-2xl text-xl font-bold text-center mt-20 mb-6 flex items-center justify-center animate-on-scroll">
             <FaVideo className="textColor mr-2" size={22} />
             <span className="textGradientColor bg-clip-text">Videos</span>
           </h3>
 
-          <VideosPagination videosData={videosData} itemsPerPage={3} />
+          <VideosPagination videosData={videosData} itemsPerPage={4} />
         </div>
 
         {/* Blogs */}

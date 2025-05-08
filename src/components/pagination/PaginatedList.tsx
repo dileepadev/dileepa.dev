@@ -8,12 +8,16 @@ interface PaginatedListProps<T> {
   items: T[];
   itemsPerPage: number;
   renderItem: (item: T, index: number) => React.ReactNode;
+  containerClassName?: string;
+  listClassName?: string;
 }
 
 export default function PaginatedList<T>({
   items,
   itemsPerPage,
   renderItem,
+  containerClassName = "",
+  listClassName = "space-y-4",
 }: PaginatedListProps<T>) {
   const { currentItems, currentPage, totalPages, onPageChange } = usePagination(
     items,
@@ -21,8 +25,8 @@ export default function PaginatedList<T>({
   );
 
   return (
-    <div className="space-y-6">
-      <div className="space-y-4">{currentItems.map(renderItem)}</div>
+    <div className={`space-y-6 ${containerClassName}`}>
+      <div className={`${listClassName}`}>{currentItems.map(renderItem)}</div>
 
       <PaginationControls
         currentPage={currentPage}

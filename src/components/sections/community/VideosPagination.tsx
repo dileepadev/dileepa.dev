@@ -1,8 +1,10 @@
 "use client";
 
-import { FaCalendarAlt, FaExternalLinkAlt, FaYoutube } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
+import { VideoData, VideosPaginationProps } from "@/types/video";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import PaginatedList from "@/components/pagination/PaginatedList";
-import { VideosPaginationProps, VideoData } from "@/types/video";
 
 export default function VideosPagination({
   videosData,
@@ -10,34 +12,32 @@ export default function VideosPagination({
 }: VideosPaginationProps) {
   const renderVideoItem = (video: VideoData, index: number) => (
     <div
-      key={`${video.title}-${index}`}
-      className="primaryCardTheme borderColor p-5 rounded-lg shadow-sm"
+      key={`${video._id}-${index}`}
+      className="primaryCardTheme borderColor block rounded-lg overflow-hidden shadow-sm"
     >
-      <div className="flex flex-col">
-        <div className="mb-2 w-full">
-          <h3 className="textColor md:text-lg text-base font-semibold flex items-center">
-            {video.title}
-          </h3>
-          <div className="textSecondaryColor text-sm md:text-base flex items-center gap-1 mt-1">
-            <FaCalendarAlt className="h-4 w-4" />
-            {video.date}
-          </div>
-          <div className="textSecondaryColor text-sm md:text-base mt-1">
-            <FaYoutube className="h-4 w-4 inline-block mr-1" />
-            YouTube
-          </div>
+      <div className="aspect-video relative">
+        <Image
+          src={video.thumbnail || "/placeholder.svg"}
+          alt={video.title}
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="p-4 flex flex-col h-full">
+        <h4 className="textColor font-semibold text-sm md:text-base mb-1 line-clamp-2">
+          {video.title}
+        </h4>
+        <div className="textSecondaryColor text-sm mb-2 flex items-center gap-1 mt-1">
+          {video.date}
         </div>
-        <p className="textSecondaryColor text-sm md:text-base mt-2">
-          {/* {video.description} */} No description available.
-        </p>
-        <a
+        <Link
           href={video.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="textButtonColor buttonTransition text-sm md:text-base flex items-center gap-1 mt-3 hover:underline"
+          className="textButtonColor buttonTransition text-sm flex items-center gap-1"
         >
           Watch video <FaExternalLinkAlt className="h-3 w-3 ml-1" />
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -47,6 +47,7 @@ export default function VideosPagination({
       items={videosData}
       itemsPerPage={itemsPerPage}
       renderItem={renderVideoItem}
+      listClassName="grid grid-cols-1 gap-4 md:grid-cols-2 md:grid-rows-2 md:gap-4"
     />
   );
 }

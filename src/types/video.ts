@@ -5,6 +5,7 @@ export interface VideoData {
   date: string;
   link: string;
   thumbnail: string;
+  description?: string;
 }
 
 export type VideosPaginationProps = {
