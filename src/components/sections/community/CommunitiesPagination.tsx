@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import PaginatedList from "@/components/pagination/PaginatedList";
-import { CommunityPaginationProps, CommunityData } from "@/types/community";
+import { CommunitiesPaginationProps, CommunityData } from "@/types/community";
 
-export default function CommunityPagination({
+export default function CommunitiesPagination({
   communityData,
   itemsPerPage,
-}: CommunityPaginationProps) {
+}: CommunitiesPaginationProps) {
   const renderCommunityItem = (community: CommunityData) => (
     <div
       key={community.name}

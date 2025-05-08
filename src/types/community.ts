@@ -13,7 +13,7 @@ export interface CommunityData {
   current: boolean;
 }
 
-export type CommunityPaginationProps = {
+export type CommunitiesPaginationProps = {
   communityData: CommunityData[];
   itemsPerPage: number;
 };

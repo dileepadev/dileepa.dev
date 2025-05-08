@@ -4,7 +4,7 @@ import {
   getVideosData,
   // getBlogsData,
 } from "@/lib/api";
-import CommunityPagination from "./community/CommunityPagination";
+import CommunitiesPagination from "./community/CommunitiesPagination";
 import EventsPagination from "./community/EventsPagination";
 import VideosPagination from "./community/VideosPagination";
 // import BlogsPagination from "./community/BlogsPagination";
@@ -37,7 +37,10 @@ export default async function CommunityPage() {
             </span>
           </h3>
 
-          <CommunityPagination communityData={communityData} itemsPerPage={3} />
+          <CommunitiesPagination
+            communityData={communityData}
+            itemsPerPage={3}
+          />
         </div>
 
         {/* Public Speaking Events */}
