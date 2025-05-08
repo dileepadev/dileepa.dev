@@ -12,3 +12,8 @@ export interface CommunityData {
   logo: CommunityLogo;
   current: boolean;
 }
+
+export type CommunityPaginationProps = {
+  communityData: CommunityData[];
+  itemsPerPage: number;
+};

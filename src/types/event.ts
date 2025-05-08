@@ -6,3 +6,8 @@ export interface EventData {
   format: string;
   description: string;
 }
+
+export type EventsPaginationProps = {
+  eventsData: EventData[];
+  itemsPerPage: number;
+};

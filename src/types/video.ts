@@ -6,3 +6,8 @@ export interface VideoData {
   link: string;
   thumbnail: string;
 }
+
+export type VideosPaginationProps = {
+  videosData: VideoData[];
+  itemsPerPage: number;
+};

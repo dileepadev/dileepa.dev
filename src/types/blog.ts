@@ -5,3 +5,8 @@ export interface BlogData {
   excerpt: string;
   readTime: string;
 }
+
+export type BlogsPaginationProps = {
+  blogsData: BlogData[];
+  itemsPerPage: number;
+};
