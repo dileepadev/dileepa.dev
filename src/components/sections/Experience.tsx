@@ -18,7 +18,7 @@ export default async function Experience() {
               key={job._id}
               className="borderConnectorColor relative pl-8 border-l-2 animate-on-scroll"
             >
-              <div className="circleGradientColor absolute w-4 h-4 rounded-full -left-[9px]"></div>
+              <div className="circleGradientColor absolute w-3 h-3 rounded-full -left-[7px]"></div>
               <div className="flex items-start gap-4">
                 {/* Desktop Logo */}
                 <div className="primaryCardTheme hidden md:block w-20 h-20 relative flex-shrink-0 rounded-md overflow-hidden">
@@ -27,8 +27,6 @@ export default async function Experience() {
                     src={job.logo.dark || "/placeholder.webp"}
                     alt={`${job.company} logo`}
                     loading="eager"
-                    placeholder="blur"
-                    blurDataURL="/placeholder.webp"
                     fill
                     className="object-contain p-2 block dark:hidden"
                   />
@@ -37,8 +35,6 @@ export default async function Experience() {
                     src={job.logo.light || job.logo.dark || "/placeholder.webp"}
                     alt={`${job.company} logo`}
                     loading="eager"
-                    placeholder="blur"
-                    blurDataURL="/placeholder.webp"
                     fill
                     className="object-contain p-2 hidden dark:block"
                   />
@@ -51,8 +47,6 @@ export default async function Experience() {
                       src={job.logo.dark || "/placeholder.webp"}
                       alt={`${job.company} logo`}
                       loading="eager"
-                      placeholder="blur"
-                      blurDataURL="/placeholder.webp"
                       fill
                       className="object-contain p-1 block dark:hidden"
                     />
@@ -63,8 +57,6 @@ export default async function Experience() {
                       }
                       alt={`${job.company} logo`}
                       loading="eager"
-                      placeholder="blur"
-                      blurDataURL="/placeholder.webp"
                       fill
                       className="object-contain p-1 hidden dark:block"
                     />
@@ -73,14 +65,8 @@ export default async function Experience() {
                     {job.title}
                   </h3>
                   <div className="mb-2">
-                    <div className="textButtonColor buttonTransition text-sm md:text-base flex items-center">
-                      <a
-                        href={job.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {job.company}
-                      </a>
+                    <div className="textSecondaryColor text-sm md:text-base">
+                      {job.company}
                     </div>
                     <div className="textSecondaryColor text-sm md:text-base">
                       {job.period}

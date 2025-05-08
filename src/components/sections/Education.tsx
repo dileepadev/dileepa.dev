@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { getEducationsData } from "@/lib/api";
 
 export default async function Education() {
@@ -16,7 +15,7 @@ export default async function Education() {
               key={edu.course}
               className="borderConnectorColor relative pl-8 border-l-2 animate-on-scroll"
             >
-              <div className="circleGradientColor absolute w-4 h-4 rounded-full -left-[9px]"></div>
+              <div className="circleGradientColor absolute w-3 h-3 rounded-full -left-[7px]"></div>
               <div className="flex items-start gap-4">
                 {/* Desktop Logo */}
                 <div className="primaryCardTheme hidden md:block w-20 h-20 relative flex-shrink-0 rounded-md overflow-hidden">
@@ -25,8 +24,6 @@ export default async function Education() {
                     src={edu.logo.dark || "/placeholder.webp"}
                     alt={`${edu.institution} logo`}
                     loading="eager"
-                    placeholder="blur"
-                    blurDataURL="/placeholder.webp"
                     fill
                     className="object-contain p-2 block dark:hidden"
                   />
@@ -35,8 +32,6 @@ export default async function Education() {
                     src={edu.logo.light || edu.logo.dark || "/placeholder.webp"}
                     alt={`${edu.institution} logo`}
                     loading="eager"
-                    placeholder="blur"
-                    blurDataURL="/placeholder.webp"
                     fill
                     className="object-contain p-2 hidden dark:block"
                   />
@@ -49,8 +44,6 @@ export default async function Education() {
                       src={edu.logo.dark || "/placeholder.webp"}
                       alt={`${edu.institution} logo`}
                       loading="eager"
-                      placeholder="blur"
-                      blurDataURL="/placeholder.webp"
                       fill
                       className="object-contain p-1 block dark:hidden"
                     />
@@ -61,8 +54,6 @@ export default async function Education() {
                       }
                       alt={`${edu.institution} logo`}
                       loading="eager"
-                      placeholder="blur"
-                      blurDataURL="/placeholder.webp"
                       fill
                       className="object-contain p-1 hidden dark:block"
                     />
@@ -71,14 +62,8 @@ export default async function Education() {
                     {edu.course}
                   </h3>
                   <div className="mb-2">
-                    <div className="textButtonColor buttonTransition text-sm md:text-base flex items-center">
-                      <Link
-                        href={edu.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {edu.institution}
-                      </Link>
+                    <div className="textSecondaryColor text-sm md:text-base">
+                      {edu.institution}
                     </div>
                     <div className="textSecondaryColor text-sm md:text-base">
                       {edu.period}
