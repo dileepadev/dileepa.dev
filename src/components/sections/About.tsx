@@ -12,20 +12,13 @@ export default async function About() {
         </h2>
         <div className="max-w-3xl mx-auto animate-on-scroll">
           <p className="textSecondaryColor text-base md:text-lg mb-6">
-            {aboutData.description}
+            {aboutData.description[0]}
           </p>
           <p className="textSecondaryColor text-base md:text-lg mb-6">
-            With hands-on experience in Python, TypeScript, and Azure, I
-            specialize in designing and deploying AI systems that deliver real
-            business value. I am particularly interested in the intersection of
-            AI and human-computer interaction, focusing on creating technologies
-            that enhance human capabilities rather than replace them.
+            {aboutData.description[1]}
           </p>
           <p className="textSecondaryColor text-base md:text-lg">
-            Outside of work, I explore research, contribute to open-source
-            projects, and stay up to date with the latest in AI. I also enjoy
-            giving back to the community by volunteering, sharing knowledge, and
-            creating content to help others grow and reach their goals.
+            {aboutData.description[2]}
           </p>
           <Image
             src={aboutData.images.bannerWebp || "/placeholder.webp"}
