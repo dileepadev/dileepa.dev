@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import metadataJSON from "@/data/metaData";
 
 const mainFont = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Dileepa Bandara",
-  description: "Associate AI Engineer",
-};
+export const metadata: Metadata = metadataJSON;
 
 export default function RootLayout({
   children,
