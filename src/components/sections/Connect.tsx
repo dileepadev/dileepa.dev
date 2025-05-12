@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { connectLinks } from "@/data/links";
 import ContactForm from "@/components/ContactForm";
+import { getAboutData } from "@/lib/api";
 
-const Connect = () => {
+export default async function Connect() {
+  const aboutData = await getAboutData();
+
   return (
     <section id="connect" className="sectionTransition py-20">
       <div className="container mx-auto px-8">
@@ -17,9 +20,7 @@ const Connect = () => {
               Find me on social media
             </h3>{" "}
             <p className="textSecondaryColor md:text-lg text-md text-center mb-8">
-              I love meeting new people and sharing meaningful moments. Feel
-              free to follow, leave a comment, or just say hello on any of the
-              platforms below!
+              {aboutData.connect[0]}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {connectLinks.map((link) => (
@@ -32,12 +33,12 @@ const Connect = () => {
                 >
                   <link.icon className="mr-4" size={24} />
                   <div>
-                    <p className="textColor text-sm font-semibold">
+                    <div className="textColor text-sm font-semibold">
                       {link.name}
-                    </p>
-                    <p className="textSecondaryColor font-normal">
+                    </div>
+                    <div className="textSecondaryColor font-normal">
                       {link.value}
-                    </p>
+                    </div>
                   </div>
                 </Link>
               ))}
@@ -47,8 +48,7 @@ const Connect = () => {
                 Send me a message
               </h3>{" "}
               <p className="textSecondaryColor md:text-lg text-md text-center mb-8">
-                Whether you have a question, an idea, or just want to reach out,
-                I&apos;d love to hear from you. Drop me a message anytime!
+                {aboutData.connect[1]}
               </p>
               <ContactForm />
             </div>
@@ -57,6 +57,4 @@ const Connect = () => {
       </div>
     </section>
   );
-};
-
-export default Connect;
+}
