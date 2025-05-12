@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { ToastNotification } from "@/components/ToastNotification";
 import metadataJSON from "@/data/metaData";
 
 const mainFont = Inter({ subsets: ["latin"] });
@@ -16,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${mainFont.className} antialiased bodyColor`}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <ToastNotification />
+        </ThemeProvider>
       </body>
     </html>
   );

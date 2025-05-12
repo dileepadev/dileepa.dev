@@ -1,5 +1,6 @@
-import { connectLinks } from "@/data/links";
 import Link from "next/link";
+import { connectLinks } from "@/data/links";
+import ContactForm from "@/components/ContactForm";
 
 const Connect = () => {
   return (
@@ -31,12 +32,12 @@ const Connect = () => {
                 >
                   <link.icon className="mr-4" size={24} />
                   <div>
-                    <div className="textColor text-sm font-semibold">
+                    <p className="textColor text-sm font-semibold">
                       {link.name}
-                    </div>
-                    <div className="textSecondaryColor font-normal">
+                    </p>
+                    <p className="textSecondaryColor font-normal">
                       {link.value}
-                    </div>
+                    </p>
                   </div>
                 </Link>
               ))}
@@ -49,76 +50,7 @@ const Connect = () => {
                 Whether you have a question, an idea, or just want to reach out,
                 I&apos;d love to hear from you. Drop me a message anytime!
               </p>
-              <form className="space-y-4 animate-on-scroll">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="textColor block text-sm font-medium mb-2"
-                    >
-                      Name <span className="requiredMark">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      required
-                      className="textFieldTheme w-full px-4 py-2"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="textColor block text-sm font-medium mb-2"
-                    >
-                      Email <span className="requiredMark">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      required
-                      className="textFieldTheme w-full px-4 py-2"
-                      placeholder="Your email"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="textColor block text-sm font-medium mb-2"
-                  >
-                    Subject <span className="requiredMark">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    required
-                    className="textFieldTheme w-full px-4 py-2"
-                    placeholder="Subject"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="textColor block text-sm font-medium mb-2"
-                  >
-                    Message <span className="requiredMark">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    required
-                    className="textFieldTheme w-full px-4 py-2"
-                    placeholder="Your message"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="buttonColor buttonTransition w-full py-3 rounded-md cursor-pointer"
-                >
-                  Send Message
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
