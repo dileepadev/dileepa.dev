@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaCodeBranch, FaGithub } from "react-icons/fa";
 import { socialLinks } from "@/data/links";
 import packageJson from "@/../package.json";
-import ThemeSwitcher from "./ThemeSwitcher";
+import ThemeSwitcher from "./theme/ThemeSwitcher";
 
 const Footer = () => {
   return (
