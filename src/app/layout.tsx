@@ -7,6 +7,7 @@ import metadataJSON from "@/data/metaData";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import MicrosoftClarity from "@/components/analytics/MicrosoftClarity";
+import GoogleAnalyticsComponent from "@/components/analytics/GoogleAnalytics";
 
 const mainFont = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           <ToastNotification />
         </ThemeProvider>
         <MicrosoftClarity />
+        <GoogleAnalyticsComponent />
         <SpeedInsights />
         <Analytics />
       </body>
