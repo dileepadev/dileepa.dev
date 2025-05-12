@@ -15,11 +15,14 @@ export default function VideosPagination({
       key={`${video._id}-${index}`}
       className="primaryCardTheme borderColor block rounded-lg overflow-hidden shadow-sm"
     >
-      <div className="aspect-video relative">
+      <div className="aspect-video relative w-full h-auto">
         <Image
           src={video.thumbnail || "/placeholder.svg"}
           alt={video.title}
+          loading="eager"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
           className="object-cover"
         />
       </div>
