@@ -7,7 +7,7 @@ import metadataJSON from "@/data/metaData";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalyticsComponent from "@/components/analytics/GoogleAnalytics";
-import Script from "next/script";
+import MicrosoftClarity from "@/components/analytics/MicrosoftClarity";
 
 const mainFont = Inter({ subsets: ["latin"] });
 
@@ -28,7 +28,7 @@ export default function RootLayout({
         <SpeedInsights />
         <Analytics />
         <GoogleAnalyticsComponent />
-        <Script id="microsoft-clarity-analytics">
+        {/* <Script id="microsoft-clarity-analytics">
           {`
               (function(c,l,a,r,i,t,y){
                   c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -36,7 +36,8 @@ export default function RootLayout({
                   y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
               })(window, document, "clarity", "script", "rii1dka37b");
           `}
-        </Script>
+        </Script> */}
+        <MicrosoftClarity />
       </body>
     </html>
   );
