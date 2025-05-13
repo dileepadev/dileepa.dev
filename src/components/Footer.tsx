@@ -1,34 +1,45 @@
 import Link from "next/link";
-import React from "react";
-import { FaGithub } from "react-icons/fa";
-import WebLinks from "@/constants/links";
-import packageJson from "../../package.json";
+import { FaCodeBranch, FaGithub } from "react-icons/fa";
+import { socialLinks } from "@/data/links";
+import packageJson from "@/../package.json";
+import ThemeSwitcher from "./theme/ThemeSwitcher";
 
 const Footer = () => {
   return (
-    <div>
-      <div className="flex flex-col gap-2 justify-center items-center pb-5 pt-5 outline outline-1 footerTheme">
-        <p className="text-sm textTheme">
-          Copyright © {new Date().getFullYear()} Dileepa Bandara
-        </p>
-        <p className="text-sm textTheme">
-          Version {packageJson.version} | Built with Next.js{" "}
-          {packageJson.dependencies.next}
-        </p>
-        <Link
-          href={WebLinks.githubRepo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm rounded-xl px-4 py-1 cardTheme textButtonTheme transitionButtonTheme"
-          aria-label="View Source Code on GitHub"
-        >
-          <div className="flex items-center">
-            <p>View Source</p>
-            <FaGithub className="ml-2" />
-          </div>
-        </Link>
+    <footer className="bodyColor outlineColor py-6 textColor outline-2 shadow-md mt-8">
+      {" "}
+      <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+        {" "}
+        {/* Copyright */}
+        <span className="text-sm text-center sm:text-left order-last sm:order-first mt-2 sm:mt-0">
+          © 2025 Dileepa Bandara. All rights reserved.
+        </span>
+        {/* Links & Theme Switcher */}
+        <div className="text-sm flex flex-row items-center space-x-2 justify-center sm:justify-end">
+          <Link
+            href={`${socialLinks.github}/dileepa.dev`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm rounded-md px-3 py-1.5 buttonColor transition-colors duration-200 flex items-center"
+            aria-label="View Source Code on GitHub"
+          >
+            <FaGithub className="mr-1.5" size={14} /> <span>View Source</span>
+          </Link>
+          <span className="textColor">|</span>
+          <Link
+            href={`${socialLinks.github}/dileepa.dev/releases/tag/v1.2.0`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm rounded-md px-3 py-1.5 buttonColor transition-colors duration-200 flex items-center"
+            aria-label="View App Version"
+          >
+            <FaCodeBranch className="mr-1.5" size={14} />{" "}
+            <span>v{packageJson.version}</span>
+          </Link>
+          <span className="textColor">|</span> <ThemeSwitcher />
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

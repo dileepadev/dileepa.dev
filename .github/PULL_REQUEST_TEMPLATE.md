@@ -1,23 +1,53 @@
-# Pull Request
+---
+about: Template for Pull Requests
+title: "<type>(<branch>): <message> [#issue_number]"
+# Example: "fix(dev): Link cards to a new username [#6]"
+---
 
-**📜 Description:**
+## 📜 Description
 
-[REQUIRED: Describe the changes you made in this pull request. Include any relevant details for the reviewer to understand the changes.]
+<!-- [REQUIRED] Briefly describe the changes in this PR and the reasoning behind them. -->
 
-**❗ Related Issue:**
+## ⚙️ Type of Change
 
-[OPTIONAL: If this pull request is related to an issue, link to the issue here by typing `#` and the issue number. For example, #1. If not, type "None."]
+<!-- [REQUIRED] Check the type of change your PR introduces -->
 
-**💻 Changes Made:**
+- [ ] 🐞 Bug Fix
+- [ ] 🌱 New Feature / Enhancement
+- [ ] 📝 Documentation Update
+- [ ] 📢 User Feedback / Suggestion
+- [ ] 💡 Other (please explain in Description)
 
-[REQUIRED: List the changes you made in this pull request. Include any relevant details for the reviewer to understand the changes.]
+## ❗ Related Issues
 
-**📸 Screenshots:**
+<!-- [REQUIRED] List related issue(s) or PR(s), e.g., "Closes #123" or "Related to #456". -->
 
-[OPTIONAL: If this pull request changes the UI, include screenshots of the changes here. If not, type "None."]
+## 📸 Screenshots
 
-**🧪 Testing:**
+<!-- [OPTIONAL] If UI-related changes were made, include before/after screenshots here. Remove if not applicable.-->
 
-[REQUIRED: Describe how you tested your changes. Include any relevant details for the reviewer to understand the testing process.]
+## ✅ Checklist
 
-✅ **By submitting this pull request, I confirm that my contributions are made under the terms of the project's license and that I have read and understood the code of conduct.**
+<!-- [REQUIRED] Tick all that apply -->
+
+- [x] I've followed the [CONTRIBUTING.md](CONTRIBUTING.md).
+- [x] I've followed the [Commit Message Guidelines](COMMIT_MESSAGE_GUIDELINES.md).
+- [x] I've followed the [Branch Naming Guidelines](BRANCH_NAMING_GUIDELINES.md).
+- [x] I agree to follow the [Pull Request Guidelines](PULL_REQUEST_GUIDELINES.md).
+- [x] I agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+- [x] Documentation has been updated where necessary.
+- [x] I've tested the changes where applicable.
+
+<!-- example:
+- [ ] I've tested the changes where applicable:
+  - [ ] Screen sizes (mobile/tablet/desktop)
+  - [ ] Browsers (Chrome/Firefox/Safari/etc.)
+  - [ ] Devices (iPhone/Android/Laptop/etc.)
+  - [ ] Operating Systems (Windows/macOS/Linux)
+  - [ ] Theme modes (Dark mode / Light mode)
+
+-->
+
+## 💬 Additional Comments
+
+<!-- [OPTIONAL] Any additional context, edge cases, considerations, or explanations for reviewers. Remove if not needed.  -->

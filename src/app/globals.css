@@ -1,157 +1,214 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Custom Theme */
+@custom-variant dark (&:where(.dark, .dark *));
 
-.bodyTheme {
-  @apply bg-slate-50 dark:bg-black;
+/* Debug Color */
+.debugColor {
+  @apply bg-red-500 
+  dark:bg-red-900;
 }
 
-.textTheme {
-  @apply text-neutral-900 dark:text-neutral-100;
+/* Body & Background Colors */
+.bodyColor {
+  @apply bg-slate-50 
+  dark:bg-black;
 }
 
-.textSecondaryTheme {
-  @apply text-neutral-500 dark:text-neutral-400;
+/* Text Colors */
+.textColor {
+  @apply text-neutral-900 
+  dark:text-neutral-100;
+}
+.textSecondaryColor {
+  @apply text-neutral-500 
+  dark:text-neutral-400;
+}
+.textGradientColor {
+  @apply text-transparent 
+  bg-gradient-to-r 
+  from-neutral-600 
+  to-neutral-900 
+  dark:from-neutral-50 
+  dark:to-neutral-400;
 }
 
-.textTertiaryTheme {
-  @apply text-neutral-700 dark:text-neutral-400;
+/* Button Colors */
+.buttonColor {
+  @apply bg-neutral-200
+  dark:bg-neutral-900
+  hover:bg-neutral-300
+  dark:hover:bg-neutral-800
+  text-neutral-900
+  dark:text-neutral-100
+  hover:text-neutral-900
+  dark:hover:text-neutral-100;
 }
 
-.textGradientTheme {
-  @apply from-neutral-800 to-neutral-600 dark:from-neutral-50 dark:to-neutral-400;
+.buttonSecondaryColor {
+  @apply bg-neutral-900 
+  dark:bg-neutral-100 
+  text-neutral-100 
+  dark:text-neutral-900 
+  hover:bg-neutral-800 
+  dark:hover:bg-neutral-200;
+}
+.textButtonColor {
+  @apply text-neutral-900 
+  dark:text-neutral-400 
+  hover:text-neutral-400 
+  dark:hover:text-neutral-100;
+}
+.textButtonSecondaryColor {
+  @apply text-neutral-600 
+  dark:text-neutral-100 
+  hover:text-neutral-400 
+  dark:hover:text-neutral-400;
+}
+.iconButtonColor {
+  @apply text-neutral-900 
+  dark:text-neutral-400 
+  hover:text-neutral-400 
+  dark:hover:text-neutral-100;
 }
 
-.textButtonTheme {
-  @apply text-neutral-900 dark:text-neutral-400 hover:text-neutral-400 dark:hover:text-neutral-100 cursor-pointer;
+/* Outline Colors */
+.outlineColor {
+  @apply outline-neutral-300 
+  dark:outline-neutral-900;
 }
 
-.textButtonSecondaryTheme {
-  @apply text-neutral-900 dark:text-neutral-100 hover:text-neutral-400 dark:hover:text-neutral-400 cursor-pointer;
+/* Shadow Colors */
+.navbarShadowColor {
+  @apply shadow-neutral-300 
+  dark:shadow-neutral-950;
 }
 
-.pageHeaderTheme {
-  @apply text-3xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-600 dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50;
+/* Border Colors */
+.borderColor {
+  @apply border-neutral-300 
+  dark:border-neutral-800;
 }
 
-.pageTitleTheme {
-  @apply text-2xl md:text-3xl font-semibold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-600 dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50;
+/* Timeline Elements Colors */
+.circleGradientColor {
+  @apply bg-gradient-to-r 
+  from-neutral-300 
+  to-neutral-600 
+  dark:from-neutral-300 
+  dark:to-neutral-800;
+}
+.borderConnectorColor {
+  @apply border-neutral-400 
+  dark:border-neutral-700;
 }
 
-.pageSubtitleTheme {
-  @apply text-base font-normal text-center textSecondaryTheme;
+/* Card Theme */
+.primaryCardTheme {
+  @apply bg-neutral-100 
+  dark:bg-neutral-950 
+  ring-1 
+  ring-neutral-200 
+  dark:ring-neutral-900 
+  hover:ring-neutral-300 
+  dark:hover:ring-neutral-800 
+  transition 
+  duration-300 
+  ease-in-out;
+}
+.secondaryCardTheme {
+  @apply bg-neutral-100 
+  dark:bg-neutral-950;
+}
+.miniCardChipTheme {
+  @apply bg-neutral-200 
+  dark:bg-neutral-700 
+  text-neutral-900
+  dark:text-neutral-100;
 }
 
-.cardTitleTheme {
-  @apply text-lg md:text-xl font-semibold text-start bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-50 dark:to-neutral-200 bg-opacity-50;
+/* Transitions */
+.buttonTransition {
+  @apply transition 
+  duration-300 
+  ease-in-out;
+}
+.sectionTransition {
+  @apply transition 
+  duration-300 
+  ease-in-out;
 }
 
-.navBarTheme {
-  @apply bg-slate-50 dark:bg-black outline-neutral-200 dark:outline-neutral-900;
+/* Divider Themes */
+.dividerTheme {
+  @apply h-px
+  border-t-0 
+  bg-neutral-400 
+  dark:bg-neutral-700 
+  opacity-60;
+}
+.gradientDividerTheme {
+  @apply h-px 
+  border-t-0 
+  bg-transparent 
+  bg-gradient-to-r 
+  from-transparent 
+  to-transparent 
+  via-neutral-500 
+  dark:via-neutral-400
+  opacity-60;
 }
 
-.selectedNavItem {
-  @apply text-neutral-900 dark:text-neutral-100;
+/* Pagination Item Colors */
+.paginationItemColor {
+  @apply bg-neutral-200 
+  dark:bg-neutral-900 
+  text-neutral-900 
+  dark:text-neutral-100 
+  hover:bg-neutral-300 
+  dark:hover:bg-neutral-800;
+}
+.paginationItemActiveColor {
+  @apply bg-neutral-900 
+  dark:bg-neutral-100 
+  text-neutral-100 
+  dark:text-neutral-900;
 }
 
-.navBarSelectedItem {
-  position: relative;
+/* TextField Theme */
+.textFieldTheme {
+  @apply bg-neutral-100 
+  dark:bg-neutral-950 
+  text-neutral-700 
+  dark:text-neutral-200 
+  placeholder:text-neutral-500 
+  dark:placeholder:text-neutral-400
+  border-1
+  border-neutral-300 
+  dark:border-neutral-800
+  focus:ring-1
+  focus:ring-neutral-700
+  focus:border-transparent
+  rounded-md 
+  outline-none 
+  transition-all;
 }
 
-.navBarSelectedItem::after {
-  content: "•";
-  position: absolute;
-  /* top: -90%; */
-  top: 85%;
-  left: 50%;
-  font-size: 10px;
-  transform: translateX(-50%);
-  @apply text-neutral-900 dark:text-neutral-100;
-}
-
-.navBarSelectedItemMobile {
-  position: relative;
-}
-
-.navBarSelectedItemMobile::after {
-  content: "•";
-  position: absolute;
-  top: 50%;
-  left: calc(100% + 5px);
-  font-size: 10px;
-  transform: translateY(-50%);
-  @apply text-neutral-900 dark:text-neutral-100;
-}
-
-.cardTheme {
-  @apply bg-neutral-200 dark:bg-neutral-900  ring-2 ring-neutral-200 dark:ring-neutral-900 hover:ring-neutral-300 dark:hover:ring-neutral-800 transition duration-300 ease-in-out;
-}
-
-.cardDarkerTheme {
-  @apply bg-neutral-100 dark:bg-neutral-950 ring-2 ring-neutral-200 dark:ring-neutral-900;
-}
-
-.cardDarkerButtonTheme {
-  @apply bg-neutral-100 dark:bg-neutral-950 ring-2 ring-neutral-200 dark:ring-neutral-900 hover:ring-neutral-300 dark:hover:ring-neutral-800 transition duration-300 ease-in-out;
-}
-
-.chipTheme {
-  @apply bg-neutral-300 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 rounded-full;
-}
-
-.timeLineTheme {
-  @apply before:bg-slate-300  after:bg-slate-600 after:border-slate-200;
-}
-
-.borderTheme {
-  @apply border border-neutral-500 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-700;
-}
-
-.errorTheme {
-  @apply text-red-500;
-}
-
-.buttonTheme {
-  @apply bg-neutral-200 dark:bg-neutral-900 hover:bg-neutral-300 dark:hover:bg-neutral-800 text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100;
-}
-
-.footerTheme {
-  @apply bg-slate-50 dark:bg-black dark:outline-neutral-900 outline-neutral-200;
-}
-
-.transitionButtonTheme {
-  @apply transition duration-300 ease-in-out;
-}
-
-.dbg {
-  @apply bg-red-800;
-}
-
-.divider {
-  @apply h-px border-t-0 bg-neutral-400 dark:bg-neutral-700 opacity-60;
-}
-
-.gradientDivider {
-  @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent to-transparent opacity-60 via-neutral-500 dark:via-neutral-400;
+.requiredMark {
+  @apply text-red-500 
+  dark:text-red-400;
 }
 
 /* Scrollbar Style */
-
 ::-webkit-scrollbar {
   width: 6px;
 }
-
 ::-webkit-scrollbar-track {
   background: #242424;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #5c5c5c;
   border-radius: 6px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: #a2a2a2;
 }

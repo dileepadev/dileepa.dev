@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  return NextResponse.json({ message: "Welcome to dileepa.dev API" });
+  return NextResponse.json({ message: "Welcome to dileepa.dev Next.js API" });
 }

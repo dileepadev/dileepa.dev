@@ -2,13 +2,50 @@
 
 All notable changes to this project are documented in this file.
 
+Changes are organized into the following categories:
+
+- **Added:** New features or functionality introduced to the project.
+- **Changed:** Modifications to existing functionality that do not add new features.
+- **Fixed:** Bug fixes that resolve issues or correct unintended behavior.
+- **Removed:** Features or components that have been removed from the project.
+
 ## [Unreleased]
 
-- **No changes yet.**
+- Changes for the next release are available in development branches.
+
+## [1.2.0] - 2025-05-13
+
+### **Added:**
+
+- Initialized base project using **Next.js 15**.
+- Implemented core layout sections: `Navbar`, `Hero`, `About`, `Experience`, `Education`, `Community`, `Connect`, and `Footer`.
+- Added API data fetching for dynamic section content.
+- Integrated contact form with **email configuration** via Resend.
+- Added SEO metadata for improved search visibility.
+- Introduced analytics and performance tools:
+  - **Vercel Web Analytics**
+  - **Vercel Speed Insights**
+  - **Microsoft Clarity**
+  - **Google Analytics**
+- Created [VERSIONING.md](https://github.com/dileepadev/dileepa.dev/VERSIONING.md) to document release practices.
+- Updated [COMMIT_MESSAGE_GUIDELINES.md](https://github.com/dileepadev/dileepa.dev/COMMIT_MESSAGE_GUIDELINES.md).
+
+### **Changed:**
+
+- Refactored routing logic to use a **single-page scrollable layout**.
+- Updated the **navbar** to support in-page scroll instead of navigation between routes.
+- Redesigned **header** and **footer** for improved aesthetics and accessibility.
+- Standardized and refined **theme styling** for consistency across components.
+- Applied accessibility improvements and layout responsiveness across screen sizes.
+
+### **Fixed:**
+
+- Resolved layout issues related to **padding and margins** in multiple sections.
+- Ensured compatibility and readability in both **dark** and **light** modes.
 
 ## [1.1.1] - 2024-10-23
 
-- **Fixed (Bugs):**
+- **Fixed:**
 
   - chore: Upgrade to 1.1.1 - package.json
   - Add Experience Page - Career Break & RSL
@@ -19,12 +56,12 @@ All notable changes to this project are documented in this file.
 
 ## [1.1.0] - 2024-05-01
 
-- **Added (New features):**
+- **Added:**
 
   - New font to Inter
   - Add pageHeaderTheme
 
-- **Changed (Improvements):**
+- **Changed:**
   
   - Update dependencies
     - version [1.0.1 -> 1.1.0]
@@ -61,7 +98,7 @@ All notable changes to this project are documented in this file.
     - Update README.md
     - Remove extra inputs from ISSUE_TEMPLATE/feature_request.md
 
-- **Fixed (Bugs):**
+- **Fixed:**
 
   - Replace unsupported links
   - Experience page missing items
@@ -71,13 +108,13 @@ All notable changes to this project are documented in this file.
 
 ## [1.0.1] - 2023-11-24
 
-- **Fixed (Bugs):**
+- **Fixed:**
 
   - Link cards to a new username
 
 ## [1.0.0] - 2023-11-15
 
-- **Added (New features):**
+- **Added:**
 
   - NavBar component (`NavBar.tsx`)
   - Body layout
@@ -97,45 +134,41 @@ All notable changes to this project are documented in this file.
   - Pull request guidelines (`PULL_REQUEST_GUIDELINES.md`)
   - Branch naming guidelines (`BRANCH_NAMING_GUIDELINES.md`)
 
-- **Changed (Improvements):**
+- **Changed:**
 
   - Updated Home page (`app/page.tsx`)
   - Formatted layout & structure
   - Updated `README.md`
 
-- **Fixed (Bugs):**
+- **Fixed:**
 
   - Website accessibility issues
 
 ## [0.1.0] - 2023-10-25
 
-- **Added (New features):**
+- **Added:**
 
   - Initialized commit from Create Next App
   - Created community standards documents
   - Developed coming soon page
   - Integrated Vercel Web Analytics
 
-- **Changed (Improvements):**
+- **Changed:**
 
   - Updated `README.md`
 
 <!-- Unreleased -->
-
-[Unreleased]: https://github.com/dileepadev/dileepa.dev/tree/dev
-
+<!-- 1.2.0 -->
+<!-- 1.1.1 -->
 <!-- 1.1.0 -->
-
-[1.1.0]: https://github.com/dileepadev/dileepa.dev/compare/v1.0.1...v1.1.0
-
 <!-- 1.0.1 -->
-
-[1.0.1]: https://github.com/dileepadev/dileepa.dev/compare/v1.0.0...v1.0.1
-
 <!-- 1.0.0 -->
-
-[1.0.0]: https://github.com/dileepadev/dileepa.dev/compare/v0.1.0...v1.0.0
-
 <!-- 0.1.0 -->
 
+[Unreleased]: https://github.com/dileepadev/dileepa.dev/tree/dev
+[1.2.0]: https://github.com/dileepadev/dileepa.dev/compare/v1.1.1...v1.2.0
+[1.1.1]: https://github.com/dileepadev/dileepa.dev/compare/v1.1.0...v1.1.1
+[1.1.0]: https://github.com/dileepadev/dileepa.dev/compare/v1.0.1...v1.1.0
+[1.0.1]: https://github.com/dileepadev/dileepa.dev/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/dileepadev/dileepa.dev/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/dileepadev/dileepa.dev/releases/tag/v0.1.0
