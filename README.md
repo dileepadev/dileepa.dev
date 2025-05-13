@@ -36,7 +36,7 @@ Welcome to my personal website project, hosted at [dileepa.dev](https://dileepa.
 - **Image Optimization:** [Next.js Image](https://nextjs.org/docs/api-reference/next/image)  
 - **API Communication:** [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 - **Email Service:** [Resend](https://resend.com/)
-- **Icons:** [React Icons](https://react-icons.github.io/react-icons) and [Heroicons](https://heroicons.com/)
+- **Icons:** [React Icons](https://react-icons.github.io/react-icons)
 
 ## Captured Media
 
