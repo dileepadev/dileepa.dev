@@ -1,10 +1,10 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import IconMoon from "../icons/IconMoon";
-import IconSun from "../icons/IconSun";
+import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
 
-export const ThemeSwitcher = () => {
+const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -17,14 +17,18 @@ export const ThemeSwitcher = () => {
   }
 
   return (
-    <div className="fixed bottom-8 right-8">
-      <button
-        type="button"
-        className="w-11 h-11 rounded-full shadow-md inline-flex justify-center items-center focus:outline-none cardTheme"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      >
-        {theme === "dark" ? <IconMoon /> : <IconSun />}
-      </button>
-    </div>
+    <button
+      type="button"
+      className="p-1.5 rounded-md buttonColor transition-colors duration-200 cursor-pointer"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    >
+      {theme === "dark" ? (
+        <HiOutlineMoon className="textColor" size={20} />
+      ) : (
+        <HiOutlineSun className="textColor" size={20} />
+      )}
+    </button>
   );
 };
+
+export default ThemeSwitcher;
