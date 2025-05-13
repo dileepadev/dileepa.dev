@@ -99,6 +99,8 @@ To get a copy of this project up and running on your local machine, follow these
    npx next dev
    ```
 
+   Note: The `next dev --turbopack` command can be used to start the development server with Turbopack. Click [here](https://nextjs.org/docs/app/api-reference/turbopack) for more information.
+
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. To change the port, use the `-p` flag. For example, `npm run dev -- -p 4000`.
 
    Note: The `--` flag is required to pass arguments like `-p` to the development server script.
